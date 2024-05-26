@@ -2,10 +2,8 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { toast } from "react-toastify";
-import "./toastify.css"
+import "./toastify.css";
 import Dashbroad from "../Dashbroad";
-
-// const BASE_URL = "https://shafin-server.onrender.com";
 
 const BASE_URL = "http://localhost:8000";
 
@@ -183,8 +181,8 @@ const Createproducts = () => {
               <label>Images</label>
               <input
                 type="file"
-                required
                 multiple
+                required
                 className="form-control"
                 onChange={handleImageChange}
               />

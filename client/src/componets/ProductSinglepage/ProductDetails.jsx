@@ -72,7 +72,7 @@ const ProductDetail = () => {
               return (
                 <img
                   key={index}
-                  src={`${BASE_URL}${image.image}`}
+                  src={image} 
                   
                 />
               );

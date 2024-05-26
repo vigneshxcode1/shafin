@@ -1,10 +1,7 @@
-
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import Navbar from '../componets/Navbar/Navbar'
-
-
+import Navbar from '../../src/componets/Navbar/Navbar';
 
 const BASE_URL = "http://localhost:8000";
 
@@ -13,12 +10,11 @@ function GridExample() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const navigate = useNavigate();
+
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-
         const res = await axios.get(`${BASE_URL}/api/v1/products?category=bike`);
-
         const sortedProducts = res.data.product.sort((a, b) => {
           const dateA = new Date(a.createdAt);
           const dateB = new Date(b.createdAt);
@@ -52,34 +48,33 @@ function GridExample() {
 
   return (
     <>
-    <Navbar/>
-    <br></br>
-        <div className="containers">
-           <div className="main-box">
-            <h2 className="title-oversizes1">TRENDING BIKE COLLECTIONS</h2>
-            <br></br>
-            {products.map((product) => (
+      <Navbar />
+      <br></br>
+      <div className="containers">
+        <div className="main-box">
+          <h2 className="title-oversizes1">TRENDING BIKE COLLECTIONS</h2>
+          <br></br>
+          {products.map((product) => (
             <div className="products" key={product._id}>
               {product.images && product.images.length > 0 ? (
                 product.images.map((image, index) => (
-                  <img  className="img-products" onClick={() => navigate(`/products/${product._id}`)}
+                  <img
+                    className="img-products"
+                    onClick={() => navigate(`/products/${product._id}`)}
                     key={index}
-                    src={`${BASE_URL}${image.image}`}
+                    src={image} 
                     alt={`${product.name} image ${index}`}
                   />
                 ))
               ) : (
                 <p>No images available</p>
               )}
-            <p className="title-oversized">{product.name}</p>
-            <p className="title-oversized">From at RS:{product.price}</p>
-             
+              <p className="title-oversized">{product.name}</p>
+              <p className="title-oversized">From at RS:{product.price}</p>
             </div>
-             
-           
           ))}
-         </div>
-         </div>
+        </div>
+      </div>
     </>
   );
 }

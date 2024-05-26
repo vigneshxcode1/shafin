@@ -63,21 +63,20 @@ function GridExample() {
             <div className="products" key={product._id}>
               {product.images && product.images.length > 0 ? (
                 product.images.map((image, index) => (
-                  <img  className="img-products" onClick={() => navigate(`/products/${product._id}`)}
+                  <img
+                    className="img-products"
+                    onClick={() => navigate(`/products/${product._id}`)}
                     key={index}
-                    src={`${BASE_URL}${image.image}`}
+                    src={image} 
                     alt={`${product.name} image ${index}`}
                   />
                 ))
               ) : (
                 <p>No images available</p>
               )}
-            <p className="title-oversized">{product.name}</p>
-            <p className="title-oversized">From at RS:{product.price}</p>
-             
+              <p className="title-oversized">{product.name}</p>
+              <p className="title-oversized">From at RS:{product.price}</p>
             </div>
-             
-           
           ))}
          </div>
          </div>

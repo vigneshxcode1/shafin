@@ -1,10 +1,13 @@
 import express from 'express';
 import multer from 'multer';
-import { deleteproduct, getproducts,newProduct,singleproduct, updateproduct } from '../controllers/Products.js';
+import { deleteproduct, getproducts, newProduct, singleproduct, updateproduct } from '../controllers/Products.js';
 import { isauthticateuser, authorizeRoles } from '../middlewares/Authenticate.js';
+import cloudinary from '../utils/Cloudinary.js';
+import fs from 'fs';
 
 const routes = express.Router();
 
+// Multer storage configuration
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, 'uploads');
@@ -16,7 +19,32 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-routes.post('/products/new', isauthticateuser, authorizeRoles('admin'), upload.array('images', 2),newProduct);
+// Cloudinary uploader function
+const uploadToCloudinary = async (path) => {
+  try {
+    const result = await cloudinary.uploader.upload(path);
+    fs.unlinkSync(path); // Remove the file from local storage after upload
+    return result.secure_url; // Return the full URL of the uploaded image
+    console.log(result.secure_url)
+  } catch (error) {
+    console.error('Error uploading to Cloudinary', error);
+    throw error;
+  }
+};
+
+// Route for creating a new product
+routes.post('/products/new', isauthticateuser, authorizeRoles('admin'), upload.array('images', 5), async (req, res, next) => {
+  try {
+    const imageUploadPromises = req.files.map(file => uploadToCloudinary(file.path));
+    const imageUrls = await Promise.all(imageUploadPromises);
+
+    req.body.images = imageUrls; // Save the Cloudinary URLs to req.body
+    next(); // Proceed to newProduct controller
+  } catch (error) {
+    res.status(500).json({ message: 'Error uploading images', error });
+  }
+}, newProduct);
+
 routes.get('/products', getproducts);
 routes.get('/products/:id', singleproduct);
 routes.put('/products/update/:id', isauthticateuser, authorizeRoles('admin'), updateproduct);

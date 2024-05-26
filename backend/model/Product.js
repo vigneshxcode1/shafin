@@ -24,11 +24,9 @@ const productSchema = new mongoose.Schema({
         default: 0
     },
     images: [{
-        image: {
-            type: String,
-            required:true
-        }
-    }],
+        type: String, // Changed to an array of strings
+        required: true
+      }],
     size: {
         type: String,
         enum: {

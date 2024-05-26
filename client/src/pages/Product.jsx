@@ -55,7 +55,7 @@ function GridExample() {
             product.images.map((image, index) => (
               <img  onClick={() => navigate(`/products/${product._id}`)}
                 key={index}
-                src={`${BASE_URL}${image.image}`}
+                src={image}
                 alt={`${product.name} image ${index}`}
               />
             ))

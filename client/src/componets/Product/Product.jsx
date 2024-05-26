@@ -55,20 +55,21 @@ function GridExample() {
 
   return (
     <div className="main-box">
-      {products.map((product) => (
-        <div className="product" key={product._id}>
-          {product.images && product.images.length > 0 ? (
-            product.images.map((image, index) => (
-              <img
-                key={index}
-                onClick={() => navigate(`/products/${product._id}`)}
-                src={`${BASE_URL}${image.image}`}
-                alt={`${product.name} image`}
-              />
-            ))
-          ) : (
-            <p>No images available</p>
-          )}
+       {products.map((product) => (
+            <div className="products" key={product._id}>
+              {product.images && product.images.length > 0 ? (
+                product.images.map((image, index) => (
+                  <img
+                    className="img-products"
+                    onClick={() => navigate(`/products/${product._id}`)}
+                    key={index}
+                    src={image} 
+                    alt={`${product.name} image ${index}`}
+                  />
+                ))
+              ) : (
+                <p>No images available</p>
+              )}
         </div>
       ))}
     </div>

@@ -1,8 +1,4 @@
-.cart-container {
-  padding: 10px;
-  background-color: black;
-
-}
+/* cart.css */
 
 .cart-container {
   padding: 20px;
@@ -11,55 +7,38 @@
 .cart-item {
   display: flex;
   margin-bottom: 20px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
 }
 
 .cart-item img {
-  width: 150px;
-  height: 150px;
-  margin-right: 10px;
-  border-radius: 5px;
+  width: 40%; /* Adjust the width as needed */
+  height: auto;
+  object-fit: cover;
 }
-.remove{
-  all: unset;
-  background-color: rgb(192, 61, 61);
-  color: white;
-  padding: 10px;
-  border-radius: 20px;
-}
+
 .cart-item-info {
-  display: flex;
-  flex-direction: column;
   flex: 1;
-  color: #0c0c0c;
-  margin-left: 20px;
-  margin-bottom: 10px;
+  padding-left: 20px;
 }
 
 .quantity-container {
   display: flex;
   align-items: center;
-  margin-top: 10px;
-  margin-left: 10px;
-  margin-bottom: 20px;
 }
 
 .quantity-container button {
-  width: 50px;
-  height: 30px;
+  background-color: #f8f9fa;
   border: none;
-  background-color: #f0f0f0;
   cursor: pointer;
-  font-size: 18px;
-  color: #555;
+  padding: 5px 10px;
 }
 
-.quantity-container span {
-  margin: 0 10px;
+.remove {
+  background-color: #dc3545;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin-top: 10px;
 }
 
 .cart-summary {
@@ -68,58 +47,16 @@
 }
 
 .total {
-  font-size: 24px;
-  background-color: #000000;
-  color: #ffffff;
-  margin-bottom: 20px;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
 }
 
 .process-btn {
-  background-color: #ff3366;
-  color: #fff;
+  background-color: #007bff;
   border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 18px;
+  color: white;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.process-btn:hover {
-  background-color: #ff0055;
-}
-
-.remove {
-  margin-top: 10px;
-}
-
-/* Mobile responsive styles */
-@media (max-width: 768px) {
-  .cart-item {
-      flex-direction: column;
-      align-items: center;
-  }
-
-  .cart-item img {
-      width: 100px;
-      height: 100px;
-      margin-right: 0;
-      margin-bottom: 10px;
-  }
-
-  .cart-item-info {
-      margin-left: 0;
-      text-align: center;
-  }
-
-  .quantity-container {
-      justify-content: center;
-      margin-top: 10px;
-      margin-left: 0;
-  }
-
-  .process-btn {
-      width: 100%;
-      text-align: center;
-  }
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
 }

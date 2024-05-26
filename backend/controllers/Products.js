@@ -6,7 +6,7 @@ import Product from '../model/Product.js';
 export const newProduct = async (req, res) => {
     try {
       const { name, price, describe, stock, category, seller, rating, size } = req.body;
-      const images = req.files.map(file => ({ image: `/uploads/${file.filename}` }));
+    const images = req.body.images;
   
       const product = new Product({
         name,

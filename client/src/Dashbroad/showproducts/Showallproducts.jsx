@@ -73,7 +73,7 @@ export const Showallproducts = () => {
           <div className="product" key={product._id}>
            {product.images && product.images.length > 0 ? (
             product.images.map((image, index) => (
-              <img key={index} src={`${BASE_URL}${image.image}`} alt={`${product.name} image ${index}`} />
+              <img key={index} src={image} alt={`${product.name} image ${index}`} />
             ))
           ) : (
             <p>No images available</p>

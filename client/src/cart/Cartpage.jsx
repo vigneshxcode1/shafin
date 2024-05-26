@@ -1,12 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import { toast } from 'react-toastify';
-import Navbar from '../../src/componets/Navbar/Navbar.jsx';
-import './cart.css';
-import { getCartItems, updateCartItem, removeCartItem,clearCart } from '../localStorageHelpers.jsx';
-import { useNavigate } from 'react-router-dom'; 
-
-
-const BASE_URL = "http://localhost:8000";
+import React, { useEffect, useState } from "react";
+import { toast } from "react-toastify";
+import Navbar from "../../src/componets/Navbar/Navbar.jsx";
+import "./cart.css";
+import { getCartItems, updateCartItem, removeCartItem, clearCart } from "../localStorageHelpers.jsx";
+import { useNavigate } from "react-router-dom"; 
 
 const Cart = () => {
     const [cartItems, setCartItems] = useState([]);
@@ -106,7 +103,8 @@ const Cart = () => {
                 <h1>Your Cart</h1>
                 {cartItems.map(item => (
                     <div key={item._id} className="cart-item">
-                        <img src={`${BASE_URL}${item.images[0].image}`} alt={item.name} />
+                       
+                        <img src={item.images[0]} alt={item.name} />
                         <div className="cart-item-info">
                             <h2>Name: {item.name}</h2>
                             <p>Price: ${item.price}</p>
