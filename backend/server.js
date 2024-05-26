@@ -7,17 +7,16 @@ import path from 'path';
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
 import orderRoute from './routes/orderRoute.js';
-import { fileURLToPath } from 'url'
+
 const app = express();
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors());
 
 dotenv.config();
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
-app.use('/uploads', express.static(path.join(__dirname,'uploads')));
+
+app.use('/uploads', express.static('uploads'));
 
 // Product API
 app.use('/api/v1', Products);
