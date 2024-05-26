@@ -4,10 +4,10 @@ import { Link, useNavigate, useParams } from 'react-router-dom';
 import Dashbroad from "../Dashbroad";
 import { toast } from "react-toastify";
 
-const BASE_URL = "https://shafin-server.onrender.com";
+// const BASE_URL = "https://shafin-server.onrender.com";
 
 
-// const BASE_URL = "http://localhost:8000";
+const BASE_URL = "http://localhost:8000";
 
 export const Deletedproducts=()=>{
   const [products, setProducts] = useState([]);

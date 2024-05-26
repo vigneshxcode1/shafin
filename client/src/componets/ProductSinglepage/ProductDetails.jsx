@@ -9,9 +9,8 @@ import Navbar from "../Navbar/Navbar.jsx";
 import { addCartItem } from "../../localStorageHelpers.jsx";
 
 
-const BASE_URL = "https://shafin-server.onrender.com";
 
-// const BASE_URL = "http://localhost:8000";
+const BASE_URL = "http://localhost:8000";
 
 const ProductDetail = () => {
   const [product, setProduct] = useState(null);

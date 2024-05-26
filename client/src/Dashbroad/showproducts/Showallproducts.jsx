@@ -5,10 +5,9 @@ import Dashbroad from "../Dashbroad";
 import "./showproducts.css"
 
 
-const BASE_URL = "https://shafin-server.onrender.com";
 
 
-// const BASE_URL = "http://localhost:8000";
+const BASE_URL = "http://localhost:8000";
 
 export const Showallproducts = () => {
   const [products, setProducts] = useState([]);

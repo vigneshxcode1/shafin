@@ -4,10 +4,8 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../componets/Navbar/Navbar"
 
-const BASE_URL = "https://shafin-server.onrender.com";
 
-
-// const BASE_URL = "http://localhost:8000";
+const BASE_URL = "http://localhost:8000";
 
 function GridExample() {
   const [products, setProducts] = useState([]);

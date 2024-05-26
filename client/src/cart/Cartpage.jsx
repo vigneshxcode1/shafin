@@ -6,10 +6,7 @@ import { getCartItems, updateCartItem, removeCartItem,clearCart } from '../local
 import { useNavigate } from 'react-router-dom'; 
 
 
-const BASE_URL = "https://shafin-server.onrender.com";
-
-
-// const BASE_URL = "http://localhost:8000";
+const BASE_URL = "http://localhost:8000";
 
 const Cart = () => {
     const [cartItems, setCartItems] = useState([]);

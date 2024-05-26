@@ -4,10 +4,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import { Link, useNavigate } from 'react-router-dom';
 
-const BASE_URL = "https://shafin-server.onrender.com";
 
-
-// const BASE_URL = "http://localhost:8000";
+const BASE_URL = "http://localhost:8000";
 
 function Signup() {
   const [username, setName] = useState('');

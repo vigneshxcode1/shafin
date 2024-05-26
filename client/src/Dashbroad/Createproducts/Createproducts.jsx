@@ -5,9 +5,9 @@ import { toast } from "react-toastify";
 import "./toastify.css"
 import Dashbroad from "../Dashbroad";
 
-const BASE_URL = "https://shafin-server.onrender.com";
+// const BASE_URL = "https://shafin-server.onrender.com";
 
-// const BASE_URL = "http://localhost:8000";
+const BASE_URL = "http://localhost:8000";
 
 const Createproducts = () => {
   const [name, setProductname] = useState("");

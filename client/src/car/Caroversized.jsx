@@ -6,9 +6,9 @@ import '../componets/Product/Product.css'
 import Navbar from "../componets/Navbar/Navbar.jsx"
 
 
-const BASE_URL = "https://shafin-server.onrender.com";
 
-// const BASE_URL = "http://localhost:8000";
+
+const BASE_URL = "http://localhost:8000";
 
 function GridExample() {
   const [products, setProducts] = useState([]);

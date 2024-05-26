@@ -7,10 +7,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import 'react-toastify/dist/ReactToastify.css';
 import "./Login.css";
 
-const BASE_URL = "https://shafin-server.onrender.com";
 
 
-// const BASE_URL = "http://localhost:8000";
+const BASE_URL = "http://localhost:8000";
 
 function Login() {
   const [email, setEmail] = useState('');
