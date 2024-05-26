@@ -1,0 +1,21 @@
+/* Footer.css */
+footer {
+    margin-top:40px ;
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .footer-section {
+    margin-bottom: 20px;
+  }
+  
+  /* Media query for responsiveness */
+  @media screen and (max-width: 768px) {
+    .footer-section {
+      margin-bottom: 10px;
+      color: black;
+    }
+  }
+  

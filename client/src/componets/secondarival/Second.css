@@ -1,0 +1,24 @@
+.text-muted{
+    padding: 10px;
+    margin-top: 35px;
+    margin-bottom:30px;
+    border-radius: 10px;
+    border: none;
+    color: #423a3a;
+    background-color: rgba(125, 245, 139, 0.992);
+}
+
+.text-btn{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    color: #423a3a;
+    background-color: rgba(125, 245, 139, 0.992);
+}
+.feature{
+    background-color: rgb(255, 255, 255);
+}
+.text-center{
+    background-color: #423a3a;
+    
+}

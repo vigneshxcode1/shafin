@@ -1,0 +1,104 @@
+/* Product.css */
+
+.box {
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 10px;
+  text-decoration: none;
+}
+.main-box{
+  margin-top: 100px;
+}
+.box img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.2s ease, opacity 0.3s ease;
+}
+
+.box img:hover {
+  transition: scale(2.05);
+  opacity: 0.8;
+}
+
+
+.title {
+  font-size: 1.2em;
+  margin-top: 10px;
+  color: aliceblue;
+
+}
+h2{
+  all: unset;
+}
+.title-1{
+  color: aliceblue;
+ 
+}
+.box .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box:hover .overlay {
+  opacity: 1;
+}
+
+.overlay-text {
+  color: white;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.title-oversizes1{
+  margin-top: -10px;
+  color: rgb(197, 197, 196);
+  font-size: 20px;
+  
+}
+.title-oversizes:hover{
+  color: rgb(83, 199, 93);
+}
+.containers {
+  margin-top: -40px;
+  padding: 5px;
+  
+}
+
+.main-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.products {
+  position: relative;
+  flex: 1 1 45%; /* Ensures two items per row, adjust as needed */
+  margin: 5px; /* Add margin if needed */
+  cursor: pointer;
+  text-align: center;
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.product:hover img {
+  transform: scale(1.05);
+  opacity: 0.8;
+}
