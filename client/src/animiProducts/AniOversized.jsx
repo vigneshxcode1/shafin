@@ -7,7 +7,7 @@ import Navbar from "../componets/Navbar/Navbar.jsx"
 
 
 
-const BASE_URL = "https://shafin-xhiw.vercel.app";
+const BASE_URL = "http://localhost:8000";
 
 function GridExample() {
   const [products, setProducts] = useState([]);
