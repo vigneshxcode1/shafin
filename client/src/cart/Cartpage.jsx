@@ -90,7 +90,8 @@ const Cart = () => {
         return (
             <>
                 <Navbar />
-                <h1>Your cart is empty</h1>
+                <br></br><br></br><br></br>
+                <h3>Your cart is empty</h3>
             </>
         );
     }
