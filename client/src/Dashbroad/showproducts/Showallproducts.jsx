@@ -7,7 +7,7 @@ import "./showproducts.css"
 
 
 
-const BASE_URL = "http://localhost:8000";
+const BASE_URL = "https://shafin-8q7w.onrender.com";
 
 export const Showallproducts = () => {
   const [products, setProducts] = useState([]);

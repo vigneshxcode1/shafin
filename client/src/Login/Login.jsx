@@ -9,7 +9,7 @@ import "./Login.css";
 
 
 
-const BASE_URL = "http://localhost:8000";
+const BASE_URL = "https://shafin-8q7w.onrender.com";
 
 function Login() {
   const [email, setEmail] = useState('');

@@ -4,7 +4,7 @@ import axios from "axios";
 
 
 
-const BASE_URL = "http://localhost:8000";
+const BASE_URL = "https://shafin-8q7w.onrender.com";
 
 const Updateproducts = () => {
   const [name, setName] = useState("");

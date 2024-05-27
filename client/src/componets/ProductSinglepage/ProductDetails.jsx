@@ -10,7 +10,7 @@ import { addCartItem } from "../../localStorageHelpers.jsx";
 
 
 
-const BASE_URL = "http://localhost:8000";
+const BASE_URL = "https://shafin-8q7w.onrender.com";
 
 const ProductDetail = () => {
   const [product, setProduct] = useState(null);

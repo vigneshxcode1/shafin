@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "../componets/Navbar/Navbar"
 
 
-const BASE_URL = "http://localhost:8000";
+const BASE_URL = "https://shafin-8q7w.onrender.com";
 
 function GridExample() {
   const [products, setProducts] = useState([]);

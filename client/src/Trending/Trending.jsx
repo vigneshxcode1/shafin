@@ -7,7 +7,7 @@ import "../../src/componets/Product/Product.css"
 
 
 
-const BASE_URL = "http://localhost:8000";
+const BASE_URL = "https://shafin-8q7w.onrender.com";
 
 function GridExample() {
   const [products, setProducts] = useState([]);

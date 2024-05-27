@@ -5,7 +5,7 @@ import axios from "axios";
 import { Link, useNavigate } from 'react-router-dom';
 
 
-const BASE_URL = "http://localhost:8000";
+const BASE_URL = "https://shafin-8q7w.onrender.com";
 
 function Signup() {
   const [username, setName] = useState('');
