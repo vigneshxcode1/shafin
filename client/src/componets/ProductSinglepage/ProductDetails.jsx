@@ -17,7 +17,7 @@ const ProductDetail = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [quantity, setQuantity] = useState(1);
-  const [selectedSize, setSelectedSize] = useState("s"); // Default size
+  const [selectedSize, setSelectedSize] = useState("s"); 
   const { id } = useParams();
 
   useEffect(() => {
@@ -86,7 +86,7 @@ const ProductDetail = () => {
             <p className="product-detail-description">
               Description: {product.describe}
             </p>
-            <span className="product-detail-price">${product.price}</span>
+            <span className="product-detail-price">₹{product.price}</span>
             <p className="product-detail-rating">Rating: {product.rating}</p>
             <p className="product-detail-seller">Seller: {product.seller}</p>
             <p className="product-detail-stock">Stock: {product.stock}</p>
