@@ -2,10 +2,10 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
 import { Link } from "react-router-dom";
-import featureimg from "../images/samurai.jpg";
-import feature2 from "../images/trending.jpg";
-import feature3 from "../images/oversized.jpg";
-import feature4 from '../images/car.jpg'
+import animi from "../images/oversized.jpg";
+import trend from "../images/trending.jpg";
+import bike from "../images/bike.png";
+import car from '../images/car.png'
 import posterimage from "../images/postercollection.png";
 import "./Product.css";
 
@@ -14,7 +14,7 @@ function animicollections() {
     <CardGroup>
       <Card.Body className="box">
         <Link to={"/animicollections"}>
-          <img variant="top" src={feature3} alt="Anime Collections" />
+          <img variant="top" src={animi} alt="Anime Collections" />
           <div className="overlay">
             <div className="overlay-text">Anime Collections</div>
           </div>
@@ -24,7 +24,7 @@ function animicollections() {
 
       <Card.Body className="box">
         <Link to={"/trendcollection"}>
-          <img variant="top" src={feature2} alt="Trending Collections" />
+          <img variant="top" src={trend} alt="Trending Collections" />
           <div className="overlay">
             <div className="overlay-text">Trending Collections</div>
           </div>
@@ -34,7 +34,7 @@ function animicollections() {
 
       <Card.Body className="box">
         <Link to={"/carcollections"}>
-          <img variant="top" src={feature4} alt="Car Collections" />
+          <img variant="top" src={car} alt="Car Collections" />
           <div className="overlay">
             <div className="overlay-text">Car Collections</div>
           </div>
@@ -44,7 +44,7 @@ function animicollections() {
 
       <Card.Body className="box">
         <Link to={"/bikecollections"}>
-          <img variant="top" src={featureimg} alt="Bike Collections" />
+          <img variant="top" src={bike} alt="Bike Collections" />
           <div className="overlay">
             <div className="overlay-text">Bike Collections</div>
           </div>
