@@ -12,7 +12,7 @@ const Entry = () => {
           <h1 className="link-item">SHOP</h1>
         </Link>
 
-        <Link to="/posters" >
+        <Link to="/postercollections" >
           <h1 className="link-item">POSTERS</h1>
         </Link>
         <a href="https://wa.me/9025630360" >

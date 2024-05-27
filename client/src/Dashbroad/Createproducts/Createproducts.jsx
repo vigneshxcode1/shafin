@@ -138,7 +138,11 @@ const Createproducts = () => {
                 <option value="caroversized">CarOversizes</option>
                 <option value="bike">Bike</option>
                 <option value='bikeoversized'>bikeoversized</option>
-                <option value="posters">posters</option>
+                <option value="posters">trendingposters</option>
+                <option value="movieposter">movieposters</option>
+                <option value="carposter">carposters</option>
+                <option value="bikeposter">bikeposters</option>
+                <option value="animiposter">animiposters</option>
                 <option value="pants">Pants</option>
                 <option value="T-shirt">T-shirt</option>
                 <option value="printed-collection">Printed Collection</option>

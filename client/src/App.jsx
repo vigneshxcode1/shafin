@@ -35,7 +35,11 @@ import Bikecollection from '../src/bike/Bikecollections.jsx'
 import Bikeoversized from '../src/bike/Bikeoversized.jsx'
 import Bike from '../src/bike/Bike.jsx'
 import Posters from '../src/Poster/Poster.jsx'
-
+import Animiposters from '../src/Poster/Aniposter.jsx'
+import Movieposter from '../src/Poster/movieposter.jsx'
+import Carposter from '../src/Poster/Carposter.jsx'
+import Bikeposter from '../src/Poster/Bikeposter.jsx'
+import Postercollections from './Poster/Postercollections.jsx';
 function App() {
   return (
     <BrowserRouter>
@@ -58,6 +62,11 @@ function App() {
         <Route path="/bike" element={<Bike/>} />
         <Route path="/bikeoversized" element={<Bikeoversized/>} />
         <Route path="/posters" element={<Posters />} />
+        <Route path="/animiposters" element={<Animiposters/>} />
+        <Route path="/movieposters" element={<Movieposter />} />
+        <Route path="/carposters" element={<Carposter />} />
+        <Route path="/bikeposters" element={<Bikeposter/>} />
+        <Route path="/postercollections" element={<Postercollections/>} />
         <Route path="/hoodies" element={<Hoodies />} />
         <Route path="/tshirt" element={<Tshirt />} />
         <Route path="/printed-collection" element={<Printedcollection />} />

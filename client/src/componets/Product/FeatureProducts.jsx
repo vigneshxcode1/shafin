@@ -6,7 +6,7 @@ import featureimg from "../images/samurai.jpg";
 import feature2 from "../images/trending.jpg";
 import feature3 from "../images/oversized.jpg";
 import feature4 from '../images/car.jpg'
-
+import posterimage from "../images/postercollection.png";
 import "./Product.css";
 
 function animicollections() {
@@ -50,6 +50,16 @@ function animicollections() {
           </div>
         </Link>
         <h1 className="title">BIKE COLLECTIONS</h1>
+      </Card.Body>
+
+      <Card.Body className="box">
+        <Link to={"/postercollections"}>
+          <img variant="top" src={posterimage} alt="Bike Collections" />
+          <div className="overlay">
+            <div className="overlay-text">Poster Collections</div>
+          </div>
+        </Link>
+        <h1 className="title">TRENDING POSTER COLLECTIONS</h1>
       </Card.Body>
     </CardGroup>
   );
