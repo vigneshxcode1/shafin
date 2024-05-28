@@ -16,7 +16,7 @@ function animicollections() {
         <Link to={"/animicollections"}>
           <img variant="top" src={animi} alt="Anime Collections" />
           <div className="overlay">
-            <div className="overlay-text">Anime Collections</div>
+            <div className="overlay-text">Anime Tees</div>
           </div>
         </Link>
         <h1 className="title">ANIMI COLLECTIONS</h1>
@@ -26,7 +26,7 @@ function animicollections() {
         <Link to={"/trendcollection"}>
           <img variant="top" src={trend} alt="Trending Collections" />
           <div className="overlay">
-            <div className="overlay-text">Trending Collections</div>
+            <div className="overlay-text">Trending Tees</div>
           </div>
         </Link>
         <h1 className="title">TRENDING COLLECTIONS</h1>
@@ -36,7 +36,7 @@ function animicollections() {
         <Link to={"/carcollections"}>
           <img variant="top" src={car} alt="Car Collections" />
           <div className="overlay">
-            <div className="overlay-text">Car Collections</div>
+            <div className="overlay-text">Car Tees</div>
           </div>
         </Link>
         <h1 className="title">CAR COLLECTIONS</h1>
@@ -46,7 +46,7 @@ function animicollections() {
         <Link to={"/bikecollections"}>
           <img variant="top" src={bike} alt="Bike Collections" />
           <div className="overlay">
-            <div className="overlay-text">Bike Collections</div>
+            <div className="overlay-text">Bike Tees</div>
           </div>
         </Link>
         <h1 className="title">BIKE COLLECTIONS</h1>

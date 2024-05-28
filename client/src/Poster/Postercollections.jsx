@@ -22,7 +22,7 @@ function postercollections() {
             <div className="overlay-text">Anime Collections</div>
           </div>
         </Link>
-        <h1 className="title">ANIMI COLLECTIONS</h1>
+        <h1 className="title">ANIMI POSTERS</h1>
       </Card.Body>
 
       <Card.Body className="box">
@@ -32,7 +32,7 @@ function postercollections() {
             <div className="overlay-text">Movies Collections</div>
           </div>
         </Link>
-        <h1 className="title">MOVIES COLLECTIONS</h1>
+        <h1 className="title">MOVIES POSTERS</h1>
       </Card.Body>
 
       <Card.Body className="box">
@@ -42,7 +42,7 @@ function postercollections() {
             <div className="overlay-text">Car Collections</div>
           </div>
         </Link>
-        <h1 className="title">CAR COLLECTIONS</h1>
+        <h1 className="title">CAR POSTERS</h1>
       </Card.Body>
 
       <Card.Body className="box">
@@ -52,7 +52,7 @@ function postercollections() {
             <div className="overlay-text">Bike Collections</div>
           </div>
         </Link>
-        <h1 className="title">BIKE COLLECTIONS</h1>
+        <h1 className="title">BIKE POSTERS</h1>
       </Card.Body>
 
       <Card.Body className="box">
