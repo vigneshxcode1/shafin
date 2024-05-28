@@ -40,6 +40,7 @@ import Movieposter from '../src/Poster/movieposter.jsx'
 import Carposter from '../src/Poster/Carposter.jsx'
 import Bikeposter from '../src/Poster/Bikeposter.jsx'
 import Postercollections from './Poster/Postercollections.jsx';
+import Sizechart from './pages/sizechart.jsx';
 function App() {
   return (
     <BrowserRouter>
@@ -67,6 +68,9 @@ function App() {
         <Route path="/carposters" element={<Carposter />} />
         <Route path="/bikeposters" element={<Bikeposter/>} />
         <Route path="/postercollections" element={<Postercollections/>} />
+        <Route path="/sizechart" element={<Sizechart />} />
+
+
         <Route path="/hoodies" element={<Hoodies />} />
         <Route path="/tshirt" element={<Tshirt />} />
         <Route path="/printed-collection" element={<Printedcollection />} />

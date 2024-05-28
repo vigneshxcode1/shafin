@@ -10,7 +10,11 @@
 .size-container {
   margin: 10px 0;
 }
-
+.product-detail-created{
+  text-decoration: none;
+  color: rgb(145, 227, 118);
+  margin-left:20px;
+}
 .size-container label {
   margin-right: 10px;
 }
@@ -96,6 +100,7 @@
     width: 50%;
     color: black;
   }
+  
 }
 
 @media (max-width: 767px) {
@@ -113,5 +118,126 @@
   .product-detail-info {
     width: 100%;
     padding: 15px;
+  }
+}
+
+.product-detail-container {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.product-detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-detail img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-detail-info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+}
+
+.product-detail-description {
+  cursor: pointer;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.product-detail-description.show {
+  -webkit-line-clamp: unset; 
+ 
+}
+
+.size-container,
+.quantity-container {
+  margin-top: 16px;
+}
+
+@media (min-width: 768px) {
+  .product-detail {
+    flex-direction: row;
+  }
+
+  .product-detail-info {
+    margin-left: 32px;
+    flex: 1;
+  }
+
+  .product-detail img {
+    max-width: 50%;
+  }
+}
+.product-detail-container {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.product-detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-detail img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-detail-info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+}
+
+.product-detail-description {
+  cursor: pointer;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Number of lines to show */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.product-detail-description.show {
+  -webkit-line-clamp: unset; /* Show full description */
+}
+
+.toggle-button {
+
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  margin-top: 8px;
+  align-self: flex-start;
+}
+
+
+.size-container,
+.quantity-container {
+  margin-top: 16px;
+}
+
+@media (min-width: 768px) {
+  .product-detail {
+    flex-direction: row;
+  }
+
+  .product-detail-info {
+    margin-left: 32px;
+    flex: 1;
+  }
+
+  .product-detail img {
+    max-width: 50%;
   }
 }

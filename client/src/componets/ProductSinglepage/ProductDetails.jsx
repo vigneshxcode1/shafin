@@ -8,8 +8,6 @@ import Product from "../Product/Product.jsx";
 import Navbar from "../Navbar/Navbar.jsx";
 import { addCartItem } from "../../localStorageHelpers.jsx";
 
-
-
 const BASE_URL = "https://shafin-8q7w.onrender.com";
 
 const ProductDetail = () => {
@@ -18,6 +16,7 @@ const ProductDetail = () => {
   const [error, setError] = useState(null);
   const [quantity, setQuantity] = useState(1);
   const [selectedSize, setSelectedSize] = useState("s"); 
+  const [showFullDescription, setShowFullDescription] = useState(false);
   const { id } = useParams();
 
   useEffect(() => {
@@ -57,6 +56,10 @@ const ProductDetail = () => {
     }
   };
 
+  const toggleDescription = () => {
+    setShowFullDescription((prevState) => !prevState);
+  };
+
   if (loading) return <p>Loading...</p>;
   if (error) return <p>{error}</p>;
   if (!product) return <p>No product details available</p>;
@@ -73,7 +76,7 @@ const ProductDetail = () => {
                 <img
                   key={index}
                   src={image} 
-                  
+                  alt={`Product image ${index + 1}`}
                 />
               );
             })
@@ -82,21 +85,19 @@ const ProductDetail = () => {
           )}
 
           <div className="product-detail-info">
-            <h2>Name:{product.name}</h2>
-            <p className="product-detail-description">
+            <h2>Name: {product.name}</h2>
+            <span className="product-detail-price">₹{product.price}</span>
+            <p className={`product-detail-description ${showFullDescription ? "show" : ""}`}>
               Description: {product.describe}
             </p>
-            <span className="product-detail-price">₹{product.price}</span>
-            <p className="product-detail-rating">Rating: {product.rating}</p>
+            <button className="toggle-button-des" onClick={toggleDescription}>
+              {showFullDescription ? "Show Less" : "Show More"}
+            </button>
             <p className="product-detail-seller">Seller: {product.seller}</p>
             <p className="product-detail-stock">Stock: {product.stock}</p>
             <p className="product-detail-category">
               Category: {product.category}
             </p>
-            <p className="product-detail-created">
-              Created at: {new Date(product.createdAt).toLocaleDateString()}
-            </p>
-
             <div className="size-container">
               <label htmlFor="size">Select Size:</label>
               <select
@@ -111,7 +112,7 @@ const ProductDetail = () => {
                 <option value="xxxl">XXXL</option>
               </select>
             </div>
-
+            <p className="product-detail-rating">Rating: {product.rating}</p>
             <div className="quantity-container">
               <button onClick={() => handleQuantityChange(-1)}>-</button>
               <span className="quantity">{quantity}</span>
@@ -119,6 +120,9 @@ const ProductDetail = () => {
             </div>
             <button onClick={handleAddToCart}>Add to Cart</button>
           </div>
+          <p className="product-detail-created">
+              Created at: {new Date(product.createdAt).toLocaleDateString()}
+            </p>
         </div>
       </div>
       <Product />
