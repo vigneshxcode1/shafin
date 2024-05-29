@@ -33,7 +33,7 @@ const Entry = () => {
       <footer className="main-foot">
 
     <a  className="foot-item" href="/about">about</a>
-        <a className="foot-item"  href="/sizechart">size chart</a>
+        <Link className="foot-item"  href="/sizechart">size chart</Link>
       
         
         <p className="foot-item">shipping</p>
