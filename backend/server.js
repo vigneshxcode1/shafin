@@ -20,14 +20,6 @@ const __dirname = path.dirname(__filename);
 app.use('/uploads',express.static(path.join(__dirname,'uploads')));
 
 
-// Serve static files from the React app
-app.use(express.static('client/dist'));
-
-// Catch all routes and return the index.html
-app.get('*', (req, res) => {
-  res.sendFile('client/dist', 'index.html');
-});
-
 
 
 // Product API
