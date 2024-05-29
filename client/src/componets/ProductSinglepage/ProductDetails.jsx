@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./productDetails.css";
-import Product from "../Product/Product.jsx";
+// import Product from "../Product/Product.jsx";
 import Navbar from "../Navbar/Navbar.jsx";
 import { addCartItem } from "../../localStorageHelpers.jsx";
 
@@ -86,7 +86,7 @@ const ProductDetail = () => {
 
           <div className="product-detail-info">
             <h2>Name: {product.name}</h2>
-            <span className="product-detail-price">₹{product.price}</span>
+            <span className="product-detail-price">RS:₹{product.price}</span>
             <p className={`product-detail-description ${showFullDescription ? "show" : ""}`}>
               Description: {product.describe}
             </p>
@@ -111,7 +111,11 @@ const ProductDetail = () => {
                 <option value="xxl">XXL</option>
                 <option value="xxxl">XXXL</option>
               </select>
+              <Link to={"/sizechart"} className="sizechart">sizechart</Link>
             </div>
+
+        
+
             <p className="product-detail-rating">Rating: {product.rating}</p>
             <div className="quantity-container">
               <button onClick={() => handleQuantityChange(-1)}>-</button>
@@ -120,12 +124,23 @@ const ProductDetail = () => {
             </div>
             <button onClick={handleAddToCart}>Add to Cart</button>
           </div>
+          <div className="shippinginfo">
+          <h1 className="shipping">Shipping info</h1>
+          <ul>
+            <li>Orders are processed within 1-3 business days.</li>
+            <li>Orders are delivered within 7-10 business days.</li>
+            <li>Customers are responsible for accurate shipping information.</li>
+            <li>For undeliverable packages, customers may incur return shipping fees</li>
+            <li>Contact us for tracking issues or inquiries.</li>
+          </ul>
+          </div>
+          
           <p className="product-detail-created">
               Created at: {new Date(product.createdAt).toLocaleDateString()}
             </p>
         </div>
       </div>
-      <Product />
+     
     </>
   );
 };
