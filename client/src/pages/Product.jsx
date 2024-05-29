@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./product.css";
 import { useNavigate } from "react-router-dom";
-
+import Navbar from '../componets/Navbar/Navbar'
 
 const BASE_URL = "https://shafin-8q7w.onrender.com";
 
@@ -47,42 +47,35 @@ function GridExample() {
   }
 
   return (
-    <div className="main-box">
-      <h1> Trending All collections</h1>
-      {products.map((product) => (
-        <div className="product" key={product._id}>
-          {product.images && product.images.length > 0 ? (
-            product.images.map((image, index) => (
-              <img  onClick={() => navigate(`/products/${product._id}`)}
-                key={index}
-                src={image}
-                alt={`${product.name} image ${index}`}
-              />
-            ))
-          ) : (
-            <p>No images available</p>
-          )}
-          <h3>{product.name}</h3>
-          <p>{product.describe}</p>
-          <span>${product.price}</span>
-          <label>Size</label>
-          {/* <select
-            className="form-control"
-            value={size}
-            onChange={(e) => setSize(e.target.value)}
-          >
-            <option value="">Select Size</option>
-            <option value="small">Small</option>
-            <option value="medium">Medium</option>
-            <option value="large">Large</option>
-            <option value="x-large">X-Large</option>
-          </select> */}
-          <button onClick={() => navigate(`/products/${product._id}`)}>
-            View Details
-          </button>
-        </div>
-      ))}
-    </div>
+    <>
+    <Navbar/>
+    <br></br>
+        <div className="containers">
+           <div className="main-box">
+            <h2 className="title-oversizes1">Anime tees collections</h2>
+            <br></br>
+            {products.map((product) => (
+            <div className="products" key={product._id}>
+              {product.images && product.images.length > 0 ? (
+                product.images.map((image, index) => (
+                  <img
+                    className="img-products"
+                    onClick={() => navigate(`/products/${product._id}`)}
+                    key={index}
+                    src={image} 
+                    alt={`${product.name} image ${index}`}
+                  />
+                ))
+              ) : (
+                <p>No images available</p>
+              )}
+              <p className="title-oversized">{product.name}</p>
+              <p className="title-oversized">From at RS:{product.price}</p>
+            </div>
+          ))}
+         </div>
+         </div>
+    </>
   );
 }
 

@@ -55,6 +55,7 @@ function GridExample() {
 
   return (
     <div className="main-box">
+     
        {products.map((product) => (
             <div className="products" key={product._id}>
               {product.images && product.images.length > 0 ? (
