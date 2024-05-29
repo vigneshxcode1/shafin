@@ -3,11 +3,11 @@ import { toast } from "react-toastify";
 import Navbar from "../../src/componets/Navbar/Navbar.jsx";
 import "./cart.css";
 import { getCartItems, updateCartItem, removeCartItem, clearCart } from "../localStorageHelpers.jsx";
-import { useNavigate } from "react-router-dom"; 
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
     const [cartItems, setCartItems] = useState([]);
-    const navigate = useNavigate(); 
+    const navigate = useNavigate();
 
     useEffect(() => {
         const items = getCartItems();
@@ -46,7 +46,13 @@ const Cart = () => {
     };
 
     const calculateTotal = () => {
-        return cartItems.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
+        let totalAmount = cartItems.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
+        return totalAmount;
+    };
+
+    const calculateTotalQuantity = () => {
+        let totalQuantity = cartItems.reduce((total, item) => total + item.quantity, 0);
+        return totalQuantity;
     };
 
     const handleProceedToPayment = () => {
@@ -62,11 +68,12 @@ const Cart = () => {
             });
             return;
         }
-        
+
         let message = `Hello! YOUR BRAND I'd like to proceed with my order. Here are the details:\n`;
         cartItems.forEach(item => {
-            message += `Product Name: ${item.name}\nDescription: ${item.describe}\nSize: ${item.size}\nQuantity: ${item.quantity}\nPrice: $${item.price}\n`;
+            message += `Product Name: ${item.name}\nDescription: ${item.describe}\nSize: ${item.size}\nQuantity: ${item.quantity}\nPrice: $${item.price * item.quantity}\n`;
         });
+      
         message = encodeURIComponent(message);
         const whatsappUrl = `https://wa.me/9025630360/?text=${message}`;
         window.location.href = whatsappUrl;
@@ -81,9 +88,9 @@ const Cart = () => {
             progress: undefined,
         });
 
-        clearCart(); 
-        setCartItems([]); 
-        navigate("/"); 
+        clearCart();
+        setCartItems([]);
+        navigate("/");
     };
 
     if (cartItems.length === 0) {
@@ -99,12 +106,10 @@ const Cart = () => {
     return (
         <>
             <Navbar />
-         
             <div className="cart-container">
                 <h1>Your Cart</h1>
                 {cartItems.map(item => (
                     <div key={item._id} className="cart-item">
-                       
                         <img src={item.images[0]} alt={item.name} />
                         <div className="cart-item-info">
                             <h2>Name: {item.name}</h2>
@@ -115,7 +120,7 @@ const Cart = () => {
                                 <span>{item.quantity}</span>
                                 <button onClick={() => handleQuantityChange(item._id, item.quantity + 1)}>+</button>
                             </div>
-                            <button className='remove' onClick={() => handleRemoveItem(item._id)}>remove</button>
+                            <button className='remove' onClick={() => handleRemoveItem(item._id)}>Remove</button>
                         </div>
                     </div>
                 ))}

@@ -86,9 +86,9 @@ const ProductDetail = () => {
 
           <div className="product-detail-info">
             <h2>Name: {product.name}</h2>
-            <span className="product-detail-price">RS:₹{product.price}</span>
+            <span className="product-detail-price">Rs:₹{product.price}</span>
             <p className={`product-detail-description ${showFullDescription ? "show" : ""}`}>
-              Description: {product.describe}
+              Description: <br></br>{product.describe}
             </p>
             <button className="toggle-button-des" onClick={toggleDescription}>
               {showFullDescription ? "Show Less" : "Show More"}
@@ -115,7 +115,7 @@ const ProductDetail = () => {
             </div>
 
         
-            {/* <p className="product-detail-rating">Rating: {product.rating}</p> */}
+            <p className="product-detail-rating">Rating: {product.rating}</p>
 
             <div className="quantity-container">
               <button onClick={() => handleQuantityChange(-1)}>-</button>

@@ -22,18 +22,18 @@ function NavScrollExample() {
             style={{ maxHeight: '200px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1">TOP COLLECTIONS</Nav.Link>
-            <Nav.Link href="#action2">NEW ARRIVAL</Nav.Link>
+            <Nav.Link href="/aniproducts">TOP COLLECTIONS</Nav.Link>
+            <Nav.Link href="/products">NEW ARRIVAL</Nav.Link>
             <NavDropdown title="COLLECTIONS" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">ANIMA</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
-              ANOTHER ITEMS
+              <NavDropdown.Item href="/anioversized">ANIME</NavDropdown.Item>
+              <NavDropdown.Item href="/posters">
+              POSTER
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
-              ANOTHER ITEMS
+              <NavDropdown.Item href="/animiposters">
+              Animi poster
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
-              ANOTHER ITEMS
+              <NavDropdown.Item href="/movieposters">
+              movieposters
               </NavDropdown.Item>
               <NavDropdown.Divider />
             </NavDropdown>
