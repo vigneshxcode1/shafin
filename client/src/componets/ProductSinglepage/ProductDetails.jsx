@@ -115,15 +115,18 @@ const ProductDetail = () => {
             </div>
 
         
+            {/* <p className="product-detail-rating">Rating: {product.rating}</p> */}
 
-            <p className="product-detail-rating">Rating: {product.rating}</p>
             <div className="quantity-container">
               <button onClick={() => handleQuantityChange(-1)}>-</button>
               <span className="quantity">{quantity}</span>
               <button onClick={() => handleQuantityChange(1)}>+</button>
             </div>
             <button onClick={handleAddToCart}>Add to Cart</button>
+            
           </div>
+
+         
           <div className="shippinginfo">
           <h1 className="shipping">Shipping info</h1>
           <ul>
