@@ -12,10 +12,12 @@ import { METHODS } from 'http';
 const app = express();
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({
-  "origin": "https://shoppinf.onrender.com",
-  "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
-}));
+app.use(cors(
+  // {
+  // "origin": "https://shoppinf.onrender.com",
+  // "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+// }
+));
 
 dotenv.config();
 const __filename = fileURLToPath(import.meta.url);
