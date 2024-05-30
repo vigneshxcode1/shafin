@@ -15,9 +15,10 @@ const Entry = () => {
         <Link to="/postercollections" >
           <h1 className="link-item">POSTERS</h1>
         </Link>
-        <a href="https://wa.me/9025630360" >
-          <h1 className="link-item">CONTACT</h1>
-        </a>
+  
+         
+          <Link to={'/contact'}><h1 className="link-item">CONTACT</h1></Link>
+  
       
         <Link to="/cart">
           <h1 className="link-item">CART</h1>
