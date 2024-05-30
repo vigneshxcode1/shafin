@@ -12,7 +12,7 @@ const Contact = () => {
         <span>Contact Links</span>
         <Link className="contact" to={"https://wa.me/9025630360"}>WhatsApp</Link>
         <Link className="contact" to={"https://telegram.me/Deepakspax"}>Telegram</Link>
-          <Link className="contact" href="https://www.instagram.com/ideepx_official/?hl=en">Instagram</Link>
+          <Link className="contact" to={"https://www.instagram.com/ideepx_official/?hl=en"}>Instagram</Link>
           <Link className="contact" to={""}>Facebook</Link>
          
         </div>
