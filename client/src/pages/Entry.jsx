@@ -32,16 +32,16 @@ const Entry = () => {
 
 
       <footer className="main-foot">
+      <Link  href="mailto:your@gmail.com" className="foot-item">
+          email
+        </Link>
 
-    <a  className="foot-item" href="/about">about</a>
         <Link className="foot-item"  to="/sizechart">size chart</Link>
       
         
         <p className="foot-item">shipping</p>
-        <a  href="mailto:your@gmail.com" className="foot-item">
-          email
-        </a>
-
+   
+        <Link  className="foot-item" href="/about">about</Link>
         <p className="foot-item">term and conditions</p>
      
       </footer>
