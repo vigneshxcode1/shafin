@@ -15,8 +15,6 @@ app.use(cookieParser());
 app.use(cors({
   "origin": "https://shoppinf.onrender.com",
   "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
-  "preflightContinue": false,
-  "optionsSuccessStatus": 204
 }));
 
 dotenv.config();
