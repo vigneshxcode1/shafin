@@ -107,6 +107,7 @@ const ProductDetail = () => {
               >
                 <option value="s">S</option>
                 <option value="m">M</option>
+                <option value="l">L</option>
                 <option value="xl">XL</option>
                 <option value="xxl">XXL</option>
                 <option value="xxxl">XXXL</option>

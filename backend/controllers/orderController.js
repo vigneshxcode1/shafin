@@ -1,37 +1,28 @@
 import ordermodel from "../model/Order.js";
 import productmodel from "../model/Product.js";
 
-export const createorder = async (req, res, next) => {
-  const {
-    shippinginfo,
-    orderItems,
-    itemprice,
-    taxprice,
-    shippingprice,
-    totalprice,
-    deliverytimeAT,
-    orderStatus,
-    createdAt,
-  } = req.body;
 
-  const order = await ordermodel.create({
-    shippinginfo,
-    user: req.user.id,
-    orderItems,
-    itemprice,
-    taxprice,
-    shippingprice,
-    totalprice,
-    paytimeAT: Date.now(),
-    deliverytimeAT,
-    orderStatus,
-    createdAt,
-  });
-  res.status(200).json({
-    success: true,
-    message: "order created",
-    order,
-  });
+export const createorder = async (req, res, next) => {
+  try {
+    const { shippinginfo } = req.body;
+
+    const order = await ordermodel.create({ shippinginfo });
+
+   
+    res.status(200).json({
+      success: true,
+      message: "Order created",
+      order,
+    });
+  } catch (error) {
+  
+    console.error("Error creating order:", error);
+    res.status(500).json({
+      success: false,
+      message: "Failed to create order",
+      error: error.message,
+    });
+  }
 };
 
 export const getsingleorder = async (req, res, next) => {

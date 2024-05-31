@@ -8,16 +8,11 @@ import cookieParser from 'cookie-parser';
 import cors from 'cors';
 import orderRoute from './routes/orderRoute.js';
 import { fileURLToPath } from 'url'
-import { METHODS } from 'http';
+
 const app = express();
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors(
-  // {
-  // "origin": "https://shoppinf.onrender.com",
-  // "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
-// }
-));
+app.use(cors());
 
 dotenv.config();
 const __filename = fileURLToPath(import.meta.url);
