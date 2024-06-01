@@ -3,7 +3,7 @@ import axios from "axios";
 import "../cart.css"
 
 
-const BASE_URL = "http://localhost:8000";
+const BASE_URL = "https://shoppinf.onrender.com";
 
 
 
