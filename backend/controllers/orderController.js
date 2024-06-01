@@ -1,12 +1,12 @@
-import ordermodel from "../model/Order.js";
+import Ordermodel from "../model/Order.js";
 import productmodel from "../model/Product.js";
 
 
 export const createorder = async (req, res, next) => {
   try {
-    const { shippinginfo } = req.body;
+    const {name, address,city,country,phone,pin} = req.body;
 
-    const order = await ordermodel.create({ shippinginfo });
+    const order = await Ordermodel.create({name,address,city,country,phone,pin});
 
    
     res.status(200).json({
@@ -45,7 +45,7 @@ export const getsingleorder = async (req, res, next) => {
 };
 
 export const myorder = async (req, res, next) => {
-  const order = await ordermodel.find({ user: req.user.id });
+  const order = await Ordermodel.find({ user: req.user.id });
   res.status(200).json({
     success: true,
     message: "order found",

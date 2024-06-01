@@ -69,18 +69,10 @@ const Cart = () => {
             return;
         }
 
-        let message = `Hello! YOUR BRAND I'd like to proceed with my order. Here are the details:\n`;
-        cartItems.forEach(item => {
-            message += `Product Name: ${item.name}\nDescription: ${item.describe}\nSize: ${item.size}\nQuantity: ${item.quantity}\nPrice: $${item.price * item.quantity}\n`;
-        });
-      
-        message = encodeURIComponent(message);
-        const whatsappUrl = `https://wa.me/9025630360/?text=${message}`;
-        window.location.href = whatsappUrl;
 
-        toast.success('Redirecting to WhatsApp...', {
+        toast.success('Redirecting to shipping details...', {
             position: "top-right",
-            autoClose: 3000,
+            autoClose: 1000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
@@ -88,9 +80,8 @@ const Cart = () => {
             progress: undefined,
         });
 
-        clearCart();
-        setCartItems([]);
-        navigate("/");
+       
+        navigate("/ordershipping");
     };
 
     if (cartItems.length === 0) {
@@ -112,7 +103,7 @@ const Cart = () => {
                     <div key={item._id} className="cart-item">
                         <img src={item.images[0]} alt={item.name} />
                         <div className="cart-item-info">
-                            <h2>Name: {item.name}</h2>
+                            <h2> {item.name}</h2>
                             <p>Price: ₹{item.price}</p>
                             <p>Size: {item.size}</p>
                             <div className="quantity-container">
@@ -126,7 +117,7 @@ const Cart = () => {
                 ))}
                 <div className="cart-summary">
                     <h2 className="total">Total: ${calculateTotal()}</h2>
-                    <button className="process-btn" onClick={handleProceedToPayment}>Proceed to Payment</button>
+                    <button className="process-btn" onClick={handleProceedToPayment}>Proceed to order</button>
                 </div>
             </div>
         </>

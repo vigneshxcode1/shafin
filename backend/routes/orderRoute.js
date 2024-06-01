@@ -3,6 +3,7 @@ import { createorder, getsingleorder, myorder } from '../controllers/orderContro
 const routes = express.Router();
 
 routes.post('/order/new', createorder);
+
 routes.get('/order/:id', getsingleorder);
 routes.get('/myorder', myorder);
 

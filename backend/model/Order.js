@@ -1,41 +1,46 @@
-import mongoose  from "mongoose";
+import mongoose from "mongoose";
 
-const orderSchema=mongoose.Schema({
-  shippinginfo:{
-    address:{
-        type:String,
-        required:true
-    },
-    city:{
-        type:String,
-        required:true,
-        default:'chennai'
-        
-    },
-    country:{
-        type:String,
-        required:true,
-        default:"india"
-    },
-    phone:{
-        type:String,
-        required:true
-    },
-    pin:{
-        type:String,
-        required:true
-    }
-  
-
+const orderSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true,
   },
-  user:{
-    type:mongoose.Schema.Types.ObjectId,
-    require:true,
-    ref:'user'
-  }
+  address: {
+    type: String,
+    required: true,
+  },
+  city: {
+    type: String,
+    required: true,
+  },
+  country: {
+    type: String,
+    required: true,
+  },
+  phone: {
+    type: String,
+    required: true,
+    validate: {
+      validator: function (v) {
+        
+        return /^\d{10}$/.test(v);
+      },
+      message: (props) => `${props.value} is not a valid phone number!`,
+    },
+  },
+  pin: {
+    type: String,
+    required: true,
+    validate: {
+      validator: function (v) {
+        
+        return /^\d{6}$/.test(v);
+      },
+      message: (props) => `${props.value} is not a valid PIN!`,
+    },
+  },
+});
 
-})
+const OrderModel = mongoose.model("Order", orderSchema);
 
-const ordermodel=mongoose.model('order',orderSchema)
-
-export default ordermodel
+export default OrderModel;

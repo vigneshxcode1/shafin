@@ -41,6 +41,7 @@ import Bikeposter from "../src/Poster/Bikeposter.jsx";
 import Postercollections from "./Poster/Postercollections.jsx";
 import Sizechart from "./pages/sizechart.jsx";
 import Contact from "./pages/Contact.jsx";
+import OrderPage from "./cart/order/Order.jsx";
 
 function App() {
   return (
@@ -71,7 +72,7 @@ function App() {
         <Route path="/postercollections" element={<Postercollections />} />
         <Route path="/sizechart" element={<Sizechart />} />
         <Route path="/contact" element={<Contact/>}></Route>
-
+        <Route path="/ordershipping" element={<OrderPage/>}></Route>
 
         <Route path="/hoodies" element={<Hoodies />} />
         <Route path="/tshirt" element={<Tshirt />} />
