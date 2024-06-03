@@ -4,6 +4,8 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./productDetails.css";
+
+import loadingimg from '../../componets/images/animiloading.gif'
 // import Product from "../Product/Product.jsx";
 import Navbar from "../Navbar/Navbar.jsx";
 import { addCartItem } from "../../localStorageHelpers.jsx";
@@ -60,7 +62,7 @@ const ProductDetail = () => {
     setShowFullDescription((prevState) => !prevState);
   };
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <img className="loading" src={loadingimg}></img>;
   if (error) return <p>{error}</p>;
   if (!product) return <p>No product details available</p>;
 
@@ -85,7 +87,7 @@ const ProductDetail = () => {
           )}
 
           <div className="product-detail-info">
-            <h2>Name: {product.name}</h2>
+            <h2 className="product-detail-price">Name: {product.name}</h2>
             <span className="product-detail-price">Rs:₹{product.price}</span>
             <p className={`product-detail-description ${showFullDescription ? "show" : ""}`}>
               Description: <br></br>{product.describe}
@@ -93,9 +95,9 @@ const ProductDetail = () => {
             <button className="toggle-button-des" onClick={toggleDescription}>
               {showFullDescription ? "Show Less" : "Show More"}
             </button>
-            <p className="product-detail-seller">Seller: {product.seller}</p>
-            <p className="product-detail-stock">Stock: {product.stock}</p>
-            <p className="product-detail-category">
+            <p className="product-detail-price">Seller: {product.seller}</p>
+            <p  className="product-detail-price">Stock: {product.stock}</p>
+            <p  className="product-detail-price">
               Category: {product.category}
             </p>
             <div className="size-container">
@@ -104,6 +106,7 @@ const ProductDetail = () => {
                 id="size"
                 value={selectedSize}
                 onChange={(e) => setSelectedSize(e.target.value)}
+                
               >
                 <option value="s">S</option>
                 <option value="m">M</option>

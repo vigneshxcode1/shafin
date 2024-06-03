@@ -5,7 +5,7 @@ import "../componets/Product/Product.css"
 import Navbar from "../componets/Navbar/Navbar"
 import { useNavigate } from "react-router-dom";
 
-
+import loadingimg from "../componets/images/animiloading.gif"
 
 const BASE_URL = "https://shafin-8q7w.onrender.com";
 
@@ -40,7 +40,7 @@ function GridExample() {
   }, []);
 
   if (loading) {
-    return <p>Loading...</p>;
+    return <img className="loading" src={loadingimg}></img>
   }
 
   if (error) {

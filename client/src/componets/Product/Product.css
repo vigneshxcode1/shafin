@@ -1,5 +1,7 @@
 /* Product.css */
-
+.loading{
+margin-left: -30px;
+}
 .box {
   position: relative;
   overflow: hidden;
