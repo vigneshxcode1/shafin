@@ -1,80 +1,95 @@
-.background{
-    background-image: url('../componets/images/nuruto.gif');
-    font-family:'Times New Roman', Times, serif;
+.text-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Cover the entire video */
+  height: 100%; /* Cover the entire video */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
 }
-h1{
-    color: rgb(255, 255, 255);
-    
-   
+
+.background-video{
+  width: 100%;
 }
-.brand {
-    font-size: 24px;
-    margin-bottom: 20px;
-    
-  }
+.brand-img,
+.link-item,
+.foot-item {
+
+  color: white;
+  text-decoration: none;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 800;
+  font-size: 4vw; 
+margin-right: 100px;
+  margin-bottom: 2vw; /* Responsive margin */
+}
+
+.main-links {
+  display: flex;
+  margin-top: 150px;
+  justify-content: space-around;
+  text-decoration: none; /* Adjust alignment for smaller screens */
+}
+
+.link-item {
+  margin-top: 10px;
+}
+
+.main-foot {
+  display: flex;
+  margin-top: 1000px; /* Adjust margin for smaller screens */
+  color: white;
+  flex-direction: column;
+  background-color: black;
+ 
+}
+
+.foot-item {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 2vw; /* Responsive font size */
+}
+
+/* Media queries for mobile responsiveness */
+@media only screen and (max-width: 760px) {
+  .text-overlay {
+    justify-content: flex-start; /* Adjust alignment for smaller screens */
+    padding-top: 50px; /* Add space at the top */
   
-  .play-button .music{
-   background-color: aqua;
-   
-  }
-  .main-links {
-    display: flex;
-    margin-top: 150px;
-    text-decoration: none;
-    justify-content: space-between;
-  
-  }
-  .foot-item{
-    color: white;
   }
 
-  a{
-    text-decoration: none;
-  }
-  .main-links .link-item{
-    margin-top:10px;
-   
-color: rgb(255, 255, 255);
-font-family:'Times New Roman', Times, serif;
-font-weight: 800;
-font-size: 30px;
-  }
-  .main-foot {
-    display: flex;
-    margin-top:250px;
-    flex-direction: column;
-    background-color: black;
-    text-decoration: none;
-  }
-  
+  .brand-img,
   .link-item,
   .foot-item {
-    margin-bottom: 20px;
+    text-decoration: none;
+    font-size: 5vw; /* Adjust font size for smaller screens */
+    margin-bottom: 3vw; /* Adjust margin for smaller screens */
   }
-  
-  /* Media queries for mobile responsiveness */
-  @media only screen and (max-width: 760px) {
-    .brand {
-      font-size: 20px;
-      margin-bottom: 10px;
-    }
-  
-    .main-links {
-      flex-direction: column;
-      align-items: center;
-      font-family:'Times New Roman', Times, serif;
-     
-    }
-  
-    .link-item {
-      margin-bottom: 8px;
-    }
-  
-    .foot-item {
-      margin-bottom: 5px;
-      text-decoration: none;
-      color: rgb(244, 244, 244);
-      font-size: 20px;
-    }
+  .background-video{
+    width: 400px;
   }
-  
+  .main-links {
+    flex-direction: column; /* Stack links vertically on smaller screens */
+    align-items: center; 
+    font-size: 0px;
+  }
+  .link-item{
+    font-size: 30px;
+    margin-right: -10px;
+    text-decoration: none;
+   
+
+  }
+ 
+.brand-img{
+  margin-right: -0px;
+}
+  .main-foot {
+    margin-top: 300px; /* Adjust margin for smaller screens */
+    align-items: center;
+    margin-right: -90px; /* Center align items */
+  }
+}

@@ -1,33 +1,44 @@
 import React, { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Enter.css";
-import backgroundmusic from "../componets/images/background.mp3"; // Fix the typo in the path
-
+import backgroundVideo from "../componets/images/naruto.mp4"; // Adjust the path and file extension if needed
+import backgroundaudio from "../componets/images/background.mp3"
 const Entry = () => {
-  const audioRef = useRef(null);
+  const videoRef = useRef(null);
+  const audioref=useRef(null)
 
   useEffect(() => {
-    if (audioRef.current) {
-      const playAudio = () => {
-        audioRef.current.play().catch((error) => {
-          console.log("Autoplay was prevented:", error);
-        });
-      };
-      playAudio();
+    const video = videoRef.current;
 
-      // Optional: Add an event listener to play the audio on user interaction
-      window.addEventListener('click', playAudio);
+    const playVideo = () => {
+      video.play().catch((error) => {
+        console.log("Autoplay was prevented:", error);
+      });
+    };
 
-      // Cleanup event listener
-      return () => {
-        window.removeEventListener('click', playAudio);
-      };
+    const audio=audioref.current;
+    const playaudio=()=>{
+      audio.play().catch((error) => {
+        console.log("Autoplay was prevented:", error);
+      });
     }
+
+    playVideo();
+    playaudio
+
+    window.addEventListener('click', playVideo);
+window.addEventListener('click',playaudio)
+    return () => {
+      window.removeEventListener('click', playVideo);
+      window.removeEventListener('click', playaudio)
+    };
   }, []);
 
   return (
     <div className="background">
-      <audio ref={audioRef} src={backgroundmusic} loop />
+    <video ref={videoRef} src={backgroundVideo} autoPlay loop muted playsInline className="background-video" />
+    <audio ref={audioref} src={backgroundaudio}></audio>
+    <div className="text-overlay">
       <h1 className="brand-img">YOUR BRAND</h1>
       <nav className="main-links">
         <Link to="/home">
@@ -53,6 +64,8 @@ const Entry = () => {
         <p className="foot-item">terms and conditions</p>
       </footer>
     </div>
+  </div>
+  
   );
 };
 
