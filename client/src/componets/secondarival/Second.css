@@ -23,6 +23,7 @@
     border: none;
     color: #423a3a;
     background-color: rgba(125, 245, 139, 0.992);
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.504);
 }
 .feature{
     background-color: rgb(255, 255, 255);
