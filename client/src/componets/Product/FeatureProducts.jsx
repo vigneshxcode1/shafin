@@ -13,7 +13,7 @@ function animicollections() {
   return (
     <CardGroup>
       <Card.Body className="box">
-        <Link to={"/animicollections"}>
+        <Link to={"/anioversized"}>
           <img variant="top" src={animi} alt="Anime Collections" />
           <div className="overlay">
             <div className="overlay-text">Anime Tees</div>
@@ -23,7 +23,7 @@ function animicollections() {
       </Card.Body>
 
       <Card.Body className="box">
-        <Link to={"/trendcollection"}>
+        <Link to={"/trendoversized"}>
           <img variant="top" src={trend} alt="Trending Collections" />
           <div className="overlay">
             <div className="overlay-text">Trending Tees</div>
@@ -33,7 +33,7 @@ function animicollections() {
       </Card.Body>
 
       <Card.Body className="box">
-        <Link to={"/carcollections"}>
+        <Link to={"/caroversized"}>
           <img variant="top" src={car} alt="Car Collections" />
           <div className="overlay">
             <div className="overlay-text">Car Tees</div>
@@ -43,7 +43,7 @@ function animicollections() {
       </Card.Body>
 
       <Card.Body className="box">
-        <Link to={"/bikecollections"}>
+        <Link to={"/bikeoversized"}>
           <img variant="top" src={bike} alt="Bike Collections" />
           <div className="overlay">
             <div className="overlay-text">Bike Tees</div>

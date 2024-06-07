@@ -129,23 +129,23 @@ const Createproducts = () => {
                 onChange={(e) => setCategory(e.target.value)}
               >
                 <option value="">Select category</option>
-                <option value="animi-tshirt">Anime T-shirt</option>
+                {/* <option value="animi-tshirt">Anime T-shirt</option> */}
                 <option value="animi-oversizes-t-shirts">Anime Oversized T-shirts</option>
                 <option value="printed-oversized">Printed Oversized</option>
-                <option value="trending">Trending</option>
+                {/* <option value="trending">Trending</option> */}
                 <option value="trendoversized">TrendingOversized</option>
-                <option value="car">Car</option>
+                {/* <option value="car">Car</option> */}
                 <option value="caroversized">CarOversizes</option>
-                <option value="bike">Bike</option>
+                {/* <option value="bike">Bike</option> */}
                 <option value='bikeoversized'>bikeoversized</option>
                 <option value="posters">trendingposters</option>
                 <option value="movieposter">movieposters</option>
                 <option value="carposter">carposters</option>
                 <option value="bikeposter">bikeposters</option>
                 <option value="animiposter">animiposters</option>
-                <option value="pants">Pants</option>
-                <option value="T-shirt">T-shirt</option>
-                <option value="printed-collection">Printed Collection</option>
+                {/* <option value="pants">Pants</option> */}
+                {/* <option value="T-shirt">T-shirt</option>
+                <option value="printed-collection">Printed Collection</option> */}
               </select>
             </div>
             <div className="mb-3">
