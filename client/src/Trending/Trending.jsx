@@ -4,7 +4,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Navbar from '../componets/Navbar/Navbar'
 import "../../src/componets/Product/Product.css"
-
+import loadingimg from "../componets/images/animiloading.gif"
 
 
 const BASE_URL = "https://shafin-8q7w.onrender.com";
@@ -40,7 +40,14 @@ function GridExample() {
   }, []);
 
   if (loading) {
-    return <p>Loading...</p>;
+    return (
+      <>
+       <img className="loading" src={loadingimg}></img>
+       <p className="loading">Loading....</p>
+      </>
+   
+    
+    )
   }
 
   if (error) {

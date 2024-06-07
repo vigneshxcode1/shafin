@@ -6,9 +6,9 @@ function HeaderAndFooterExample() {
   return (
     <div className="feature">
       <Card className="text-center">
-        <Card.Header>ABOUT OUR BRAND</Card.Header>
+        <Card.Header className="head">ABOUT OUR BRAND</Card.Header>
         <Card.Body>
-          <Card.Text>
+          <Card.Text className="text">
           We are good to announce the launch of our new brand, dedicated
             to providing the epitome of elegance at prices that everyone can
             afford. This marks a significant milestone for us, as we strive to

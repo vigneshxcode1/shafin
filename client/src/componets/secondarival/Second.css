@@ -7,7 +7,16 @@
     color: #423a3a;
     background-color: rgba(125, 245, 139, 0.992);
 }
+.text{
+    font-size: large;
+    font-family: sans-serif;
 
+}
+.head{
+    margin-top: 10px;
+
+    box-shadow: 5px 2px 2px  1px  rgba(0, 0, 0, 0.386);
+}
 .text-btn{
     padding: 10px;
     border-radius: 10px;

@@ -59,7 +59,7 @@ function animicollections() {
             <div className="overlay-text">Poster Collections</div>
           </div>
         </Link>
-        <h1 className="title">TRENDING POSTER COLLECTIONS</h1>
+        <h1 className="title">POSTER COLLECTIONS</h1>
       </Card.Body>
     </CardGroup>
   );

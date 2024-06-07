@@ -5,8 +5,8 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./productDetails.css";
 
-import loadingimg from '../../componets/images/animiloading.gif'
-// import Product from "../Product/Product.jsx";
+import loadingimg from '../../componets/images/luffy2.gif'
+
 import Navbar from "../Navbar/Navbar.jsx";
 import { addCartItem } from "../../localStorageHelpers.jsx";
 

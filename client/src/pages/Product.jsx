@@ -3,6 +3,8 @@ import axios from "axios";
 import "./product.css";
 import { useNavigate } from "react-router-dom";
 import Navbar from '../componets/Navbar/Navbar'
+import loadingimg from "../componets/images/stickgif.gif"
+
 
 const BASE_URL = "https://shafin-8q7w.onrender.com";
 
@@ -35,7 +37,14 @@ function GridExample() {
   }, []);
 
   if (loading) {
-    return <p>Loading...</p>;
+    return (
+      <>
+       <img className="loading" src={loadingimg}></img>
+       <p className="loading">Loading....</p>
+      </>
+   
+    
+    )
   }
 
   if (error) {

@@ -40,7 +40,14 @@ function GridExample() {
   }, []);
 
   if (loading) {
-    return <img className="loading" src={loadingimg}></img>
+    return (
+      <>
+       <img className="loading" src={loadingimg}></img>
+       <p className="loading">Loading....</p>
+      </>
+   
+    
+    )
   }
 
   if (error) {

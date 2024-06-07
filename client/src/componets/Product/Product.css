@@ -1,6 +1,8 @@
 /* Product.css */
 .loading{
-margin-left: -30px;
+margin-left:0px;
+margin-top: 50px;
+width: 400px;
 }
 .box {
   position: relative;
