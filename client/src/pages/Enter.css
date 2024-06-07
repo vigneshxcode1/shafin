@@ -57,12 +57,14 @@ margin-right: 100px;
 @media only screen and (max-width: 760px) {
   .text-overlay {
     justify-content: flex-start; /* Adjust alignment for smaller screens */
-    padding-top: 50px; /* Add space at the top */
-  
+   ; /* Add space at the top */
+    color: black;
   }
 
-  .brand-img,
-  .link-item,
+  .brand-img{
+    margin-top: 100px;
+   
+  }
   .foot-item {
     text-decoration: none;
     font-size: 5vw; /* Adjust font size for smaller screens */
@@ -74,22 +76,80 @@ margin-right: 100px;
   .main-links {
     flex-direction: column; /* Stack links vertically on smaller screens */
     align-items: center; 
-    font-size: 0px;
+    font-size: 40px;
   }
-  .link-item{
-    font-size: 30px;
-    margin-right: -10px;
-    text-decoration: none;
-   
 
-  }
  
 .brand-img{
   margin-right: -0px;
 }
-  .main-foot {
-    margin-top: 300px; /* Adjust margin for smaller screens */
-    align-items: center;
-    margin-right: -90px; /* Center align items */
-  }
+ 
+.main-foot{
+margin-bottom: -100px;
+background: rgba(0, 0, 0, 0.554);
+  padding: 40px 300px;
+
+}
+
+}
+
+/* Enter.css */
+
+/* General styles */
+.background {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  z-index: 1;
+}
+
+.brand-img {
+  font-size: 3rem;
+}
+
+.main-links {
+  margin-top: 2rem;
+}
+
+.link-item {
+  display: inline-block;
+  margin: 0 1rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+}
+
+.main-foot {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.foot-item {
+  display: inline-block;
+  margin: 0 1rem;
+  font-size: 1rem;
+  color: #fff;
+  text-decoration: none;
 }
