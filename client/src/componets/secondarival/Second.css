@@ -14,8 +14,8 @@
 }
 .head{
     margin-top: 10px;
-
-    box-shadow: 5px 2px 2px  1px  rgba(0, 0, 0, 0.386);
+border-radius: 20px;
+    box-shadow:5px 8px 10px 7px  rgba(35, 35, 35, 0.252);
 }
 .text-btn{
     padding: 10px;
