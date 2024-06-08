@@ -119,7 +119,7 @@ const ProductDetail = () => {
             </div>
 
         
-            <p className="product-detail-rating">Rating: {product.rating}</p>
+            {/* <p className="product-detail-rating">Rating: {product.rating}</p> */}
 
             <div className="quantity-container">
               <button onClick={() => handleQuantityChange(-1)}>-</button>
