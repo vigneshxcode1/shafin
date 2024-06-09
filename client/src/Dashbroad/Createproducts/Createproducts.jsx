@@ -15,7 +15,7 @@ const Createproducts = () => {
   const [describe, setDescription] = useState("");
   const [seller, setSeller] = useState("");
   const [rating, setRating] = useState("");
-  const [size, setSize] = useState("s");
+  const [size, setSize] = useState("m");
   const [images, setImages] = useState([]);
 
   const navigate = useNavigate();
