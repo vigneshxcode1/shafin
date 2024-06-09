@@ -94,6 +94,24 @@ export const updateproduct=async(req,res,next)=>{
 
 }
 
+export const singleproductupdate=async(req,res)=>{
+    let product=await productModel.findByIdAndUpdate(req.params.id,req.body,{
+        new:true,
+        runvalidator:true
+    
+        })
+        if(!product){
+           return  res.status(404).json({
+                success:true,
+                message:"product not found"
+            })
+        }
+        res.status(200).json({
+            success:true,
+            message:"product updated ",
+            product
+        })
+}
 
 export const deleteproduct=async(req,res,next)=>{
 
