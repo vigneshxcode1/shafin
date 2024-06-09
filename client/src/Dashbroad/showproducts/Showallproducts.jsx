@@ -69,15 +69,18 @@ export const Showallproducts = () => {
       <h1>All products in store</h1>
       <Link to="/dashbroad" element={<Dashbroad />}>Dashboard</Link>
       <div className="products-grid">
-        {products.map((product) => (
-          <div className="product" key={product._id}>
-           {product.images && product.images.length > 0 ? (
-            product.images.map((image, index) => (
-              <img key={index} src={image} alt={`${product.name} image ${index}`} />
-            ))
-          ) : (
-            <p>No images available</p>
-          )}
+      {products.map((product) => (
+            <div className="products" key={product._id}>
+              {product.images && product.images.length > 0 ? (
+                <img
+                  className="img-products"
+                  onClick={() => navigate(`/products/${product._id}`)}
+                  src={product.images[0]} 
+                  alt={`${product.name} first image`}
+                />
+              ) : (
+                <p>No images available</p>
+              )}
             <p>Name:{product.name}</p>
             <p>Stock:{product.stock}</p>
             <span> price ${product.price}</span>

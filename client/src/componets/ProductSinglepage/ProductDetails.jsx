@@ -48,7 +48,7 @@ const ProductDetail = () => {
         return;
       }
 
-      addCartItem({ ...product, size: selectedSize }, quantity);
+     addCartItem({ ...product, size: selectedSize }, quantity);
       setProduct((prevProduct) => ({ ...prevProduct, stock: updatedStock }));
       toast.success("Product successfully added to cart");
     } catch (err) {
