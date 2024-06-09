@@ -118,9 +118,9 @@ const ProductDetail = () => {
               <Link to={"/sizechart"} className="sizechart">sizechart</Link>
             </div>
             <div className="quantity-container">
-              <button onClick={() => handleQuantityChange(-1)}>-</button>
+              <button className="quabtity-btn-left" onClick={() => handleQuantityChange(-1)}>-</button>
               <span className="quantity">{quantity}</span>
-              <button onClick={() => handleQuantityChange(1)}>+</button>
+              <button className="quabtity-btn-right" onClick={() => handleQuantityChange(1)}>+</button>
             </div>
             <button className="cart" onClick={handleAddToCart}><img src={cartimg}></img></button>
           </div>

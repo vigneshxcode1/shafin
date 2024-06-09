@@ -87,9 +87,15 @@ background-color: #23e600;
 
 
 }
+.quabtity-btn-left{
+  margin-right: 10px;
+}
+.quabtity-btn-right{
+  margin-left:15px;
+}
 .quantity{
   color: #23e600;
-  margin-top: 20px;
+  margin-top: 10px;
   
 }
 .product-detail-info button:hover {
