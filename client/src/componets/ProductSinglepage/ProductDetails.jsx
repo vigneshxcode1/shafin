@@ -16,7 +16,7 @@ const ProductDetail = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [quantity, setQuantity] = useState(1);
-  const [selectedSize, setSelectedSize] = useState("s");
+  const [selectedSize, setSelectedSize] = useState("m");
   const [showFullDescription, setShowFullDescription] = useState(false);
   const [current, setCurrent] = useState(0);
   const { id } = useParams();
@@ -95,7 +95,7 @@ const ProductDetail = () => {
             </div>
           </div>
           <div className="product-detail-info">
-            <h2 className="product-detail-price">Name: {product.name}</h2>
+            <p className="product-detail-price">Name: {product.name}</p>
             <span className="product-detail-price">Rs:₹{product.price}</span>
             <p className={`product-detail-description ${showFullDescription ? "show" : ""}`}>
               Description: <br />{product.describe}
@@ -109,12 +109,11 @@ const ProductDetail = () => {
             <div className="size-container">
               <label htmlFor="size">Select Size:</label>
               <select id="size" value={selectedSize} onChange={(e) => setSelectedSize(e.target.value)}>
-                <option value="s">S</option>
+               
                 <option value="m">M</option>
                 <option value="l">L</option>
                 <option value="xl">XL</option>
-                <option value="xxl">XXL</option>
-                <option value="xxxl">XXXL</option>
+                
               </select>
               <Link to={"/sizechart"} className="sizechart">sizechart</Link>
             </div>

@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 .text-muted{
     padding: 10px;
     margin-top: 35px;
@@ -7,9 +11,19 @@
     color: #423a3a;
     background-color: rgba(125, 245, 139, 0.992);
 }
+/*type*/
+@font-face{
+    font-family: "bosko";
+    font-family: "gothvetica";
+    font-family: "cornor";
+    font-family: "fontstart";
+    src: url("../../fonts/Fonstars-4Bo0p.otf");
+   
+}
+
 .text{
-    font-size: large;
-    font-family: sans-serif;
+    font-family: "fontstart";
+   
 
 }
 .head{
