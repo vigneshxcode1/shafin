@@ -64,22 +64,19 @@ function GridExample() {
 <>
 <Navbar/>
 <br></br>
-    <div className="containers">
-       <div className="main-box">
-        <h2 className="title-oversizes1">Anime OverSized collections</h2>
-        <br></br>
-        {products.map((product) => (
+<div className="containers">
+        <div className="main-box">
+          <h2 className="title-oversizes1">Anime OverSized collections</h2>
+          <br></br>
+          {products.map((product) => (
             <div className="products" key={product._id}>
               {product.images && product.images.length > 0 ? (
-                product.images.map((image, index) => (
-                  <img
-                    className="img-products"
-                    onClick={() => navigate(`/products/${product._id}`)}
-                    key={index}
-                    src={image} 
-                    alt={`${product.name} image ${index}`}
-                  />
-                ))
+                <img
+                  className="img-products"
+                  onClick={() => navigate(`/products/${product._id}`)}
+                  src={product.images[0]} 
+                  alt={`${product.name} first image`}
+                />
               ) : (
                 <p>No images available</p>
               )}
@@ -87,8 +84,8 @@ function GridExample() {
               <p className="title-oversized">From at RS:{product.price}</p>
             </div>
           ))}
-     </div>
-     </div>
+        </div>
+      </div>
 </>
  
    
