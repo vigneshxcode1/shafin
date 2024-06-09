@@ -4,7 +4,7 @@ import "../cart.css"
 
 
 const BASE_URL = "https://shoppinf.onrender.com";
-
+// const BASE_URL = "http://localhost:8000";
 
 
 const ShippingPage = () => {
@@ -71,7 +71,7 @@ PIN: ${pin}
           cartItemsMessage += `
 Product Name: ${item.name}
 Quantity:${item.quantity}
-Images:${item.images}
+Images:${item.images[0]}
 Price:Rs:${item.price}
 total:Rs${item.quantity*item.price}
 Category: ${item.category}
