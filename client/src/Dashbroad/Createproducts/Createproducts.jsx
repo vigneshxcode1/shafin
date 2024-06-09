@@ -131,7 +131,7 @@ const Createproducts = () => {
                 <option value="">Select category</option>
                 {/* <option value="animi-tshirt">Anime T-shirt</option> */}
                 <option value="animi-oversizes-t-shirts">Anime Oversized T-shirts</option>
-                <option value="printed-oversized">Printed Oversized</option>
+                {/* <option value="printed-oversized">Printed Oversized</option> */}
                 {/* <option value="trending">Trending</option> */}
                 <option value="trendoversized">TrendingOversized</option>
                 {/* <option value="car">Car</option> */}
