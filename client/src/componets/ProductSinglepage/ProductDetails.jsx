@@ -4,7 +4,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./productDetails.css";
-
+import cartimg from "../../componets/images/addcartimg.gif" 
 import loadingimg from '../../componets/images/luffy2.gif'
 import Navbar from "../Navbar/Navbar.jsx";
 import { addCartItem } from "../../localStorageHelpers.jsx";
@@ -123,7 +123,7 @@ const ProductDetail = () => {
               <span className="quantity">{quantity}</span>
               <button onClick={() => handleQuantityChange(1)}>+</button>
             </div>
-            <button onClick={handleAddToCart}>Add to Cart</button>
+            <button className="cart" onClick={handleAddToCart}><img src={cartimg}></img></button>
           </div>
           <div className="shippinginfo">
             <h1 className="shipping">Shipping info</h1>

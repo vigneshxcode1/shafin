@@ -8,6 +8,7 @@
   max-width: 1200px;
   color: #e2e1e1;
 }
+
 .sizechart{
   margin-left: 20px;
   color: rgb(86, 226, 116);
@@ -70,13 +71,12 @@
 
 .product-detail-info button {
   margin-top: 20px;
-  padding: 10px;
-  background-color: #23e600;
-  color: rgb(0, 0, 0);
-  border: none;
+  padding: -10px -10px;
+background-color: #23e600;
+  border: 1px solid rgb(25, 215, 31);
   cursor: pointer;
-  border-radius: 4px;
-  font-size: 1rem;
+
+
 }
 .quantity{
   color: #23e600;
