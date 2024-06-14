@@ -31,13 +31,7 @@ const orderSchema = new mongoose.Schema({
   pin: {
     type: String,
     required: true,
-    validate: {
-      validator: function (v) {
-        
-        return /^\d{6}$/.test(v);
-      },
-      message: (props) => `${props.value} is not a valid PIN!`,
-    },
+  
   },
 });
 
