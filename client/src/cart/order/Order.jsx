@@ -3,7 +3,7 @@ import axios from "axios";
 import "../cart.css"
 
 
-const BASE_URL = " https://shafin-8q7w.onrender.com";
+const BASE_URL = "https://server.vignesh.top";
 
 // const BASE_URL = "http://localhost:8000";
 
