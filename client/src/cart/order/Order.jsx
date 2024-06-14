@@ -60,11 +60,10 @@ Address: ${address}
 City: ${city}
 Country: ${country}
 Phone: ${phone}
-PIN: ${pin}
+PIN: ${pin}`;
 
-
-      `;
       <br></br>
+
       let cartItemsMessage =
 `Hello! YOUR BRAND I'd like to proceed with my order. Here are the details:\n`;
       if (cartData.length > 0) {

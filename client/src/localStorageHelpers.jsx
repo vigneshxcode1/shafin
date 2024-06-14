@@ -19,7 +19,7 @@ export const updateCartItem = (productId, quantity) => {
   let cartItems = getCartItems();
   cartItems = cartItems.map(item => {
       if (item._id === productId) {
-          return { ...item, quantity: Math.max(quantity, 1) }; // Ensure quantity is at least 1
+          return { ...item, quantity: Math.max(quantity, 1) }; 
       }
       return item;
   });
