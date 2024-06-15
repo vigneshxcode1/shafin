@@ -34,7 +34,7 @@ function animicollections() {
       </Card.Body>
 
       <Card.Body className="box">
-        <Link to={"/caroversized"}>
+        <Link to={"/musicoversized"}>
           <img variant="top" src={musicimage} alt="Car Collections" />
           <div className="overlay">
             <div className="overlay-text">MUSIC Tees</div>

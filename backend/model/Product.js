@@ -53,6 +53,8 @@ const productSchema = new mongoose.Schema({
                 'movieposter',
                 'bikeposter',
                 'carposter',
+
+                
                 'hoodie',
                 'pants',
                 'slippers',
