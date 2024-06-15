@@ -7,6 +7,7 @@ import trend from "../images/trending.jpg";
 import bike from "../images/bike.png";
 import car from '../images/car.png'
 import posterimage from "../images/postercollection.png";
+import musicimage from "../images/musicimg.jpg"
 import "./Product.css";
 
 function animicollections() {
@@ -19,7 +20,7 @@ function animicollections() {
             <div className="overlay-text">Anime Tees</div>
           </div>
         </Link>
-        <h1 className="title">ANIMI COLLECTIONS</h1>
+        <h1 className="title">ANIMI COLLECTIONS &#8594;</h1>
       </Card.Body>
 
       <Card.Body className="box">
@@ -29,7 +30,17 @@ function animicollections() {
             <div className="overlay-text">Trending Tees</div>
           </div>
         </Link>
-        <h1 className="title">TRENDING COLLECTIONS</h1>
+        <h1 className="title">TRENDING COLLECTIONS &#8594;</h1>
+      </Card.Body>
+
+      <Card.Body className="box">
+        <Link to={"/caroversized"}>
+          <img variant="top" src={musicimage} alt="Car Collections" />
+          <div className="overlay">
+            <div className="overlay-text">MUSIC Tees</div>
+          </div>
+        </Link>
+        <h1 className="title">MUSIC COLLECTIONS &#8594;</h1>
       </Card.Body>
 
       <Card.Body className="box">
@@ -39,7 +50,7 @@ function animicollections() {
             <div className="overlay-text">Car Tees</div>
           </div>
         </Link>
-        <h1 className="title">CAR COLLECTIONS</h1>
+        <h1 className="title">CAR COLLECTIONS &#8594;</h1>
       </Card.Body>
 
       <Card.Body className="box">
@@ -49,7 +60,7 @@ function animicollections() {
             <div className="overlay-text">Bike Tees</div>
           </div>
         </Link>
-        <h1 className="title">BIKE COLLECTIONS</h1>
+        <h1 className="title">BIKE COLLECTIONS &#8594; </h1>
       </Card.Body>
 
       <Card.Body className="box">
@@ -59,7 +70,7 @@ function animicollections() {
             <div className="overlay-text">Poster Collections</div>
           </div>
         </Link>
-        <h1 className="title">POSTER COLLECTIONS</h1>
+        <h1 className="title">POSTER COLLECTIONS &#8594;</h1>
       </Card.Body>
     </CardGroup>
   );

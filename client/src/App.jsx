@@ -42,6 +42,7 @@ import Postercollections from "./Poster/Postercollections.jsx";
 import Sizechart from "./pages/sizechart.jsx";
 import Contact from "./pages/Contact.jsx";
 import OrderPage from "./cart/order/Order.jsx";
+import Musicoversized from "./musicproduct/Musicoversized.jsx";
 
 function App() {
   return (
@@ -60,6 +61,7 @@ function App() {
         <Route path="/trendcollection" element={<Trendcollections />} />
         <Route path="/carcollections" element={<Carcollections />} />
         <Route path="/car" element={<Car />} />
+        <Route path="/musicoversized" element={<Musicoversized/>} />
         <Route path="/caroversized" element={<Caroversized />} />
         <Route path="/bikecollections" element={<Bikecollection />} />
         <Route path="/bike" element={<Bike />} />

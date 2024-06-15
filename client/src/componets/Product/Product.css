@@ -32,9 +32,10 @@ width: 400px;
 
 
 .title {
-  font-size: 1.2em;
+  font-size: 15px;
   margin-top: 10px;
-  color: aliceblue;
+  color: rgb(118, 247, 137);
+  filter: drop-shadow(rgba(60, 255, 0, 0.556) 6px 4px 6px)
 
 }
 h2{

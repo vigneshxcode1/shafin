@@ -43,6 +43,7 @@ const productSchema = new mongoose.Schema({
                 'printed-oversized',
                 'trending',
                 'trendoversized',
+                'music',
                 'car',
                 'caroversized',
                 'bike',
