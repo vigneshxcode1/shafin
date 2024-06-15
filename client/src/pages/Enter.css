@@ -58,7 +58,7 @@ margin-right: 100px;
   .text-overlay {
     justify-content: flex-start; /* Adjust alignment for smaller screens */
    ; /* Add space at the top */
-    color: black;
+    color: rgb(0, 0, 0);
   }
 
   .brand-img{

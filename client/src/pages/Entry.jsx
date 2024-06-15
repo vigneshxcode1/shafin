@@ -54,7 +54,7 @@ window.addEventListener('click',playaudio)
           <h1 className="link-item">CART</h1>
         </Link>
       </nav>
-      <footer className="main-foot">
+      {/* <footer className="main-foot">
         <a href="mailto:your@gmail.com" className="foot-item">
           email
         </a>
@@ -62,7 +62,7 @@ window.addEventListener('click',playaudio)
         <p className="foot-item">shipping</p>
         <Link className="foot-item" to="/about">about</Link>
         <p className="foot-item">terms and conditions</p>
-      </footer>
+      </footer> */}
     </div>
   </div>
   
