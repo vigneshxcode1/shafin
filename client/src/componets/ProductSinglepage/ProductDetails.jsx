@@ -85,7 +85,7 @@ const ProductDetail = () => {
                 product.images.map((image, index) => (
                   <div className={index === current ? "slide active" : "slide"} key={index}>
                     {index === current && (
-                      <img src={image} alt={`Product image ${index + 1}`} />
+                      <img className="productdetail-img"src={image} alt={`Product image ${index + 1}`} />
                     )}
                   </div>
                 ))

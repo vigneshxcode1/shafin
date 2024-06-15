@@ -22,7 +22,9 @@ width: 400px;
   height: auto;
   transition: transform 0.2s ease, opacity 0.3s ease;
 }
-
+.arrowimg{
+  width: 10px;
+}
 .box img:hover {
   transition: scale(2.05);
   opacity: 0.8;
@@ -185,9 +187,12 @@ h2{
     box-shadow:2px 3px 8px rgba(84, 249, 72, 0.976);
   }
   .title-oversized{
-    margin-top: -15px;
+  
+    margin-top: -10px;
+    margin-right: 20px;
     color: rgb(250, 255, 250);
-    text-decoration:underline;
+    font-size: 13px;
+    
   }
 
 }
