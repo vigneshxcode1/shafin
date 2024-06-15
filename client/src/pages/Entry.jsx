@@ -39,7 +39,7 @@ window.addEventListener('click',playaudio)
     <video ref={videoRef} src={backgroundVideo} autoPlay loop muted playsInline className="background-video" />
     {/* <audio ref={audioref} src={backgroundaudio}></audio> */}
     <div className="text-overlay">
-      <h1 className="brand-img">YOUR BRAND</h1>
+      <h1 className="brand-img">shafin</h1>
       <nav className="main-links">
         <Link to="/home">
           <h1 className="link-item">SHOP</h1>
