@@ -1,2 +1,2 @@
-*.zip filter=lfs diff=lfs merge=lfs -text
+[[:space:]]client/src/componets/images/motogp1.mp4[[:space:]] filter=lfs diff=lfs merge=lfs -text
 motogp1.mp4 filter=lfs diff=lfs merge=lfs -text
