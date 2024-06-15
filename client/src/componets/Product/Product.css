@@ -110,3 +110,84 @@ h2{
   transform: scale(1.05);
   opacity: 0.8;
 }
+
+/* Main container styling */
+.containers {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.main-box {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.title-oversizes1 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Ensures spacing between the products */
+  gap: 20px; /* Adds gap between products */
+  margin-bottom: 20px; /* Adds space between rows */
+}
+
+.product-item {
+  flex: 1 1 calc(50% - 20px); /* Two items per row, with space between */
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  padding: 10px;
+}
+
+.img-products {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s;
+  border-radius: 10px;
+   box-shadow:1px 2px 8px rgba(228, 233, 227, 0.853); ;
+   border: 1px solid rgb(236, 238, 232);
+}
+
+.img-products:hover {
+  transform: scale(1.05);
+}
+
+.title-oversized {
+  margin: 10px 0;
+}
+
+/* Loading styling */
+.loading {
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .product-item {
+    flex: 1 1 calc(100% - 20px); /* One item per row on smaller screens */
+  }
+
+  .title-oversizes1 {
+    font-size: 1.5em;
+    color: rgb(0, 255, 30);
+    border-radius: 10px;
+    box-shadow:2px 3px 8px rgba(84, 249, 72, 0.976);
+  }
+  .title-oversized{
+    margin-top: -15px;
+    color: rgb(250, 255, 250);
+    text-decoration:underline;
+  }
+
+}
