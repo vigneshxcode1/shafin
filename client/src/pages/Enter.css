@@ -14,7 +14,7 @@
 .background-video{
   width: 100%;
   object-fit: cover;
-  /* filter: blur(1.8px) brightness(1); */
+  filter: blur(1px) brightness(1);
 }
 .brand-img,
 .link-item,
@@ -31,11 +31,11 @@ margin-right: 100px;
 
 .main-links {
   display: flex;
- 
   margin-top: 150px;
   justify-content: space-around;
   text-decoration: none; /* Adjust alignment for smaller screens */
 }
+
 
 .link-item {
   margin-top: 10px;
@@ -53,10 +53,9 @@ margin-right: 100px;
 .foot-item {
   color: white;
   margin-bottom: 20px;
-  font-size: 2vw; /* Responsive font size */
+  font-size: 2vw; 
 }
 
-/* Media queries for mobile responsiveness */
 @media only screen and (max-width: 760px) {
   .text-overlay {
     justify-content: flex-start; /* Adjust alignment for smaller screens */
@@ -83,12 +82,13 @@ margin-right: 100px;
     align-items: center; 
     font-size: 50px;
     color: black;
+    font-weight: 900;
   }
   .link-item{
     padding: 20px;
     border-radius: 20px;
-   
-  
+   text-decoration: underline;
+
   }
 
  
