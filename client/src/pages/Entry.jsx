@@ -40,7 +40,7 @@ window.addEventListener('click',playaudio)
     {/* <audio ref={audioref} src={backgroundaudio}></audio> */}
     <div className="text-overlay">
       <h1 className="brand-img">shafin</h1>
-      <nav className="main-links">
+      <nav className="main-links" id="main-link">
         <Link to="/home">
           <h1 className="link-item">SHOP</h1>
         </Link>

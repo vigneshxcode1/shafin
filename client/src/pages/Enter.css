@@ -13,12 +13,14 @@
 
 .background-video{
   width: 100%;
+  object-fit: cover;
+  /* filter: blur(1.8px) brightness(1); */
 }
 .brand-img,
 .link-item,
 .foot-item {
 
-  color: white;
+  color: rgb(230, 225, 225);
   text-decoration: none;
   font-family: 'Times New Roman', Times, serif;
   font-weight: 800;
@@ -29,6 +31,7 @@ margin-right: 100px;
 
 .main-links {
   display: flex;
+ 
   margin-top: 150px;
   justify-content: space-around;
   text-decoration: none; /* Adjust alignment for smaller screens */
@@ -75,9 +78,16 @@ margin-right: 100px;
    opacity: 1.6;
   }
   .main-links {
-    flex-direction: column; /* Stack links vertically on smaller screens */
+    flex-direction: column; 
     align-items: center; 
-    font-size: 40px;
+    font-size: 50px;
+    color: black;
+  }
+  .link-item{
+    padding: 20px;
+    border-radius: 20px;
+   
+  
   }
 
  
