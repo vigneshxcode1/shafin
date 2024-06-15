@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Enter.css";
-import backgroundVideo from "../componets/images/MotoGp.mp4"; // Adjust the path and file extension if needed
+import backgroundVideo from "../componets/images/entry.mp4"; 
 import backgroundaudio from "../componets/images/background.mp3"
 const Entry = () => {
   const videoRef = useRef(null);
