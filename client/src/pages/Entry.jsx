@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Enter.css";
-import backgroundVideo from "../componets/images/naruto.mp4"; // Adjust the path and file extension if needed
+import backgroundVideo from "../componets/images/naruto1.mp4"; // Adjust the path and file extension if needed
 import backgroundaudio from "../componets/images/background.mp3"
 const Entry = () => {
   const videoRef = useRef(null);
@@ -37,7 +37,7 @@ window.addEventListener('click',playaudio)
   return (
     <div className="background">
     <video ref={videoRef} src={backgroundVideo} autoPlay loop muted playsInline className="background-video" />
-    <audio ref={audioref} src={backgroundaudio}></audio>
+    {/* <audio ref={audioref} src={backgroundaudio}></audio> */}
     <div className="text-overlay">
       <h1 className="brand-img">YOUR BRAND</h1>
       <nav className="main-links">
