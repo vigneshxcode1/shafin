@@ -4,8 +4,8 @@ import CardGroup from "react-bootstrap/CardGroup";
 import { Link } from "react-router-dom";
 import animi from "../images/oversized.jpg";
 import trend from "../images/trending.jpg";
-import bike from "../images/bike.png";
-import car from '../images/car.png'
+import bike from "../images/bike.jpg";
+import car from '../images/car.jpg'
 import posterimage from "../images/postercollection.png";
 import musicimage from "../images/musicimg.jpg"
 import "./Product.css";
