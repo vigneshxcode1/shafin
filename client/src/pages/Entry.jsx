@@ -2,10 +2,10 @@ import React, { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Enter.css";
 import backgroundVideo from "../componets/images/entry.mp4"; 
-import backgroundaudio from "../componets/images/background.mp3"
+// import backgroundaudio from "../componets/images/background.mp3"
 const Entry = () => {
   const videoRef = useRef(null);
-  const audioref=useRef(null)
+  // const audioref=useRef(null)
 
   useEffect(() => {
     const video = videoRef.current;
@@ -16,28 +16,30 @@ const Entry = () => {
       });
     };
 
-    const audio=audioref.current;
-    const playaudio=()=>{
-      audio.play().catch((error) => {
-        console.log("Autoplay was prevented:", error);
-      });
-    }
+    // const audio=audioref.current;
+    // const playaudio=()=>{
+    //   audio.play().catch((error) => {
+    //     console.log("Autoplay was prevented:", error);
+    //   });
+    // }
 
     playVideo();
-    playaudio
+    // playaudio
 
     window.addEventListener('click', playVideo);
-window.addEventListener('click',playaudio)
+// window.addEventListener('click',playaudio)
     return () => {
       window.removeEventListener('click', playVideo);
-      window.removeEventListener('click', playaudio)
+      // window.removeEventListener('click', playaudio)
     };
   }, []);
 
   return (
     <div className="background">
-    <video ref={videoRef} src={backgroundVideo} autoPlay loop muted playsInline className="background-video" />
+    <video ref={videoRef} src={backgroundVideo} type="video/mp4" autoPlay loop  playsInline  />
+   
     {/* <audio ref={audioref} src={backgroundaudio}></audio> */}
+
     <div className="text-overlay">
       <h1 className="brand-img">shafin</h1>
       <nav className="main-links" id="main-link">
