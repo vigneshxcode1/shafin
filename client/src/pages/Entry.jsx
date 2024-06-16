@@ -36,7 +36,7 @@ const Entry = () => {
 
   return (
     <div className="background">
-    <video ref={videoRef} src={backgroundVideo} type="video/mp4" autoPlay loop   playsInline  />
+    <video ref={videoRef} src={backgroundVideo} type="video/mp4" autoPlay loop muted  playsInline  />
    
     {/* <audio ref={audioref} src={backgroundaudio}></audio> */}
 
