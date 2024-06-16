@@ -13,14 +13,12 @@
 
 .background-video{
   width: 100%;
-  object-fit: cover;
-  /* filter: blur(1px) brightness(1); */
 }
 .brand-img,
 .link-item,
 .foot-item {
 
-  color: rgb(230, 225, 225);
+  color: white;
   text-decoration: none;
   font-family: 'Times New Roman', Times, serif;
   font-weight: 800;
@@ -35,7 +33,6 @@ margin-right: 100px;
   justify-content: space-around;
   text-decoration: none; /* Adjust alignment for smaller screens */
 }
-
 
 .link-item {
   margin-top: 10px;
@@ -53,9 +50,10 @@ margin-right: 100px;
 .foot-item {
   color: white;
   margin-bottom: 20px;
-  font-size: 2vw; 
+  font-size: 2vw; /* Responsive font size */
 }
 
+/* Media queries for mobile responsiveness */
 @media only screen and (max-width: 760px) {
   .text-overlay {
     justify-content: flex-start; /* Adjust alignment for smaller screens */
@@ -64,8 +62,7 @@ margin-right: 100px;
   }
 
   .brand-img{
-    margin-top: 150px;
-
+    margin-top: 100px;
    
   }
   .foot-item {
@@ -78,17 +75,9 @@ margin-right: 100px;
    opacity: 1.6;
   }
   .main-links {
-    flex-direction: column; 
+    flex-direction: column; /* Stack links vertically on smaller screens */
     align-items: center; 
-    font-size: 50px;
-    color: black;
-    font-weight: 900;
-  }
-  .link-item{
-    padding: 20px;
-    border-radius: 20px;
-   text-decoration: underline;
-
+    font-size: 60px;
   }
 
  
