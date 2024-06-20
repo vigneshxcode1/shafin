@@ -23,9 +23,9 @@ const upload = multer({ storage: storage });
 const uploadToCloudinary = async (path) => {
   try {
     const result = await cloudinary.uploader.upload(path);
-    fs.unlinkSync(path); // Remove the file from local storage after upload
-    return result.secure_url; // Return the full URL of the uploaded image
-    console.log(result.secure_url)
+    fs.unlinkSync(path);
+    return result.secure_url; 
+    
   } catch (error) {
     console.error('Error uploading to Cloudinary', error);
     throw error;
@@ -38,8 +38,8 @@ routes.post('/products/new', isauthticateuser, authorizeRoles('admin'), upload.a
     const imageUploadPromises = req.files.map(file => uploadToCloudinary(file.path));
     const imageUrls = await Promise.all(imageUploadPromises);
 
-    req.body.images = imageUrls; // Save the Cloudinary URLs to req.body
-    next(); // Proceed to newProduct controller
+    req.body.images = imageUrls;
+    next(); 
   } catch (error) {
     res.status(500).json({ message: 'Error uploading images', error });
   }

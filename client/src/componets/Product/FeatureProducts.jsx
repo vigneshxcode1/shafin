@@ -12,10 +12,12 @@ import "./Product.css";
 
 function animicollections() {
   return (
+    <>
+    <div className="main">
     <CardGroup>
       <Card.Body className="box">
         <Link to={"/anioversized"}>
-          <img variant="top" src={animi} alt="Anime Collections" />
+          <img variant="top" src={animi} alt="Anime Collections" className="img-box" />
           <div className="overlay">
             <div className="overlay-text">Anime Tees</div>
           </div>
@@ -25,7 +27,7 @@ function animicollections() {
 
       <Card.Body className="box">
         <Link to={"/trendoversized"}>
-          <img variant="top" src={trend} alt="Trending Collections" />
+          <img variant="top" src={trend} alt="Trending Collections" className="img-box" />
           <div className="overlay">
             <div className="overlay-text">Trending Tees</div>
           </div>
@@ -35,7 +37,7 @@ function animicollections() {
 
       <Card.Body className="box">
         <Link to={"/musicoversized"}>
-          <img variant="top" src={musicimage} alt="Car Collections" />
+          <img variant="top" src={musicimage} alt="Car Collections"  className="img-box"/>
           <div className="overlay">
             <div className="overlay-text">MUSIC Tees</div>
           </div>
@@ -45,7 +47,7 @@ function animicollections() {
 
       <Card.Body className="box">
         <Link to={"/caroversized"}>
-          <img variant="top" src={car} alt="Car Collections" />
+          <img variant="top" src={car} alt="Car Collections"  className="img-box" />
           <div className="overlay">
             <div className="overlay-text">Car Tees</div>
           </div>
@@ -55,7 +57,7 @@ function animicollections() {
 
       <Card.Body className="box">
         <Link to={"/bikeoversized"}>
-          <img variant="top" src={bike} alt="Bike Collections" />
+          <img variant="top" src={bike} alt="Bike Collections"  className="img-box"/>
           <div className="overlay">
             <div className="overlay-text">Bike Tees</div>
           </div>
@@ -65,7 +67,7 @@ function animicollections() {
 
       <Card.Body className="box">
         <Link to={"/postercollections"}>
-          <img variant="top" src={posterimage} alt="Bike Collections" />
+          <img variant="top" src={posterimage} alt="Bike Collections"  className="img-box"/>
           <div className="overlay">
             <div className="overlay-text">Poster Collections</div>
           </div>
@@ -73,6 +75,10 @@ function animicollections() {
         <h1 className="title">POSTER COLLECTIONS &#8594;</h1>
       </Card.Body>
     </CardGroup>
+    </div>
+  
+    </>
+    
   );
 }
 

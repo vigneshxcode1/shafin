@@ -27,6 +27,7 @@ class apiFeature {
     this.query.find(JSON.parse(strquery));
     return this;
   }
+  
 
   paginate(resultperpage) {
     const currentpage = Number(this.strquery.page);

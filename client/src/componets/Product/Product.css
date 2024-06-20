@@ -4,6 +4,9 @@ margin-left:0px;
 margin-top: 50px;
 width: 400px;
 }
+.main{
+  background-image: url("../../componets/images/featurebackgoundimg.gif");
+}
 .box {
   position: relative;
   overflow: hidden;
@@ -12,6 +15,12 @@ width: 400px;
   text-align: center;
   margin-top: 10px;
   text-decoration: none;
+  filter: drop-shadow(0 0 0.75rem rgba(56, 179, 213, 0.413));
+  
+  
+}
+.img-box{
+  border-radius: 10px;
   
 }
 .main-box{
