@@ -66,7 +66,7 @@ function GridExample() {
 <br></br>
 <div className="containers">
         <div className="main-box">
-          <h2 className="title-oversizes1">Anime OverSized collections</h2>
+          <h2 className="title-head">Anime OverSized collections</h2>
           <br></br>
           {products.map((product) => (
             <div className="products" key={product._id}>
