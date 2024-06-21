@@ -8,11 +8,12 @@ const Contact = () => {
       <Navbar />
       <div className="contact-container">
         <div className="main-containers">
-          <span>Contact Links</span>
+          <h1>Contact Links</h1>
           <Link className="contact" to={"https://wa.me/9025630360"}>
             WhatsApp
             <svg
-              className="icon"
+            id="icon"
+              className="icon-whatsapps"
               xmlns="http://www.w3.org/2000/svg"
               x="0px"
               y="0px"
@@ -47,7 +48,8 @@ const Contact = () => {
           <Link className="contact" to={"https://telegram.me/Deepakspax"}>
             Telegram
             <svg
-              className="icon"
+              id="icon"
+              className="icon-telegram"
               xmlns="http://www.w3.org/2000/svg"
               x="0px"
               y="0px"
@@ -75,12 +77,14 @@ const Contact = () => {
           </Link>
 
           <Link
+          
             className="contact"
             to={"https://www.instagram.com/ideepx_official/?hl=en"}
           >
             Instagram{" "}
             <svg
-              className="icon"
+              id="icon"
+              className="icon-instagram"
               xmlns="http://www.w3.org/2000/svg"
               x="0px"
               y="0px"
@@ -182,7 +186,8 @@ const Contact = () => {
           <Link className="contact" to={""}>
             Facebook
             <svg
-            className="icon"
+              id="icon"
+            className="icon-facebook"
               xmlns="http://www.w3.org/2000/svg"
               x="0px"
               y="0px"
@@ -200,6 +205,8 @@ const Contact = () => {
               ></path>
             </svg>
           </Link>
+
+          
         </div>
       </div>
     </>

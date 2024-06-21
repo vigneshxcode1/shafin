@@ -8,13 +8,14 @@ import cartimg from "../images/add-to-cart.png"
 
 import "./Navbar.css"
 import { Link } from 'react-router-dom';
+
 function NavScrollExample() {
   return (
     <Navbar expand="sm" id='navbar' fixed="top" className="bg-body-tertiary" >
       <Container fluid>
        
         <Link to={"/cart"}><Navbar.Brand><img src={cartimg} alt="cart"  className='cart-img'/></Navbar.Brand></Link>
-        <Navbar.Brand href="/"> NEW BRAND</Navbar.Brand>
+        <Navbar.Brand href="/" className='brandtitle'>Zculture</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav

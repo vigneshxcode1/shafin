@@ -22,17 +22,17 @@ function animicollections() {
             <div className="overlay-text">Anime Tees</div>
           </div>
         </Link>
-        <h1 className="title">ANIMI COLLECTIONS &#8594;</h1>
+        <h1 className="title">ANIMI TEES COLLECTIONS &#8594;</h1>
       </Card.Body>
 
       <Card.Body className="box">
         <Link to={"/trendoversized"}>
           <img variant="top" src={trend} alt="Trending Collections" className="img-box" />
           <div className="overlay">
-            <div className="overlay-text">Trending Tees</div>
+            <div className="overlay-text">Trending  Tees</div>
           </div>
         </Link>
-        <h1 className="title">TRENDING COLLECTIONS &#8594;</h1>
+        <h1 className="title">TRENDING TEES COLLECTIONS &#8594;</h1>
       </Card.Body>
 
       <Card.Body className="box">
@@ -42,7 +42,7 @@ function animicollections() {
             <div className="overlay-text">MUSIC Tees</div>
           </div>
         </Link>
-        <h1 className="title">MUSIC COLLECTIONS &#8594;</h1>
+        <h1 className="title">MUSIC TEES COLLECTIONS &#8594;</h1>
       </Card.Body>
 
       <Card.Body className="box">
@@ -52,7 +52,7 @@ function animicollections() {
             <div className="overlay-text">Car Tees</div>
           </div>
         </Link>
-        <h1 className="title">CAR COLLECTIONS &#8594;</h1>
+        <h1 className="title">CAR TEES COLLECTIONS &#8594;</h1>
       </Card.Body>
 
       <Card.Body className="box">
@@ -62,7 +62,7 @@ function animicollections() {
             <div className="overlay-text">Bike Tees</div>
           </div>
         </Link>
-        <h1 className="title">BIKE COLLECTIONS &#8594; </h1>
+        <h1 className="title">BIKE TEES COLLECTIONS &#8594; </h1>
       </Card.Body>
 
       <Card.Body className="box">

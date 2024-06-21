@@ -2,13 +2,15 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%; /* Cover the entire video */
-  height: 100%; /* Cover the entire video */
+  width: 100%; 
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 1;
+  
+  
 }
 
 .background-video{
@@ -27,18 +29,18 @@
 
   color: white;
   text-decoration: none;
-  font-family: 'Times New Roman', Times, serif;
+ 
   font-weight: 800;
   font-size: 4vw; 
 margin-right: 100px;
-  margin-bottom: 2vw; /* Responsive margin */
+  margin-bottom: 2vw; 
 }
 
 .main-links {
   display: flex;
   margin-top: 150px;
   justify-content: space-around;
-  text-decoration: none; /* Adjust alignment for smaller screens */
+  text-decoration: none; 
 }
 
 .link-item {
@@ -47,7 +49,7 @@ margin-right: 100px;
 
 .main-foot {
   display: flex;
-  margin-top: 1000px; /* Adjust margin for smaller screens */
+  margin-top: 1000px; 
   color: white;
   flex-direction: column;
   background-color: black;
@@ -57,15 +59,16 @@ margin-right: 100px;
 .foot-item {
   color: white;
   margin-bottom: 20px;
-  font-size: 2vw; /* Responsive font size */
+  font-size: 2vw; 
 }
 
-/* Media queries for mobile responsiveness */
+
 @media only screen and (max-width: 760px) {
   .text-overlay {
-    justify-content: flex-start; /* Adjust alignment for smaller screens */
-   ; /* Add space at the top */
+    justify-content: flex-start; 
+    font-family: "fontstart";
     color: rgb(0, 0, 0);
+    
   }
 
   .brand-img{
@@ -74,15 +77,15 @@ margin-right: 100px;
   }
   .foot-item {
     text-decoration: none;
-    font-size: 5vw; /* Adjust font size for smaller screens */
-    margin-bottom: 3vw; /* Adjust margin for smaller screens */
+    font-size: 5vw; 
+    margin-bottom: 3vw; 
   }
   .background-video{
     width: 400px;
    opacity: 1.6;
   }
   .main-links {
-    flex-direction: column; /* Stack links vertically on smaller screens */
+    flex-direction: column; 
     align-items: center; 
     font-size: 60px;
   }
@@ -101,9 +104,6 @@ background: rgba(0, 0, 0, 0.554);
 
 }
 
-/* Enter.css */
-
-/* General styles */
 .background {
   position: relative;
   width: 100%;
