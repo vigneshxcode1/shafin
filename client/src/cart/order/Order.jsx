@@ -1,22 +1,19 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "../cart.css"
-
+import "../cart.css";
 
 const BASE_URL = "https://server.zculture.in";
 
 // const BASE_URL = "http://localhost:8000";
 
-
 const ShippingPage = () => {
-  const [name,setname]=useState()
-  const [address, setAddress] = useState();
-  const [city, setCity] = useState();
-  const [country, setCountry] = useState();
-  const [phone, setPhone] = useState();
-  const [pin, setPin] = useState();
+  const [name, setname] = useState("");
+  const [address, setAddress] = useState("");
+  const [city, setCity] = useState("");
+  const [country, setCountry] = useState("");
+  const [phone, setPhone] = useState("");
+  const [pin, setPin] = useState("");
   const [cartData, setCartData] = useState([]);
- 
 
   useEffect(() => {
     const storedCartData = localStorage.getItem("cart");
@@ -55,26 +52,25 @@ const ShippingPage = () => {
 
       const message = `
 Order placed successfully! Here are the details:
-Name:${name}
-Address: ${address}
-City: ${city}
-Country: ${country}
-Phone: ${phone}
-PIN: ${pin}`;
+Name: ${name};
+Address: ${address};
+City: ${city};
+Country: ${country};
+Phone: ${phone};
+PIN: ${pin};
 
-      <br></br>
+`;
 
-      let cartItemsMessage =
-`Hello! YOUR BRAND I'd like to proceed with my order. Here are the details:\n`;
+      let cartItemsMessage = `\nHello! YOUR BRAND I'd like to proceed with my order. Here are the details:\n`;
       if (cartData.length > 0) {
         cartData.forEach((item) => {
           cartItemsMessage += `
 Product Name: ${item.name}
-Quantity:${item.quantity}
-Images:${item.images[0]}
-Price:Rs:${item.price}
-total:Rs${item.quantity*item.price}
+Quantity: ${item.quantity}
+Price: Rs:${item.price}
+Total: Rs${item.quantity * item.price}
 Category: ${item.category}
+Images: ${item.images[0]}
 Description: ${item.describe}
 \n`;
         });
@@ -82,7 +78,6 @@ Description: ${item.describe}
         console.error("No items found in cartData:", cartData);
       }
 
-   
       localStorage.removeItem("cart");
 
       const whatsappURL = `https://api.whatsapp.com/send?phone=7338821735&text=${encodeURIComponent(
@@ -90,10 +85,8 @@ Description: ${item.describe}
       )}`;
       window.location.href = whatsappURL;
 
-   
-
       // Clear form data after redirection
-      setname("")
+      setname("");
       setAddress("");
       setCity("");
       setCountry("");
@@ -106,89 +99,80 @@ Description: ${item.describe}
   };
 
   return (
-    <>
-   
-     <div className="shipping-form-container">
-     <h2>SHIPPING ADDRESS </h2>
-   <form className="main-container" onSubmit={handleSubmit}>
-   <div className="container">
-       <label>Name:</label>
-       <input
-         type="text"
-         name="name"
-         value={name}
-         className="inputs"
-         onChange={(e) => setname(e.target.value)}
-         required
-       ></input>
-
-       </div>
-     <div className="container">
-       <label>Address:</label>
-       <input
-         type="text"
-         name="address"
-         value={address}
-         className="inputs"
-         onChange={(e) => setAddress(e.target.value)}
-         required
-       />
-     </div>
-     <label>City:</label>
-       <input
-         type="text"
-         name="city"
-         className="inputs"
-         value={city}
-         onChange={(e) => setCity(e.target.value)}
-         required
-       />
-     <div>
-     <div>
-       <label>Country:</label>
-       <input
-         type="text"
-         name="country"
-         className="inputs"
-         value={country}
-         onChange={(e) => setCountry(e.target.value)}
-         required
-       />
-     </div>
-     
-     <div>
-       <label>Phone:</label>
-       <input
-         type="text"
-         name="phone"
-         className="inputs"
-         value={phone}
-         onChange={(e) => setPhone(e.target.value)}
-         required
-       />
-     </div>
-     <div>
-       <label>PIN:</label>
-       <input
-         type="text"
-         name="pin"
-         className="inputs"
-         value={pin}
-         onChange={(e) => setPin(e.target.value)}
-         required
-       />
-     </div>
-
-     </div>
-
-     
-     <button className="placeorder" type="submit">Place Order</button>
-   </form>
- </div>
-    </>
-  
-   
-  
+    <div className="shipping-form-container">
+      <h2>SHIPPING ADDRESS </h2>
+      <form className="main-container" onSubmit={handleSubmit}>
+        <div className="container">
+          <label>Name:</label>
+          <input
+            type="text"
+            name="name"
+            value={name}
+            className="inputs"
+            onChange={(e) => setname(e.target.value)}
+            required
+          />
+        </div>
+        <div className="container">
+          <label>Address:</label>
+          <input
+            type="text"
+            name="address"
+            value={address}
+            className="inputs"
+            onChange={(e) => setAddress(e.target.value)}
+            required
+          />
+        </div>
+        <div className="container">
+          <label>City:</label>
+          <input
+            type="text"
+            name="city"
+            className="inputs"
+            value={city}
+            onChange={(e) => setCity(e.target.value)}
+            required
+          />
+        </div>
+        <div className="container">
+          <label>Country:</label>
+          <input
+            type="text"
+            name="country"
+            className="inputs"
+            value={country}
+            onChange={(e) => setCountry(e.target.value)}
+            required
+          />
+        </div>
+        <div className="container">
+          <label>Phone:</label>
+          <input
+            type="text"
+            name="phone"
+            className="inputs"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            required
+          />
+        </div>
+        <div className="container">
+          <label>PIN:</label>
+          <input
+            type="text"
+            name="pin"
+            className="inputs"
+            value={pin}
+            onChange={(e) => setPin(e.target.value)}
+            required
+          />
+        </div>
+        <button className="placeorder" type="submit">
+          Place Order
+        </button>
+      </form>
+    </div>
   );
 };
 
