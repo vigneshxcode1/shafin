@@ -33,14 +33,15 @@
 }
 
 .brand-img {
+  /* font-family: ; */
   font-size: 50px;
   font-weight: 800;
   margin-bottom: 20px;
 }
 
 .main-links {
+  /* font-family: ; */
   display: flex;
-
   margin-top: 150px;
   justify-content: space-around;
   width: 100%;
@@ -79,6 +80,7 @@ h1 .link-item {
 @media only screen and (max-width: 760px) {
   .link-main{
     text-decoration: none;
+    font-size: 20px;
   }
   .text-overlay {
     justify-content: flex-start;
@@ -100,8 +102,9 @@ h1 .link-item {
     font-size: 30px;
     margin-bottom: 3vw;
   }
+  
   #link{
-    font-size: 30px;
+    font-size: 40px;
     text-decoration: none;
   }
 

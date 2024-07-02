@@ -55,7 +55,7 @@ export const myorder = async (req, res, next) => {
 
 //getallorder - for admin
 export const orders = async (req, res, next) => {
-  const order = await ordermodel.find();
+  const order = await Ordermodel.find();
 
   var totalamount = 0;
   order.forEach((order) => {
@@ -74,7 +74,7 @@ export const orders = async (req, res, next) => {
 export const updateorder = async (req, res, next) => {
   try {
     const orderId = req.params.id; 
-    const order = await ordermodel.findById(orderId);
+    const order = await Ordermodel.findById(orderId);
 
     if (!order) {
       return res
@@ -115,7 +115,7 @@ async function updatestock(productid, quantity) {
 export const deleteorder = async (req, res, next) => {
   try {
     const orderId = req.params.id; 
-    const order = await ordermodel.findByIdAndDelete(orderId);
+    const order = await Ordermodel.findByIdAndDelete(orderId);
     res.status(200).json({ success: true, message:"order deleted succssfully",order });
   }
   catch(err){

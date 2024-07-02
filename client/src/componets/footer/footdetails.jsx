@@ -12,7 +12,7 @@ const Footer = () => {
         <p>Region:chennai</p>
       </div>
       <div className="footer-section">
-        <p>&copy; 2024 Your Clothing Brand. All rights reserved.</p>
+        <p>&copy; 2024 Zculuture. All rights reserved.</p>
       </div>
     </footer>
   );

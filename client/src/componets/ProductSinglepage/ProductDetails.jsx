@@ -4,10 +4,11 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./productDetails.css";
-import cartimg from "../../componets/images/addcartimg.gif" 
-import loadingimg from '../../componets/images/luffy2.gif'
+import cartimg from "../../componets/images/addcartimg.gif";
+import loadingimg from "../../componets/images/luffy2.gif";
 import Navbar from "../Navbar/Navbar.jsx";
 import { addCartItem } from "../../localStorageHelpers.jsx";
+import Accordion from "react-bootstrap/Accordion";
 
 const BASE_URL = "https://shafin-8q7w.onrender.com";
 
@@ -17,7 +18,7 @@ const ProductDetail = () => {
   const [error, setError] = useState(null);
   const [quantity, setQuantity] = useState(1);
   const [selectedSize, setSelectedSize] = useState("m");
-  const [showFullDescription, setShowFullDescription] = useState(false);
+  // const [showFullDescription, setShowFullDescription] = useState(false);
   const [current, setCurrent] = useState(0);
   const { id } = useParams();
 
@@ -48,7 +49,7 @@ const ProductDetail = () => {
         return;
       }
 
-     addCartItem({ ...product, size: selectedSize }, quantity);
+      addCartItem({ ...product, size: selectedSize }, quantity);
       setProduct((prevProduct) => ({ ...prevProduct, stock: updatedStock }));
       toast.success("Product successfully added to cart");
     } catch (err) {
@@ -56,9 +57,9 @@ const ProductDetail = () => {
     }
   };
 
-  const toggleDescription = () => {
-    setShowFullDescription((prevState) => !prevState);
-  };
+  // const toggleDescription = () => {
+  //   setShowFullDescription((prevState) => !prevState);
+  // };
 
   const nextSlide = () => {
     setCurrent(current === product.images.length - 1 ? 0 : current + 1);
@@ -68,7 +69,8 @@ const ProductDetail = () => {
     setCurrent(current === 0 ? product.images.length - 1 : current - 1);
   };
 
-  if (loading) return <img className="loading" src={loadingimg} alt="Loading" />;
+  if (loading)
+    return <img className="loading" src={loadingimg} alt="Loading" />;
   if (error) return <p>{error}</p>;
   if (!product) return <p>No product details available</p>;
 
@@ -79,13 +81,24 @@ const ProductDetail = () => {
         <div className="product-detail">
           <div className="product-images">
             <div className="slider">
-              <button className="left-arrow" onClick={prevSlide}>&#10094;</button>
-              <button className="right-arrow" onClick={nextSlide}>&#10095;</button>
+              <button className="left-arrow" onClick={prevSlide}>
+                &#10094;
+              </button>
+              <button className="right-arrow" onClick={nextSlide}>
+                &#10095;
+              </button>
               {product.images && product.images.length > 0 ? (
                 product.images.map((image, index) => (
-                  <div className={index === current ? "slide active" : "slide"} key={index}>
+                  <div
+                    className={index === current ? "slide active" : "slide"}
+                    key={index}
+                  >
                     {index === current && (
-                      <img className="productdetail-img"src={image} alt={`Product image ${index + 1}`} />
+                      <img
+                        className="productdetail-img"
+                        src={image}
+                        alt={`Product image ${index + 1}`}
+                      />
                     )}
                   </div>
                 ))
@@ -97,43 +110,98 @@ const ProductDetail = () => {
           <div className="product-detail-info">
             <p className="product-detail-price">Name: {product.name}</p>
             <span className="product-detail-price">Rs:₹{product.price}</span>
-            <p className={`product-detail-description ${showFullDescription ? "show" : ""}`}>
+
+            {/* <p className={`product-detail-description ${showFullDescription ? "show" : ""}`}>
               Description: <br />{product.describe}
-            </p>
-            <button className="toggle-button-des" onClick={toggleDescription}>
+            </p> */}
+            {/* <button className="toggle-button-des" onClick={toggleDescription}>
               {showFullDescription ? "Show Less" : "Show More"}
-            </button>
+            </button> */}
+
             <p className="product-detail-price">Seller: {product.seller}</p>
-            <p className="product-detail-price">Stock: {product.stock}</p>
-            <p className="product-detail-price">Category: {product.category}</p>
+            {/* <p className="product-detail-price">Stock: {product.stock}</p> */}
+            <p className="product-detail-price">Category:{product.category}</p>
             <div className="size-container">
               <label htmlFor="size">Select Size:</label>
-              <select id="size" value={selectedSize} onChange={(e) => setSelectedSize(e.target.value)}>
-               
+              <select
+                id="size"
+                value={selectedSize}
+                onChange={(e) => setSelectedSize(e.target.value)}
+              >
                 <option value="m">M</option>
                 <option value="l">L</option>
                 <option value="xl">XL</option>
-                
               </select>
-              <Link to={"/sizechart"} className="sizechart">sizechart</Link>
+              <Link to={"/sizechart"} className="sizechart">
+                sizechart
+              </Link>
             </div>
             <div className="quantity-container">
-              <button className="quabtity-btn-left" onClick={() => handleQuantityChange(-1)}>-</button>
+              <button
+                className="quabtity-btn-left"
+                onClick={() => handleQuantityChange(-1)}
+              >
+                -
+              </button>
               <span className="quantity">{quantity}</span>
-              <button className="quabtity-btn-right" onClick={() => handleQuantityChange(1)}>+</button>
+              <button
+                className="quabtity-btn-right"
+                onClick={() => handleQuantityChange(1)}
+              >
+                +
+              </button>
             </div>
-            <button className="cart" onClick={handleAddToCart}><img src={cartimg}></img></button>
+            <button className="cart" onClick={handleAddToCart}>
+              <img src={cartimg}></img>
+            </button>
           </div>
-          <div className="shippinginfo">
-            <h1 className="shipping">Shipping info</h1>
+
+          <div className="desandshop">
+            <Accordion 
+             className="description">
+              <Accordion.Item eventKey="0">
+                <Accordion.Header>Description</Accordion.Header>
+                <Accordion.Body className="dec-detail">{product.describe}</Accordion.Body>
+              </Accordion.Item>
+            </Accordion>
+
+            <Accordion   className="description">
+              <Accordion.Item eventKey="0">
+                <Accordion.Header>Shipping info</Accordion.Header>
+                <Accordion.Body className="dec-detail">
+                  <ul>
+                    <li>Orders are processed within 1-3 business days.</li>
+                    <li>Orders are delivered within 7-10 business days.</li>
+                    <li>
+                      Customers are responsible for accurate shipping
+                      information.
+                    </li>
+                    <li>
+                      For undeliverable packages, customers may incur return
+                      shipping fees.
+                    </li>
+                    <li>Contact us for tracking issues or inquiries.</li>
+                  </ul>
+                </Accordion.Body>
+              </Accordion.Item>
+            </Accordion>
+          </div>
+
+          {/* <div className="shippinginfo">
+            <h1 className="shipping"></h1>
             <ul>
               <li>Orders are processed within 1-3 business days.</li>
               <li>Orders are delivered within 7-10 business days.</li>
-              <li>Customers are responsible for accurate shipping information.</li>
-              <li>For undeliverable packages, customers may incur return shipping fees.</li>
+              <li>
+                Customers are responsible for accurate shipping information.
+              </li>
+              <li>
+                For undeliverable packages, customers may incur return shipping
+                fees.
+              </li>
               <li>Contact us for tracking issues or inquiries.</li>
             </ul>
-          </div>
+          </div> */}
           <p className="product-detail-created">
             Created at: {new Date(product.createdAt).toLocaleDateString()}
           </p>
