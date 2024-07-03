@@ -1,16 +1,23 @@
-/* cart.css */
 
 .cart-container {
   padding: 20px;
+  
 }
 
+
+.cartloading{
+ width: 100%;
+ /* display: flex;
+ margin-top: 200px;
+ height: 200px; */
+}
 .cart-item {
   display: flex;
   margin-bottom: 20px;
 }
 
 .cart-item img {
-  width: 40%; /* Adjust the width as needed */
+  width: 40%; 
   height: auto;
   object-fit: cover;
 }
@@ -63,8 +70,6 @@
   border-radius: 5px;
 }
 
-/* CSS for shipping information form */
-/* CSS for shipping information form */
 .shipping-form-container {
   max-width: 500px;
   margin: auto;
@@ -124,4 +129,6 @@
   .inputs {
     margin-bottom: 10px;
   }
+ 
+
 }

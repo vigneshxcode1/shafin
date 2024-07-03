@@ -4,6 +4,8 @@ import Navbar from "../../src/componets/Navbar/Navbar.jsx";
 import "./cart.css";
 import { getCartItems, updateCartItem, removeCartItem, clearCart } from "../localStorageHelpers.jsx";
 import { useNavigate } from "react-router-dom";
+import cartbackgroundimg from "../../src/componets/images/7GtC.gif"
+
 
 const Cart = () => {
     const [cartItems, setCartItems] = useState([]);
@@ -88,8 +90,11 @@ const Cart = () => {
         return (
             <>
                 <Navbar />
+               
                 <br></br><br></br><br></br>
                 <h3>Your cart is empty</h3>
+                <img className="cartloading" src={cartbackgroundimg}/>
+
             </>
         );
     }
