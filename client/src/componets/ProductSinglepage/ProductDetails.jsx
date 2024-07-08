@@ -203,7 +203,7 @@ const ProductDetail = () => {
             </ul>
           </div> */}
           <p className="product-detail-created">
-            Created at: {new Date(product.createdAt).toLocaleDateString()}
+            
           </p>
         </div>
       </div>

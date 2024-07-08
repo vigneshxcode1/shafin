@@ -29,13 +29,14 @@ const Entry = () => {
       <video ref={videoRef} src={backgroundVideo} type="video/mp4" autoPlay loop muted playsInline className="background-video" />
       <div className="text-overlay">
         <h1 className="brand-img">Zculture</h1>
+        <p className="subhead">செய்யும் தொழிலே தெய்வம்</p>
         <nav className="main-links" id="main-link">
           <Link to="/home" className="link-main">
             <h1 id="link"className="link-item">SHOP</h1>
           </Link>
-          <Link to="/postercollections" className="link-main">
+          {/* <Link to="/postercollections" className="link-main">
             <h1 id="link" className="link-item">POSTERS</h1>
-          </Link>
+          </Link> */}
           <Link to="/contact" className="link-main">
             <h1 id="link" className="link-item">CONTACT</h1>
           </Link>

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import './CardSlider.css';
+import '../CardSlider.css';
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import loadingimg from "../../componets/images/7GtC.gif"
+import loadingimg from "../../../componets/images/7GtC.gif"
 const BASE_URL = "https://shafin-8q7w.onrender.com";
 
 const Trendingshirt = () => {
@@ -41,10 +41,10 @@ const Trendingshirt = () => {
   return (
     <div>
       <Link className="links" to={"/anioversized"}>
-    
-          <h1 className="header">New arrival</h1>
+        <div>
+          <h1 className="header">Best seller</h1>
           <span className="showmore">show more</span>
-     
+        </div>
       </Link>
       <div className="img-main">
         {products.map((product) => (

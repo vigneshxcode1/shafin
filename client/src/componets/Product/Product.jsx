@@ -17,7 +17,9 @@ function GridExample() {
     const fetchProducts = async () => {
       try {
         const res = await axios.get(`${BASE_URL}/api/v1/products`);
+
         console.log('API response:', res.data); 
+        
         if (res.data && res.data.product) { 
           const sortedProducts = res.data.product.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
           const firstFourProducts = sortedProducts.slice(0, 4);

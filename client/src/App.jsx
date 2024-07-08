@@ -12,8 +12,6 @@ import Printedcollection from "../src/Printedcollection/Printedcollection";
 import Pants from "../src/Pants/Pants";
 import ProductDetail from "../src/componets/ProductSinglepage/ProductDetails.jsx";
 import Register from "../src/register/Register.jsx";
-import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 import Login from "./Login/Login.jsx";
 import Dashbroad from "./Dashbroad/Dashbroad.jsx";
 import Createproducts from "./Dashbroad/Createproducts/Createproducts.jsx";
@@ -43,6 +41,8 @@ import Sizechart from "./pages/sizechart.jsx";
 import Contact from "./pages/Contact.jsx";
 import OrderPage from "./cart/order/Order.jsx";
 import Musicoversized from "./musicproduct/Musicoversized.jsx";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   return (

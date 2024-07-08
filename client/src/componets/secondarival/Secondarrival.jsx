@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 
 function HeaderAndFooterExample() {
   return (
+    <>
+        <h1>hgd</h1>
     <div className="feature">
       <Card className="text-center">
         <Card.Header className="head">ABOUT OUR BRAND</Card.Header>
@@ -20,6 +22,8 @@ function HeaderAndFooterExample() {
         </Card.Body>
       </Card>
     </div>
+    </>
+
   );
 }
 

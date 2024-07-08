@@ -1,11 +1,9 @@
-
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import '../componets/Product/Product.css'
-import Navbar from "../componets/Navbar/Navbar.jsx"
-import loadingimg from "../componets/images/animiloading.gif"
-
+import '../componets/Product/Product.css';
+import Navbar from "../componets/Navbar/Navbar.jsx";
+import loadingimg from "../componets/images/animiloading.gif";
 
 const BASE_URL = "https://shafin-8q7w.onrender.com";
 
@@ -15,19 +13,11 @@ function GridExample() {
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
-
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-
         const res = await axios.get(`${BASE_URL}/api/v1/products?category=animi-oversizes-t-shirts`);
-
-        const sortedProducts = res.data.product.sort((a, b) => {
-          const dateA = new Date(a.createdAt);
-          const dateB = new Date(b.createdAt);
-          return dateB - dateA;
-        });
-
+        const sortedProducts = res.data.product.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
         const firstFourProducts = sortedProducts.slice(0, 4);
         setProducts(firstFourProducts);
       } catch (err) {
@@ -44,12 +34,10 @@ function GridExample() {
   if (loading) {
     return (
       <>
-       <img className="loading" src={loadingimg}></img>
-       <p className="loading">Loading....</p>
+        <img className="loading-image" src={loadingimg} alt="Loading..." />
+        <p className="loading">Loading...</p>
       </>
-   
-    
-    )
+    );
   }
 
   if (error) {
@@ -61,35 +49,34 @@ function GridExample() {
   }
 
   return (
-<>
-<Navbar/>
-<br></br>
-<div className="containers">
-        <div className="main-box">
-          <h2 className="title-head">Anime OverSized collections</h2>
-          <br></br>
+    
+    <>
+    <Navbar/>
+  
+      <h2 className="grid-title">Anime OverSized Collections</h2>
+      <br />
+      <div className="containers">
+        <div className="grid">
           {products.map((product) => (
-            <div className="products" key={product._id}>
+            <div className="product-card" key={product._id}>
               {product.images && product.images.length > 0 ? (
                 <img
-                  className="img-products"
+                  className="product-image"
                   onClick={() => navigate(`/products/${product._id}`)}
-                  src={product.images[0]} 
+                  src={product.images[0]}
                   alt={`${product.name} first image`}
                 />
               ) : (
                 <p>No images available</p>
               )}
-              <p className="title-oversized">{product.name}</p>
-              <p className="title-oversized">From at RS:{product.price}</p>
+              <p className="product-title">{product.name}</p>
+              <p className="product-title">From RS: {product.price}</p>
             </div>
           ))}
         </div>
       </div>
-</>
- 
-   
+    </>
   );
 }
 
-export default GridExample
+export default GridExample;

@@ -10,6 +10,11 @@
     text-decoration: none;
     color: rgb(0, 0, 0);
 }
+
+@font-face{
+    src: url("../../fonts/Fonstars-4Bo0p.otf");
+    font-family: "fo";
+}
 .brandtitle{
     font-family: 'fontstart';
 }

@@ -1,0 +1,52 @@
+.img-mains {
+    display: flex;
+    overflow-x: scroll;
+    white-space: nowrap; 
+    padding: 10px;
+    gap: 10px;
+    margin-left: -10px; 
+    scroll-behavior: smooth; 
+    margin-top: -10px; 
+    position: relative; 
+  }
+  .cor-name{
+    font-size: 20px;
+  }
+  
+  .products {
+    position: relative; 
+    display: inline-block;
+    flex: none;
+    text-align: center;
+  }
+  
+  .stackimgs {
+    width: 1000px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s ease-in-out;
+    transform-style: preserve-3d; 
+    perspective: 1000px; 
+  }
+  
+  .stackimgs:hover {
+    transform: scale(1.1) rotateY(5deg); 
+  }
+  .header{
+    text-decoration: underline;
+  }
+  
+ 
+  @media (max-width: 768px) {
+    .stackimgs {
+      width: 420px;
+    }
+    .links{
+      text-decoration: none;
+    }
+    .header{
+      text-decoration: none;
+    }
+  }
+  
