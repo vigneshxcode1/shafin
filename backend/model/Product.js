@@ -39,6 +39,9 @@ const productSchema = new mongoose.Schema({
         required: [true, 'please enter product category'],
         enum: {
             values: [
+                'newarrival',
+                'bestseller',
+                'zcommuntity',
                 'animi-oversizes-t-shirts',
                 'printed-oversized',
                 'trending',

@@ -7,6 +7,8 @@ import Dashbroad from "../Dashbroad";
 
 const BASE_URL = "https://shafin-8q7w.onrender.com";
 
+// const BASE_URL = "http://localhost:5173";
+
 const Createproducts = () => {
   const [name, setProductname] = useState("");
   const [price, setPrice] = useState("");
@@ -131,6 +133,9 @@ const Createproducts = () => {
                 <option value="">Select category</option>
                 {/* <option value="animi-tshirt">Anime T-shirt</option> */}
                 <option value="animi-oversizes-t-shirts">Anime Oversized T-shirts</option>
+                <option value="newarrival">newarrival</option>
+                <option value="bestseller">bestseller</option>
+                <option value="zcommuntity">zcommuntity</option>
                 {/* <option value="printed-oversized">Printed Oversized</option> */}
                 {/* <option value="trending">Trending</option> */}
                 <option value="trendoversized">TrendingOversized</option>

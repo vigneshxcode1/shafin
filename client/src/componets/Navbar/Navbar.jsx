@@ -32,8 +32,8 @@ function CollapsibleExample() {
             </NavDropdown>
           </Nav>
           <Nav>
-            <Nav.Link href="#deets">LOGIN</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
+            <Nav.Link href="/login">LOGIN</Nav.Link>
+            <Nav.Link eventKey={2} href="/register">
              REGISTER
             </Nav.Link>
           </Nav>
