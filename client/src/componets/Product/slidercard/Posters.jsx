@@ -16,7 +16,7 @@ const productsimg = [
 const Trendingshirt = () => {
   return (
     <div>
-        <h1 className="header">Poster collection &#8594;</h1>
+        <h1 className="headers">Poster collection &#8594;</h1>
       <div className="img-main">
         {productsimg.map((product) => (
           <div className="products" key={product.id}>
