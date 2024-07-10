@@ -4,12 +4,50 @@ import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 import ListSubheader from '@mui/material/ListSubheader';
 import IconButton from '@mui/material/IconButton';
-import animiimg from "../../images/animicard.jpg"
-import carimg from "../../images/carcard.jpg"
-import moviecard from "../../images/moviecard.jpg"
+import animiimg from "../../images/animipostercard.jpg"
+import carimg from "../../images/roadposter.jpg"
+import moviecard from "../../images/moviepostercard.jpg"
 import bikecard from "../../images/motogp.jpg"
 import { Link } from 'react-router-dom';
 import "./imagecard.css"
+
+const itemData = [
+    {
+      img:animiimg,
+      title: 'Animi poster',
+      author: 'Animi collections',
+      rows: 2,
+      cols: 2,
+      featured: true,
+      link: "/animiposters"
+    },
+    {
+      img:carimg,
+      title: 'Road Poster',
+      author: ' Poster Collections',
+      link: "/carposters"
+    },
+    {
+      img: moviecard,
+      title: 'Movie Poster',
+      author: 'Movie Collections',
+      link:"/movieposters"
+    },
+    {
+      img: bikecard,
+      title: 'bike Poster',
+      author: 'Bike Collections',
+      cols: 2,
+      link:"/bikeposters"
+    },
+    // {
+    //   img: 'https://images.unsplash.com/photo-1533827432537-70133748f5c8',
+    //   title: 'Hats',
+    //   author: '@hjrc33',
+    //   cols: 2,
+    // },
+  
+  ];
 export default function TitlebarImageList() {
   return (
     <ImageList className='main'>
@@ -46,40 +84,3 @@ export default function TitlebarImageList() {
   );
 }
 
-const itemData = [
-  {
-    img:animiimg,
-    title: 'Animi poster',
-    author: 'Animi collections',
-    rows: 2,
-    cols: 2,
-    featured: true,
-    link: "/animiposters"
-  },
-  {
-    img:carimg,
-    title: 'Road Poster',
-    author: ' Poster Collections',
-    link: "/carposters"
-  },
-  {
-    img: moviecard,
-    title: 'Movie Poster',
-    author: 'Movie Collections',
-    link:"/movieposters"
-  },
-  {
-    img: bikecard,
-    title: 'bike Poster',
-    author: 'Bike Collections',
-    cols: 2,
-    link:"/bikeposters"
-  },
-  // {
-  //   img: 'https://images.unsplash.com/photo-1533827432537-70133748f5c8',
-  //   title: 'Hats',
-  //   author: '@hjrc33',
-  //   cols: 2,
-  // },
-
-];
