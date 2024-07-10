@@ -1,9 +1,17 @@
-.main{
-margin-top: 30px;
+
+@font-face{
+    font-family: "mont";
+    src: url("../../../fonts/Mont-ExtraLightDEMO.otf");
 }
 .header1{
     color: rgb(245, 251, 251);
     margin-top: 50px;
     border: 2px solid white;
     padding: 10px;
+    font-family: 'mont';
 }
+.main{
+    margin-top: 30px;
+    font-family: "mont";
+    font-weight: 900;
+    }

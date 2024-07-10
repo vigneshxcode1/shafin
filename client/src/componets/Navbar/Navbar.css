@@ -12,9 +12,21 @@
 }
 
 @font-face{
-    src: url("../../fonts/Fonstars-4Bo0p.otf");
-    font-family: "fo";
+    src: url("../../fonts/Mont-ExtraLightDEMO.otf");
+    font-family: "mont";
 }
 .brandtitle{
-    font-family: 'fontstart';
+    font-family: 'monto';
+    font-size: 30px;
+    font-weight: 700;
+}
+.toggle{
+    border: none;
+    margin-top: -20px;
+}
+.cart-img{
+    margin-top: -30px;
+}
+#bg-body-tertiary{
+   margin-bottom: 20px;
 }

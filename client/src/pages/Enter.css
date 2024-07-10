@@ -40,8 +40,8 @@
 
 @font-face{
  
-  font-family:"fonstar";
-  src: url('../fonts/Fonstars-4Bo0p.otf');
+  font-family:"moto";
+  src: url('../fonts/Mont-ExtraLightDEMO.otf');
 }
 
 .brand-img {
@@ -52,7 +52,7 @@
 }
 
 .main-links {
-  font-family:"bloody" ;
+  font-family:"moto" ;
   display: flex;
   margin-top: 40%;
   font-family:"fonstar";

@@ -1,76 +1,77 @@
 /* Footer.css */
-
 footer {
+  padding: 20px;
+  font-family: "mont";
   background-color: #000000;
-  color: #fff;
-  padding: 20px 0;
+  border-top: 1px solid rgb(180, 179, 179);
+}
+.links{
+  text-decoration: none;
+  color: white;
 }
 
-.footer-section {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 10px 20px;
-  text-align: left;
+.footer-sections span{
+  margin-top: 20px;
+  border: none;
+  font-size:20px; 
+  background-color: #000000;
 }
 
-.footer-section h1,
-.footer-section h6 {
-  margin: 10px 0;
+.footerlinks .accordion-button {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  color: #000;
 }
 
-.footer-section p {
+.footerlinks .accordion-button:focus {
+  box-shadow: none;
+  border: none;
+}
+
+.footerlinks .accordion-body {
+  background-color:black;
+  color: aliceblue;
+  border: none;
+}
+
+.footerlinks .link-detail li {
+text-align: center;
+display: flex;
+border: none;
+margin: 10px;
+}
+
+h1, h6, p {
   margin: 5px 0;
-}
-
-/* Mobile styles */
-@media (max-width: 768px) {
-  .footer-section {
-    padding: 10px;
-  }
-
-  footer {
-    padding: 15px 0;
-  }
-
-  .footer-section h1 {
-    font-size: 1.5rem;
-  }
-
-  .footer-section h6 {
-    font-size: 1rem;
-  }
-
-  .footer-section p {
-    font-size: 0.9rem;
-  }
-}
-span{
-  color: rgb(249, 249, 249);
   font-size: 20px;
 }
 
-/* Desktop styles */
-@media (min-width: 769px) {
-  .footer-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    text-align: left;
-  }
- 
-  .footer-section h1 {
-    font-size: 2rem;
-  }
+span {
+  display: block;
+  margin-top: 20px;
+}
+.contactlinks{
+  margin-top: 20px;
+  background-color: #000;
+}
+.contactlinks h6{
+  font-size: 20px;
+  border-bottom: 1px solid rgb(164, 163, 163);
+  padding: 10px;
 
-  .footer-section h6 {
-    font-size: 1.2rem;
-  }
+}
+.contactlinks p{
+  margin-top: 20px;
+}
 
-  .footer-section p {
-    font-size: 1rem;
-  }
+.info h6{
 
-  footer {
-    padding: 30px 0;
-  }
+border-bottom: 1px solid rgb(170, 169, 169);
+padding: 10px;
+font-size: 20px;
+margin-top: 10px;
+}
+.info p{
+  margin-top: 20px;
 }
