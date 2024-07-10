@@ -110,11 +110,11 @@ const ProductDetail = () => {
           <div className="product-detail-info">
             <p className="cmpy">zculture...</p>
             <p className="product-detail-name">{product.category}</p>
+
             <div className="prices">
               <span className="product-cutprice">Rs:₹{product.price}</span>
-              <span className="product-price">
-                Rs:₹{product.price} <span className="sale">Sale</span>
-              </span>
+              <span className="product-price">Rs:₹{product.price} </span>
+              <span className="sale">sale</span>
             </div>
             <p className="freeshipping">FREE SHIPPING ON PREPAID</p>
             <br></br>
@@ -143,14 +143,14 @@ const ProductDetail = () => {
             <div className="quantity-container">
               <span className="qtnbtn">Quantity</span>
               <button
-                className="quabtity-btn-left"
+                id="quabtity-btn-left"
                 onClick={() => handleQuantityChange(-1)}
               >
                 -
               </button>
-              <span className="quantity">{quantity}</span>
+              <span className="quantitys">{quantity}</span>
               <button
-                className="quabtity-btn-right"
+                id="quabtity-btn-right"
                 onClick={() => handleQuantityChange(1)}
               >
                 +

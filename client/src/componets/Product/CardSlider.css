@@ -7,8 +7,7 @@
   margin-left:-10px;
   scroll-behavior: smooth; 
   margin-top: 0px;
-
-  
+  font-family: 'mont'
 }
 
 .header {
@@ -18,8 +17,8 @@
   margin: 20px 0;
   margin-top: 20px;
   margin-bottom:-50px;
-    
-  
+    font-weight: 700;
+  font-family: 'mont';
 }
 
 
@@ -30,6 +29,8 @@
   display: block;
   text-align: end;
   margin-right: 20px;
+  font-family: 'mont';
+  font-weight: 600;
 }
 
 .products {
@@ -53,6 +54,7 @@
 .title-oversized {
   font-size: 1rem;
   color: #f0eded;
+  font-family: 'mont';
 }
 .title-oversized {
   font-size: 20px;
@@ -95,8 +97,8 @@
 
   .title-oversized {
     font-size: 20px;
-   font-family: "monta";
     color: rgb(255, 255, 255);
+    font-family: 'mont';
   }
   .title-oversized-cut{
     text-decoration:line-through;
