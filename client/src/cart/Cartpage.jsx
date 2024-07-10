@@ -4,8 +4,7 @@ import Navbar from "../../src/componets/Navbar/Navbar.jsx";
 import "./cart.css";
 import { getCartItems, updateCartItem, removeCartItem, clearCart } from "../localStorageHelpers.jsx";
 import { useNavigate } from "react-router-dom";
-import cartbackgroundimg from "../../src/componets/images/7GtC.gif"
-
+import cartbackgroundimg from "../../src/componets/images/7GtC.gif";
 
 const Cart = () => {
     const [cartItems, setCartItems] = useState([]);
@@ -71,7 +70,6 @@ const Cart = () => {
             return;
         }
 
-
         toast.success('Redirecting to shipping details...', {
             position: "top-right",
             autoClose: 1000,
@@ -82,7 +80,6 @@ const Cart = () => {
             progress: undefined,
         });
 
-       
         navigate("/ordershipping");
     };
 
@@ -90,11 +87,9 @@ const Cart = () => {
         return (
             <>
                 <Navbar />
-               
                 <br></br><br></br><br></br>
                 <h3>Your cart is empty</h3>
-                <img className="cartloading" src={cartbackgroundimg}/>
-
+                <img className="cartloading" src={cartbackgroundimg} />
             </>
         );
     }
@@ -108,20 +103,31 @@ const Cart = () => {
                     <div key={item._id} className="cart-item">
                         <img src={item.images[0]} alt={item.name} />
                         <div className="cart-item-info">
-                            <h2> {item.name}</h2>
+                            <h2>{item.name}</h2>
                             <p>Price: ₹{item.price}</p>
                             <p>Size: {item.size}</p>
                             <div className="quantity-container">
-                                <button onClick={() => handleQuantityChange(item._id, item.quantity - 1)}>-</button>
-                                <span>{item.quantity}</span>
-                                <button onClick={() => handleQuantityChange(item._id, item.quantity + 1)}>+</button>
+                                <span className="qtnbtn">Quantity</span>
+                                <button
+                                    id="quantity-btn-left"
+                                    onClick={() => handleQuantityChange(item._id, item.quantity - 1)}
+                                >
+                                    -
+                                </button>
+                                <span className="quantity">{item.quantity}</span>
+                                <button
+                                    id="quantity-btn-right"
+                                    onClick={() => handleQuantityChange(item._id, item.quantity + 1)}
+                                >
+                                    +
+                                </button>
                             </div>
                             <button className='remove' onClick={() => handleRemoveItem(item._id)}>Remove</button>
                         </div>
                     </div>
                 ))}
                 <div className="cart-summary">
-                    <h2 className="total">Total: ${calculateTotal()}</h2>
+                    <h2 className="total">Total: ₹{calculateTotal()}</h2>
                     <button className="process-btn" onClick={handleProceedToPayment}>Proceed to order</button>
                 </div>
             </div>

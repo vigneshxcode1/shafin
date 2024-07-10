@@ -51,7 +51,7 @@ const ProductDetail = () => {
 
       addCartItem({ ...product, size: selectedSize }, quantity);
       setProduct((prevProduct) => ({ ...prevProduct, stock: updatedStock }));
-      toast.success("Product successfully added to cart");
+      toast.success("check your cart");
     } catch (err) {
       toast.error("Failed to add product to cart. Please try again later.");
     }

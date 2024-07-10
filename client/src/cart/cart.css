@@ -1,7 +1,13 @@
 
 .cart-container {
   padding: 20px;
-  
+  font-family: 'mont';
+
+}
+
+.cart-container h1{
+  font-family: 'mont';
+  font-weight: 700;
 }
 
 
@@ -30,13 +36,21 @@
 .quantity-container {
   display: flex;
   align-items: center;
+  color: #eff1ef;
+  font-size: 20px;
 }
 
 .quantity-container button {
-  background-color: #f8f9fa;
+background-color: #000000;
+color: #44bc50;
+font-size: 20px;
+font-weight: 900;
   border: none;
   cursor: pointer;
   padding: 5px 10px;
+}
+.quantity{
+  margin-top: 10px;
 }
 
 .remove {
@@ -129,6 +143,6 @@
   .inputs {
     margin-bottom: 10px;
   }
- 
+
 
 }
