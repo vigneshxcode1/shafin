@@ -31,7 +31,7 @@
   border-radius: 10px;
 }
 .cmpy{
-  font-size: 14px;
+  font-size: 15px;
 }
 .qtnbtn {
   color: white;
@@ -140,6 +140,7 @@
   background-color: #23e600;
   border: 1px solid rgb(25, 215, 31);
   cursor: pointer;
+  font-weight: bolder;
 }
 
 .quabtity-btn-left {
