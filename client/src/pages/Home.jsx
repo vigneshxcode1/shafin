@@ -10,20 +10,24 @@ import Bestseller from "../componets/Product/slidercard/Bestseller.jsx"
 import Zcommunity from "../componets/Product/slidercard/Z-communtity.jsx"
 import Corosol from "../componets/Product/corosol/Corolsol.jsx"
 import Poster from "../componets/Product/slidercard/Posters.jsx"
+import Postercard from '../componets/Product/slidercard/Postercards.jsx'
 import '../App.css'
 import Footer from "../componets/footer/footdetails.jsx";
-import { Link } from "react-router-dom";
+import Imagecard from "../componets/Product/slidercard/Imagecard.jsx"
 const Home = () => {
   return (
     <>
   <Navbar/>
+  
     <Corosol/>
 
  <CardSlider/>
 
  <Bestseller/>
  <Zcommunity/>
+ <Imagecard/>
  <Poster/>
+ <Postercard/>
 
 <Footer/>
     </>

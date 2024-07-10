@@ -70,7 +70,7 @@ const ProductDetail = () => {
   };
 
   if (loading)
-    return <img className="loading" src={loadingimg} alt="Loading" />;
+    return  <img className="loading" src={loadingimg} alt="Loading" />;
   if (error) return <p>{error}</p>;
   if (!product) return <p>No product details available</p>;
 
