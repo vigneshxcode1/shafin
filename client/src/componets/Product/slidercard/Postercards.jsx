@@ -50,37 +50,40 @@ const itemData = [
   ];
 export default function TitlebarImageList() {
   return (
-    <ImageList className='main'>
+    <>
+    <h1 className='header1'>Poster Collections</h1>
+     <ImageList className='main'>
         
-      <ImageListItem key="Subheader" cols={2}>
-      
-      </ImageListItem>
-      {itemData.map((item) => (
-        <ImageListItem key={item.img}>
-          <img
-            srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-            src={`${item.img}?w=248&fit=crop&auto=format`}
-            alt={item.title}
-            loading="lazy"
-          />
-          <Link to={item.link}>
-          <ImageListItemBar
-            title={item.title}
-            subtitle={item.author}
-            actionIcon={
-              <IconButton
-                sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
-                aria-label={`info about ${item.title}`}
-              >
-
-              </IconButton>
-            }
-          />
-          </Link>
-         
+        <ImageListItem key="Subheader" cols={2}>
+        
         </ImageListItem>
-      ))}
-    </ImageList>
+        {itemData.map((item) => (
+          <ImageListItem key={item.img}>
+            <img
+              srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+              src={`${item.img}?w=248&fit=crop&auto=format`}
+              alt={item.title}
+              loading="lazy"
+            />
+            <Link to={item.link}>
+            <ImageListItemBar
+              title={item.title}
+              subtitle={item.author}
+              actionIcon={
+                <IconButton
+                  sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
+                  aria-label={`info about ${item.title}`}
+                >
+  
+                </IconButton>
+              }
+            />
+            </Link>
+           
+          </ImageListItem>
+        ))}
+      </ImageList></>
+   
   );
 }
 

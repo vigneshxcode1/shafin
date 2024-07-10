@@ -1,5 +1,5 @@
 /* General styles for the product detail page */
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap");
 
 .product-detail-container {
   display: flex;
@@ -16,7 +16,28 @@
   margin-left: 20px;
   color: rgb(86, 226, 116);
 }
-
+#size {
+  color: #000000;
+  border-radius: 10px;
+  font-weight: 900;
+  padding: 6px;
+  margin-left: 10px;
+}
+.sale {
+  margin-top: 10px;
+  color: #23e600;
+  border: 2px solid white;
+  padding: 2px;
+  border-radius: 10px;
+}
+.cmpy{
+  font-size: 14px;
+}
+.qtnbtn {
+  color: white;
+  margin-top: 20px;
+  margin-right: 20px;
+}
 .size-container {
   margin: 10px 0;
 }
@@ -54,8 +75,15 @@
 }
 
 @font-face {
-  font-family: "corner";
-  src: url("../../../src/fonts/Cornerstone.ttf");
+  font-family: "moto";
+  src: url("../../../src/fonts/Mont-ExtraLightDEMO.otf");
+}
+
+.addtocart {
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .product-detail-info {
@@ -64,9 +92,28 @@
   flex-direction: column;
   justify-content: center;
   color: white;
-  font-family: "corner";
+  font-family: "moto";
   font-weight: 400;
   margin-top: 16px;
+  font-weight: 900;
+}
+.product-detail-name {
+  font-size: 30px;
+}
+.prices {
+  color: #23e600;
+}
+.product-cutprice {
+  font-size: 20px;
+  text-decoration: line-through;
+}
+.freeshipping {
+  font-size: 10px;
+}
+.product-price {
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 30px;
 }
 
 .toggle-button-des {
@@ -178,23 +225,22 @@
   background: rgba(0, 0, 0, 0.7);
 }
 
-.description{
- margin-bottom: 5px;
- padding: 10px;
- border-radius: 10px;
- font-family: 'fontstart';
+.description {
+  margin-bottom: 5px;
+  padding: 10px;
+  border-radius: 10px;
+  font-family: "fontstart";
 }
-.dec-detail{
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.dec-detail {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-
 
 /* Responsive styles */
 @media (min-width: 768px) {
   .product-detail {
     flex-direction: row;
   }
-  
+
   .product-detail-info {
     margin-left: 32px;
     flex: 1;
@@ -211,7 +257,7 @@
   .product-detail {
     flex-direction: column;
     color: black;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Times New Roman", Times, serif;
     font-size: 20px;
   }
 
@@ -250,7 +296,7 @@
 
 .shippinginfo {
   color: white;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .shippinginfo h1 {

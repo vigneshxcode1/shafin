@@ -15,7 +15,7 @@ export default function TitlebarImageList() {
     <ImageList className='main'>
         
       <ImageListItem key="Subheader" cols={2}>
-      <h1>Top collections</h1>
+      <h1 className='header1'>Top collections</h1>
       </ImageListItem>
       {itemData.map((item) => (
         <ImageListItem key={item.img}>

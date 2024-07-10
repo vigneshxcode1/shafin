@@ -22,11 +22,11 @@ const Home = () => {
       <Corosol />
 
       <CardSlider />
-
       <Bestseller />
       <Zcommunity />
       <Imagecard />
-      <Poster />
+      {/* <Poster /> */}
+
       <Postercard />
 
       <Footer />

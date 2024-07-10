@@ -9,7 +9,7 @@ import loadingimg from "../../componets/images/luffy2.gif";
 import Navbar from "../Navbar/Navbar.jsx";
 import { addCartItem } from "../../localStorageHelpers.jsx";
 import Accordion from "react-bootstrap/Accordion";
-
+import cartimgs from "../../componets/images/icons-cart.gif";
 const BASE_URL = "https://shafin-8q7w.onrender.com";
 
 const ProductDetail = () => {
@@ -70,7 +70,7 @@ const ProductDetail = () => {
   };
 
   if (loading)
-    return  <img className="loading" src={loadingimg} alt="Loading" />;
+    return <img className="loading" src={loadingimg} alt="Loading" />;
   if (error) return <p>{error}</p>;
   if (!product) return <p>No product details available</p>;
 
@@ -108,21 +108,24 @@ const ProductDetail = () => {
             </div>
           </div>
           <div className="product-detail-info">
-            <p className="product-detail-price">Name: {product.name}</p>
-            <span className="product-detail-price">Rs:₹{product.price}</span>
-
-            {/* <p className={`product-detail-description ${showFullDescription ? "show" : ""}`}>
-              Description: <br />{product.describe}
-            </p> */}
-            {/* <button className="toggle-button-des" onClick={toggleDescription}>
-              {showFullDescription ? "Show Less" : "Show More"}
-            </button> */}
-
-            <p className="product-detail-price">Seller: {product.seller}</p>
+            <p className="cmpy">zculture...</p>
+            <p className="product-detail-name">{product.category}</p>
+            <div className="prices">
+              <span className="product-cutprice">Rs:₹{product.price}</span>
+              <span className="product-price">
+                Rs:₹{product.price} <span className="sale">Sale</span>
+              </span>
+            </div>
+            <p className="freeshipping">FREE SHIPPING ON PREPAID</p>
+            <br></br>
+            {/* <p className="product-detail-seller">Seller: {product.seller}</p> */}
             {/* <p className="product-detail-price">Stock: {product.stock}</p> */}
-            <p className="product-detail-price">Category:{product.category}</p>
-            <div className="size-container">
-              <label htmlFor="size">Select Size:</label>
+            <p className="product-detail-category">
+              Category: {product.category}
+            </p>
+            <br></br>
+            <div className="size-container-size">
+              <label htmlFor="size">Select Size</label>
               <select
                 id="size"
                 value={selectedSize}
@@ -136,7 +139,9 @@ const ProductDetail = () => {
                 sizechart
               </Link>
             </div>
+
             <div className="quantity-container">
+              <span className="qtnbtn">Quantity</span>
               <button
                 className="quabtity-btn-left"
                 onClick={() => handleQuantityChange(-1)}
@@ -151,21 +156,37 @@ const ProductDetail = () => {
                 +
               </button>
             </div>
-            <button className="cart" onClick={handleAddToCart}>
-              <img src={cartimg}></img>
+            <br></br>
+            <button className="addtocart" onClick={handleAddToCart}>
+              Add To Cart
             </button>
           </div>
 
           <div className="desandshop">
-            <Accordion 
-             className="description">
+            <Accordion className="description">
               <Accordion.Item eventKey="0">
                 <Accordion.Header>Description</Accordion.Header>
-                <Accordion.Body className="dec-detail">{product.describe}</Accordion.Body>
+                <Accordion.Body className="dec-detail">
+                  {product.describe}
+                </Accordion.Body>
               </Accordion.Item>
             </Accordion>
 
-            <Accordion   className="description">
+            <Accordion className="description">
+              <Accordion.Item eventKey="0">
+                <Accordion.Header>Return and Refund</Accordion.Header>
+                <Accordion.Body className="dec-detail">
+                  We'll take the tshirt back in case there is any quality issue
+                  with either the print, or the tshirt. You need to notify us
+                  within 3 days of recieving your order. Incase of sizing
+                  issues, there is no return/refund. Our tshirts are printed on
+                  demand, and if there is a return for size issues, it is
+                  practically dead stock to us.
+                </Accordion.Body>
+              </Accordion.Item>
+            </Accordion>
+
+            <Accordion className="description">
               <Accordion.Item eventKey="0">
                 <Accordion.Header>Shipping info</Accordion.Header>
                 <Accordion.Body className="dec-detail">
@@ -202,9 +223,7 @@ const ProductDetail = () => {
               <li>Contact us for tracking issues or inquiries.</li>
             </ul>
           </div> */}
-          <p className="product-detail-created">
-            
-          </p>
+          <p className="product-detail-created"></p>
         </div>
       </div>
     </>

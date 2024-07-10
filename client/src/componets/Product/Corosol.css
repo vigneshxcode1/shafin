@@ -35,6 +35,7 @@
   }
   .header{
     text-decoration: underline;
+    margin-top: 30px;
   }
   .headers{
     border: 2px solid white;

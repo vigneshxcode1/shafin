@@ -6,7 +6,7 @@
   gap: 10px;
   margin-left:-10px;
   scroll-behavior: smooth; 
-  margin-top: 20px;
+  margin-top: 0px;
 
   
 }
@@ -72,15 +72,16 @@
   margin-top: -10px;
 }
 
+
 @media (max-width: 768px) {
   .stackimg {
     width: 180px; 
   }
+ 
   
   .header {
     font-size: 1.5rem;
     display:flex ;
-    
     margin-left: 10px;
     color: rgb(245, 245, 245);
     font-size: 30px;
