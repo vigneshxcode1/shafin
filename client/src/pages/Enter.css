@@ -9,7 +9,7 @@
 }
 .subhead{
   background-color: #0a0a0a;
-  margin-top: -8px;
+  margin-top: -30px;
   color: rgb(251, 251, 251);
 }
 .background-video {
@@ -54,7 +54,7 @@
 .main-links {
   font-family:"bloody" ;
   display: flex;
-  margin-top: 80px;
+  margin-top: 40%;
   font-family:"fonstar";
   justify-content: space-around;
   width: 100%;
@@ -70,6 +70,8 @@ h1 .link-item {
 #link{
   color: #fff;
   text-decoration: none;
+  background-color: #0a0a0a32;
+
 }
 
 .main-foot {
