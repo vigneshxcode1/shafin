@@ -11,6 +11,7 @@
   background-color: #0a0a0a;
   margin-top: -30px;
   color: rgb(251, 251, 251);
+  font-size: 15px;
 }
 .background-video {
   position: absolute;
@@ -97,6 +98,7 @@ h1 .link-item {
     text-decoration: none;
     font-size: 20px;
   }
+
   .text-overlay {
     justify-content: flex-start;
     text-decoration: none;
