@@ -120,7 +120,7 @@ const ProductDetail = () => {
             <br></br>
             {/* <p className="product-detail-seller">Seller: {product.seller}</p> */}
             {/* <p className="product-detail-price">Stock: {product.stock}</p> */}
-            <p className="product-detail-category">
+            <p className="product-detail-categorys">
               Category: {product.category}
             </p>
             <br></br>

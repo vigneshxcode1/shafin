@@ -234,6 +234,11 @@ gap: 40px;
   background-color: #000000;
   color: white;
 }
+.product-detail-categorys{
+  font-size: 23px;
+letter-spacing: 6px;
+ 
+}
 
 /* Responsive styles */
 @media (min-width: 768px) {
@@ -266,6 +271,7 @@ gap: 40px;
     width: 100%;
     padding: 15px;
   }
+  
 }
 
 .product-detail-description {
@@ -309,6 +315,7 @@ gap: 40px;
   letter-spacing: 10px;
 
 }
+
 .product-detail-info {
   padding: 10px;
   font-family: "mont";
