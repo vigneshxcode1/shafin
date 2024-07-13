@@ -13,6 +13,7 @@
   font-family: "mont";
 }
 
+
 .sizechart {
   margin-left: 20px;
   color: rgb(86, 226, 116);
@@ -33,6 +34,7 @@
 }
 .cmpy{
   font-size: 15px;
+  letter-spacing: 8px;
 }
 .qtnbtn {
   color: white;
@@ -95,7 +97,7 @@
   font-weight: 900;
 }
 .product-detail-name {
-  font-size: 30px;
+  font-size: 20px;
 }
 .prices {
 display: flex;
@@ -266,6 +268,10 @@ letter-spacing: 6px;
     color: black;
     font-size: 20px;
   }
+  #product-detail-name{
+    font-size: 30px;
+    letter-spacing: 20px;
+  }
 
   .product-detail-info {
     width: 100%;
@@ -311,10 +317,7 @@ letter-spacing: 6px;
 }
 
 /* ProductDetail.css */
-.product-detail-name{
-  letter-spacing: 10px;
 
-}
 
 .product-detail-info {
   padding: 10px;
