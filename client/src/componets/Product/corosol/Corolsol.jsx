@@ -30,7 +30,7 @@ const Trendingshirt = () => {
                 <p>No image available</p>
               )}
             </Link>
-            <p className="cor-name">{product.name}&#8594;</p>
+            <p className="cor-name">{product.name}</p>
           </div>
         ))}
       </div>

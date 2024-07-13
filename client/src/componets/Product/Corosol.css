@@ -8,6 +8,8 @@
     scroll-behavior: smooth; 
     margin-top: -10px; 
     position: relative; 
+    font-family: 'mont';
+     letter-spacing: 3px;
   }
   .cor-name{
     font-size: 20px;

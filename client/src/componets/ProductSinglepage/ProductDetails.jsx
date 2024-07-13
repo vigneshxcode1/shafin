@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./productDetails.css";
 import cartimg from "../../componets/images/addcartimg.gif";
-import loadingimg from "../../componets/images/luffy2.gif";
+import loadingimg from "../../componets/images/animiloading.gif";
 import Navbar from "../Navbar/Navbar.jsx";
 import { addCartItem } from "../../localStorageHelpers.jsx";
 import Accordion from "react-bootstrap/Accordion";
@@ -70,7 +70,7 @@ const ProductDetail = () => {
   };
 
   if (loading)
-    return <img className="loading" src={loadingimg} alt="Loading" />;
+    return <img className="loading-image" src={loadingimg} alt="Loading" />;
   if (error) return <p>{error}</p>;
   if (!product) return <p>No product details available</p>;
 
@@ -198,8 +198,7 @@ const ProductDetail = () => {
                       information.
                     </li>
                     <li>
-                      For undeliverable packages, customers may incur return
-                      shipping fees.
+                      For undeliverable packages, customers may incur return shipping fees.
                     </li>
                     <li>Contact us for tracking issues or inquiries.</li>
                   </ul>

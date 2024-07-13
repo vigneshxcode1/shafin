@@ -11,7 +11,7 @@
   background-color: #0a0a0a;
   margin-top: -30px;
   color: rgb(251, 251, 251);
-  font-size: 15px;
+  font-size: 10px;
 }
 .background-video {
   position: absolute;
@@ -39,26 +39,22 @@
 }
 
 
-@font-face{
- 
-  font-family:"moto";
-  src: url('../fonts/Mont-ExtraLightDEMO.otf');
-}
 
 .brand-img {
-  /* font-family:'bloody'; */
+  font-family:'mont';
   font-weight: 800;
   margin-bottom: 20px;
  
 }
 
 .main-links {
-  font-family:"moto" ;
+  
   display: flex;
   margin-top: 40%;
-  font-family:"fonstar";
   justify-content: space-around;
   width: 100%;
+  letter-spacing: 26px;
+ 
 }
 
 h1 .link-item {
@@ -97,6 +93,7 @@ h1 .link-item {
   .link-main{
     text-decoration: none;
     font-size: 20px;
+    
   }
 
   .text-overlay {
@@ -106,7 +103,7 @@ h1 .link-item {
 
   .brand-img {
     margin-top: 40px;
-    font-size: 90px;
+    font-size: 80px;
     color: rgb(221, 224, 224);
   }
 

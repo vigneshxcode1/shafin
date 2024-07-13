@@ -17,7 +17,7 @@
   margin: 20px 0;
   margin-top: 20px;
   margin-bottom:-50px;
-    font-weight: 700;
+  letter-spacing: 3px;
   font-family: 'mont';
 }
 
@@ -30,7 +30,7 @@
   text-align: end;
   margin-right: 20px;
   font-family: 'mont';
-  font-weight: 600;
+
 }
 
 .products {
