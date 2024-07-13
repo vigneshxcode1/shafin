@@ -84,6 +84,7 @@ function GridExample() {
                 <p>No images available</p>
               )}
         <p className="title-oversized">{product.name}</p>
+        <p className="title-oversized-cut">Rs:₹{product.cutprice}</p>
         <p className="title-oversized">From at RS:{product.price}</p>
          
         </div>

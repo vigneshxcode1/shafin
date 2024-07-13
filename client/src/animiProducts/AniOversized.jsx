@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import '../componets/Product/Product.css';
+import "../componets/Product/Product.css";
 import Navbar from "../componets/Navbar/Navbar.jsx";
 import loadingimg from "../componets/images/animiloading.gif";
 
@@ -16,8 +16,12 @@ function GridExample() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await axios.get(`${BASE_URL}/api/v1/products?category=animi-oversizes-t-shirts`);
-        const sortedProducts = res.data.product.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+        const res = await axios.get(
+          `${BASE_URL}/api/v1/products?category=animi-oversizes-t-shirts`
+        );
+        const sortedProducts = res.data.product.sort(
+          (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
+        );
         const firstFourProducts = sortedProducts.slice(0, 4);
         setProducts(firstFourProducts);
       } catch (err) {
@@ -49,10 +53,9 @@ function GridExample() {
   }
 
   return (
-    
     <>
-    <Navbar/>
-  
+      <Navbar />
+
       <h2 className="grid-title">Anime OverSized Collections</h2>
       <br />
       <div className="containers">
@@ -70,6 +73,7 @@ function GridExample() {
                 <p>No images available</p>
               )}
               <p className="product-title">{product.name}</p>
+              <p className="title-oversized-cut">Rs:₹{product.cutprice}</p>
               <p className="product-title">From RS: {product.price}</p>
             </div>
           ))}

@@ -12,6 +12,7 @@ const BASE_URL = "https://shafin-8q7w.onrender.com";
 const Createproducts = () => {
   const [name, setProductname] = useState("");
   const [price, setPrice] = useState("");
+  const[cutprice,setcutprice]=useState("")
   const [stock, setStock] = useState("");
   const [category, setCategory] = useState("");
   const [describe, setDescription] = useState("");
@@ -30,6 +31,7 @@ const Createproducts = () => {
     const formData = new FormData();
     formData.append("name", name);
     formData.append("price", price);
+    formData.append('cutprice',cutprice)
     formData.append("stock", stock);
     formData.append("category", category);
     formData.append("describe", describe);
@@ -120,6 +122,17 @@ const Createproducts = () => {
                 className="form-control"
                 value={price}
                 onChange={(e) => setPrice(e.target.value)}
+              />
+            </div>
+            <div className="mb-3">
+              <label>cutPrice</label>
+              <input
+                type="number"
+                required
+                placeholder="Enter product cutprice price"
+                className="form-control"
+                value={price}
+                onChange={(e) => setcutprice(e.target.value)}
               />
             </div>
             <div className="mb-3">

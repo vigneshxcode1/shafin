@@ -45,7 +45,8 @@ const Contact = () => {
               ></path>
             </svg>
           </Link>
-          <Link className="contact" to={"https://telegram.me/Deepakspax"}>
+
+          {/* <Link className="contact" to={"https://telegram.me/Deepakspax"}>
             Telegram
             <svg
               id="icon"
@@ -74,7 +75,7 @@ const Contact = () => {
                 d="M29.9,18.2c-0.2-0.2-0.5-0.3-0.7-0.1L16,26c0,0,2.1,5.9,2.4,6.9c0.3,1,0.6,1,0.6,1l1-6l9.8-9.1	C30,18.7,30.1,18.4,29.9,18.2z"
               ></path>
             </svg>
-          </Link>
+          </Link> */}
 
           <Link
           
@@ -183,7 +184,7 @@ const Contact = () => {
               </g>
             </svg>
           </Link>
-          <Link className="contact" to={""}>
+          {/* <Link className="contact" to={""}>
             Facebook
             <svg
               id="icon"
@@ -204,7 +205,7 @@ const Contact = () => {
                 d="M21.2,20.7V24h-4.7v5h4.7v13.7C22.1,42.9,23,43,24,43c0.9,0,1.7-0.1,2.6-0.2V29h4.9l0.8-5h-5.7v-2.7	c0-2.1,0.7-3.9,2.6-3.9h3.1V13c-0.5-0.1-1.7-0.2-3.9-0.2C23.8,12.8,21.2,15.2,21.2,20.7z"
               ></path>
             </svg>
-          </Link>
+          </Link> */}
 
           
         </div>

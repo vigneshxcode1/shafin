@@ -11,8 +11,12 @@ const productSchema = new mongoose.Schema({
     },
     price: {
         type: Number,
-        required: true,
         default: 0
+    },
+    cutprice:{
+        type:Number,
+        required:true,
+        default:0
     },
     describe: {
         type: String,

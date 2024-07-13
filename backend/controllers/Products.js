@@ -5,12 +5,13 @@ import apiFeature from '../utils/apiFeatures.js';
 import Product from '../model/Product.js';
 export const newProduct = async (req, res) => {
     try {
-      const { name, price, describe, stock, category, seller, rating, size } = req.body;
+      const { name, price,cutprice, describe, stock, category, seller, rating, size } = req.body;
     const images = req.body.images;
   
       const product = new Product({
         name,
         price,
+        cutprice,
         describe,
         stock,
         category,

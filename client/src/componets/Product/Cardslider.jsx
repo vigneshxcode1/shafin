@@ -14,7 +14,7 @@ const Trendingshirt = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await axios.get(`${BASE_URL}/api/v1/products?category=animi-oversizes-t-shirts`);
+        const res = await axios.get(`${BASE_URL}/api/v1/products?category=newarrival`);
         const sortedProducts = res.data.product.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
         const firstEightProducts = sortedProducts.slice(0, 6);
         setProducts(firstEightProducts);
@@ -57,10 +57,10 @@ const Trendingshirt = () => {
                 alt={`${product.name} first image`}
               />
             ) : (
-              <p>No images available</p>
+              <p>No product available</p>
             )}
             <p className="title-oversized">{product.name}</p>
-            <p className="title-oversized-cut">Rs:₹{product.price}</p>
+            <p className="title-oversized-cut">Rs:₹{product.cutprice}</p>   
             <p className="title-oversized-org">Just at:₹{product.price}</p>
           </div>
         ))}

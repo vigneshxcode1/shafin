@@ -112,7 +112,7 @@ const ProductDetail = () => {
             <p className="product-detail-name">{product.category}</p>
 
             <div className="prices">
-              <span className="product-cutprice">Rs:₹{product.price}</span>
+              <span className="product-cutprice">Rs:₹{product.cutprice}</span>
               <span className="product-price">Rs:₹{product.price} </span>
               <span className="sale">sale</span>
             </div>

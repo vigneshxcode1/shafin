@@ -13,19 +13,38 @@ const Footer = () => {
           <Accordion className="footerlinks">
             <Accordion.Item eventKey="0">
               <Accordion.Header>Quick Shop</Accordion.Header>
+              
               <Accordion.Body className="link-detail">
-                <Link className="links">
+              <span>PRINTED Collections...</span>
+                <Link className="links" to={"/animi-oversizes-t-shirts"}>
                   <li>Animi oversized</li>
                 </Link>
-                <Link className="links">
+                <Link className="links" to={"/caroversized"}>
                   <li>Car printed Oversized</li>
                 </Link>
-                <Link className="links">
+                <Link className="links" to={"/music"}>
                   {" "}
                   <li>Music printed Oversized</li>
                 </Link>
-                <Link className="links">
+                <Link className="links" to={"/bikeoversized'"}>
+                  {" "}
+                  <li>Bike printed Oversized</li>
+                </Link>
+                <span>POSTER Collections....</span>
+                <Link className="links" to={"/posters"}>
                   <li>Poster</li>
+                </Link>
+                <Link className="links" to={"/animiposter"}>
+                  <li>Animi Poster</li>
+                </Link>
+                <Link className="links" to={"/carposters"}>
+                  <li>Car Poster</li>
+                </Link>
+                <Link className="links" to={"/bikeposter"}>
+                  <li>bike Poster</li>
+                </Link>
+                <Link className="links" to={"/movieposter"}>
+                  <li>Movies Poster</li>
                 </Link>
               </Accordion.Body>
             </Accordion.Item>

@@ -14,7 +14,7 @@ const Trendingshirt = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await axios.get(`${BASE_URL}/api/v1/products?category=animi-oversizes-t-shirts`);
+        const res = await axios.get(`${BASE_URL}/api/v1/products?category=bestseller`);
         const sortedProducts = res.data.product.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
         const firstEightProducts = sortedProducts.slice(0, 6);
         setProducts(firstEightProducts);
@@ -40,30 +40,32 @@ const Trendingshirt = () => {
 
   return (
     <div>
-      <Link className="links" to={"/anioversized"}>
+      <Link className="links" to={"/caroversized"}>
         <div>
           <h1 className="header">Best seller</h1>
           <span className="showmore">show more</span>
         </div>
       </Link>
-      <div className="img-main">
-        {products.map((product) => (
-          <div className="products" key={product._id}>
-            {product.images && product.images.length > 0 ? (
-              <img
-                className="stackimg"
-                onClick={() => navigate(`/products/${product._id}`)}
-                src={product.images[0]} 
-                alt={`${product.name} first image`}
-              />
-            ) : (
-              <p>No images available</p>
-            )}
-            <p className="title-oversized">{product.name}</p>
-            <p className="title-oversized-cut">Rs:₹{product.price}</p>
-            <p className="title-oversized-org">Just at:₹{product.price}</p>
-          </div>
-        ))}
+      <div className="containers">
+        <div className="grid">
+          {products.map((product) => (
+            <div className="product-card" key={product._id}>
+              {product.images && product.images.length > 0 ? (
+                <img
+                  className="product-image"
+                  onClick={() => navigate(`/products/${product._id}`)}
+                  src={product.images[0]}
+                  alt={`${product.name} first image`}
+                />
+              ) : (
+                <p>No products available</p>
+              )}
+              <p className="product-title">{product.name}</p>
+              <p className="title-oversized-cut">Rs:₹{product.cutprice}</p>
+              <p className="product-title">From RS: {product.price}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
