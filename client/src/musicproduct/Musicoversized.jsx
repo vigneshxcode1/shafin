@@ -64,24 +64,26 @@ function Musicoversized() {
 <>
 <Navbar/>
 <br></br>
-<div className="containers">
-        <div className="main-box">
-          <h2 className="title-oversizes1">Music OverSized collections</h2>
-          <br></br>
+
+<h2 className="grid-title">Music OverSized Collections</h2>
+      <br />
+      <div className="containers">
+        <div className="grid">
           {products.map((product) => (
-            <div className="products" key={product._id}>
+            <div className="product-card" key={product._id}>
               {product.images && product.images.length > 0 ? (
                 <img
-                  className="img-products"
+                  className="product-image"
                   onClick={() => navigate(`/products/${product._id}`)}
-                  src={product.images[0]} 
+                  src={product.images[0]}
                   alt={`${product.name} first image`}
                 />
               ) : (
                 <p>No images available</p>
               )}
-              <p className="title-oversized">{product.name}</p>
-              <p className="title-oversized">From at RS:{product.price}</p>
+              <p className="product-title">{product.name}</p>
+              <p className="title-oversized-cut">Rs:₹{product.cutprice}</p>
+              <p className="product-title">From RS: {product.price}</p>
             </div>
           ))}
         </div>

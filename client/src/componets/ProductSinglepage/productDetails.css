@@ -11,6 +11,7 @@
   color: #e2e1e1;
   flex-direction: column;
   font-family: "mont";
+
 }
 
 
@@ -246,6 +247,7 @@ letter-spacing: 6px;
 @media (min-width: 768px) {
   .product-detail {
     flex-direction: row;
+   
     
   }
 
