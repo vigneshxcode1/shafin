@@ -7,8 +7,6 @@ export const createorder = async (req, res, next) => {
     const {name, address,email,city,country,phone,pin} = req.body;
 
     const order = await Ordermodel.create({name,address,email,city,country,phone,pin});
-
-   
     res.status(200).json({
       success: true,
       message: "Order created",

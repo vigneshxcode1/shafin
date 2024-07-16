@@ -9,7 +9,7 @@ const BASE_URL = "https://server.zculture.in";
 const ShippingPage = () => {
   const [name, setname] = useState("");
   const [address, setAddress] = useState("");
-  const [email, setemail] = useState("");
+  const [email,setemail]=useState("")
   const [city, setCity] = useState("");
   const [country, setCountry] = useState("india");
   const [phone, setPhone] = useState("");
@@ -52,20 +52,11 @@ const ShippingPage = () => {
       );
       console.log(response.data);
 
-      //email
-      
-      const emailresponsive = await axios
-        .post(`${BASE_URL}/api/v1/sentmail`, orderData)
-        .then(() => {
-          alert("check your mail;");
-        });
-      console.log(emailresponsive.data);
-
       const message = `
-Order placed successfully! Check your email and Here are the details:
+Order placed successfully! Here are the details:
 Name: ${name};
 Address: ${address};
-email:${email}
+email:${email};
 City: ${city};
 Country: ${country};
 Phone: ${phone};
@@ -73,7 +64,7 @@ PIN: ${pin};
 
 `;
 
-      let cartItemsMessage = `\nHello! zculture-shopping I'd like to proceed with my order. Here are the details:\n`;
+      let cartItemsMessage = `\nHello! YOUR BRAND I'd like to proceed with my order. Here are the details:\n`;
       if (cartData.length > 0) {
         cartData.forEach((item) => {
           cartItemsMessage += `
@@ -100,7 +91,7 @@ Description: ${item.describe}
       // Clear form data after redirection
       setname("");
       setAddress("");
-      setemail("");
+      setemail("")
       setCity("");
       setCountry("");
       setPhone("");
@@ -116,8 +107,9 @@ Description: ${item.describe}
       <h2>SHIPPING ADDRESS </h2>
       <form className="main-container" onSubmit={handleSubmit}>
         <div className="container">
+         
           <input
-            placeholder="name"
+          placeholder="name"
             type="text"
             name="name"
             value={name}
@@ -127,20 +119,10 @@ Description: ${item.describe}
           />
         </div>
         <div className="container">
+         
           <input
-            placeholder="email"
-            type="email"
-            name="city"
-            className="inputs"
-            value={email}
-            onChange={(e) => setemail(e.target.value)}
-            required
-          />
-        </div>
-        <div className="container">
-          <input
-            placeholder="address"
             type="text"
+            placeholder="email"
             name="address"
             value={address}
             className="inputs"
@@ -148,10 +130,12 @@ Description: ${item.describe}
             required
           />
         </div>
+
         <div className="container">
+          
           <input
-            placeholder="city"
             type="text"
+            placeholder="city"
             name="city"
             className="inputs"
             value={city}
@@ -160,6 +144,7 @@ Description: ${item.describe}
           />
         </div>
         <div className="container">
+          
           <input
             type="text"
             placeholder="country"
@@ -171,10 +156,11 @@ Description: ${item.describe}
           />
         </div>
         <div className="container">
+         
           <input
-            placeholder="phone"
             type="text"
             name="phone"
+            placeholder="phone"
             className="inputs"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
@@ -183,8 +169,8 @@ Description: ${item.describe}
         </div>
         <div className="container">
           <input
-            placeholder="pin"
             type="text"
+            placeholder="pin number"
             name="pin"
             className="inputs"
             value={pin}
