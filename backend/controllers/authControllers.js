@@ -1,6 +1,5 @@
 import bcrypt from 'bcryptjs'
 import UserModel from "../model/Usermodel.js";
-import sentemail from "../utils/email.js";
 import crypto from 'crypto'
 import usermodel from '../model/Usermodel.js';
 

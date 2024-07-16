@@ -6,21 +6,21 @@ import userrouter from './routes/AuthRouter.js';
 import path from 'path';
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
+
 import orderRoute from './routes/orderRoute.js';
-import { fileURLToPath } from 'url'
+import { fileURLToPath } from 'url';
+
+dotenv.config();
 
 const app = express();
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors());
 
-dotenv.config();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-app.use('/uploads',express.static(path.join(__dirname,'uploads')));
-
-
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 
 // Product API
@@ -40,12 +40,12 @@ app.use((err, req, res, next) => {
 
 async function main() {
   await mongoose.connect(process.env.MONGODB, {
-    
+   
   });
   console.log("MongoDB connected");
 }
 
-main().catch(err => console.log(err));
+main().catch((err) => console.log(err));
 
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {

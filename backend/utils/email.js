@@ -1,32 +1,34 @@
-import nodemailer from 'nodemailer'
+import nodemailer from "nodemailer";
+import dotenv from "dotenv";
 
-const SMTP_HOST='sandbox.smtp.mailtrap.io'
-const SMPT_PORT=2525
-const SMPT_USER="8bed8869667b89"
-const SMPT_PASS="359edc8150f172"
-const SMPT_FROM_NAME='vignesh'
-const SMPT_FROM_EMAIL='vicky@getMaxListeners.com'
+dotenv.config();
 
-const sentemail =async option=>{
-const transport = {
-    host :SMTP_HOST,
-    port :SMPT_PORT,
-    auth:{
-        user:SMPT_USER,
-        pass:SMPT_PASS
-    }
+const transporter = nodemailer.createTransport({
+  host: "smtp.gmail.com",
+
+  auth: {
+    user:"vvigneshwaran518@gmail.com",
+    pass:"bkga xpnx imty enfm",
+  },
+});
+
+async function sendMail() {
+let message="hello"
+let cartItemsMessage="items"
+  try {
+    const info = await transporter.sendMail({
+      from:'vvigneshwaran518@gmail.com',
+      to:"vvigneshwaran518@gmail.com", // recipient address
+      subject: "Order Confirmation", // Subject line
+      text: message, // plain text body
+      html: `<p>${message.replace(/\n/g, '<br>')}</p><p>${cartItemsMessage.replace(/\n/g, '<br>')}</p>`, 
+    });
+
+    console.log("Message sent: %s", info.messageId);
+  } catch (err) {
+    console.error("Error sending email:", err);
+  }
 }
-const transporter=nodemailer.createTransport(transport)
+sendMail()
 
-const message = {
-    from:`${SMPT_FROM_NAME}<>${SMPT_FROM_EMAIL}`,
-    to:options.email,
-    subject:options.subject,
-    text:options.message
-}
-transporter.sendMail(message)
-   
-
-}
-
-export default sentemail
+export default sendMail;

@@ -1,17 +1,17 @@
+
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "../cart.css";
 
+
 const BASE_URL = "https://server.zculture.in";
 
-// const BASE_URL = "http://localhost:8000";
-
 const ShippingPage = () => {
-  const [name, setname] = useState("");
+  const [name, setName] = useState("");
   const [address, setAddress] = useState("");
-  const [email,setEmail]=useState("")
+  const [email, setEmail] = useState("");
   const [city, setCity] = useState("");
-  const [country, setCountry] = useState("india");
+  const [country, setCountry] = useState("India");
   const [phone, setPhone] = useState("");
   const [pin, setPin] = useState("");
   const [cartData, setCartData] = useState([]);
@@ -31,6 +31,8 @@ const ShippingPage = () => {
     }
   }, []);
 
+  
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -46,28 +48,24 @@ const ShippingPage = () => {
       };
       console.log("Submitting order data:", orderData);
 
-      const response = await axios.post(
-        `${BASE_URL}/api/v1/order/new`,
-        orderData
-      );
+      const response = await axios.post(`${BASE_URL}/api/v1/order/new`, orderData);
       console.log(response.data);
+     
 
       const message = `
-Order placed successfully! Here are the details:
-Name: ${name};
-Address: ${address};
-email:${email};
-City: ${city};
-Country: ${country};
-Phone: ${phone};
-PIN: ${pin};
-
+Order placed successfully! \n Here are the details:\n
+Name: ${name}
+Address: ${address}
+Email: ${email}
+City: ${city}
+Country: ${country}
+Phone: ${phone}
+PIN: ${pin}
 `;
 
-      let cartItemsMessage = `\nHello! YOUR BRAND I'd like to proceed with my order. Here are the details:\n`;
-      if (cartData.length > 0) {
-        cartData.forEach((item) => {
-          cartItemsMessage += `
+      let cartItemsMessage = `\n Hello! z-culture I'd like to proceed with my order. Here are the details:\n`;
+      cartData.forEach((item) => {
+        cartItemsMessage += `
 Product Name: ${item.name}
 Quantity: ${item.quantity}
 Price: Rs:${item.price}
@@ -76,22 +74,19 @@ Category: ${item.category}
 Images: ${item.images[0]}
 Description: ${item.describe}
 \n`;
-        });
-      } else {
-        console.error("No items found in cartData:", cartData);
-      }
-
+      });
       localStorage.removeItem("cart");
-
+      setCartData([]);
       const whatsappURL = `https://api.whatsapp.com/send?phone=7338821735&text=${encodeURIComponent(
         message + cartItemsMessage
       )}`;
       window.location.href = whatsappURL;
 
-      // Clear form data after redirection
-      setname("");
+   
+      
+      setName("");
       setAddress("");
-      setEmail("")
+      setEmail("");
       setCity("");
       setCountry("");
       setPhone("");
@@ -104,37 +99,34 @@ Description: ${item.describe}
 
   return (
     <div className="shipping-form-container">
-      <h2>SHIPPING ADDRESS </h2>
+      <h2>SHIPPING ADDRESS</h2>
       <form className="main-container" onSubmit={handleSubmit}>
         <div className="container">
-         
           <input
-          placeholder="name"
+            placeholder="Name"
             type="text"
             name="name"
             value={name}
             className="inputs"
-            onChange={(e) => setname(e.target.value)}
+            onChange={(e) => setName(e.target.value)}
             required
           />
         </div>
         <div className="container">
-         
-         <input
-           type="text"
-           placeholder="email"
-           name="address"
-           value={email}
-           className="inputs"
-           onChange={(e) => setEmail(e.target.value)}
-           required
-         />
-       </div>
-        <div className="container">
-         
           <input
+            placeholder="Email"
+            type="email"
+            name="email"
+            value={email}
+            className="inputs"
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+        </div>
+        <div className="container">
+          <input
+            placeholder="Address"
             type="text"
-            placeholder="address"
             name="address"
             value={address}
             className="inputs"
@@ -142,12 +134,10 @@ Description: ${item.describe}
             required
           />
         </div>
-
         <div className="container">
-          
           <input
+            placeholder="City"
             type="text"
-            placeholder="city"
             name="city"
             className="inputs"
             value={city}
@@ -156,10 +146,9 @@ Description: ${item.describe}
           />
         </div>
         <div className="container">
-          
           <input
             type="text"
-            placeholder="country"
+            placeholder="Country"
             name="country"
             className="inputs"
             value={country}
@@ -168,11 +157,10 @@ Description: ${item.describe}
           />
         </div>
         <div className="container">
-         
           <input
             type="text"
             name="phone"
-            placeholder="phone"
+            placeholder="Phone"
             className="inputs"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
@@ -182,7 +170,7 @@ Description: ${item.describe}
         <div className="container">
           <input
             type="text"
-            placeholder="pin number"
+            placeholder="PIN"
             name="pin"
             className="inputs"
             value={pin}

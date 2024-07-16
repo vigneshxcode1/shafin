@@ -89,6 +89,7 @@ const Cart = () => {
                 <Navbar />
                 <br></br><br></br><br></br>
                 <h3>Your cart is empty</h3>
+                <button className="shop"><a href="/">shop</a></button>
                 <img className="cartloading" src={cartbackgroundimg} />
             </>
         );
