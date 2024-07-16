@@ -131,7 +131,7 @@ const Createproducts = () => {
                 required
                 placeholder="Enter product cutprice price"
                 className="form-control"
-                value={price}
+                value={cutprice}
                 onChange={(e) => setcutprice(e.target.value)}
               />
             </div>
