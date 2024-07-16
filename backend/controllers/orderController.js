@@ -4,9 +4,9 @@ import productmodel from "../model/Product.js";
 
 export const createorder = async (req, res, next) => {
   try {
-    const {name, address,city,country,phone,pin} = req.body;
+    const {name, address,email,city,country,phone,pin} = req.body;
 
-    const order = await Ordermodel.create({name,address,city,country,phone,pin});
+    const order = await Ordermodel.create({name,address,email,city,country,phone,pin});
 
    
     res.status(200).json({

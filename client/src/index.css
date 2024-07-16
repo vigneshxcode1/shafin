@@ -5,7 +5,7 @@
     src: url("../src/fonts/Station.ttf");
   }
 body{
-background-color:rgb(0, 0, 0) ;
-color: white;
+background-color:#000000 ;
+color: #88A9C3;
 font-family:"monta"
 }

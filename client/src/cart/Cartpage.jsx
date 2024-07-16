@@ -70,7 +70,7 @@ const Cart = () => {
             return;
         }
 
-        toast.success('Redirecting to shipping details...', {
+        toast.success('process to shipping details...', {
             position: "top-right",
             autoClose: 1000,
             hideProgressBar: false,

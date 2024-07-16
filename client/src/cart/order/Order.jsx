@@ -9,8 +9,9 @@ const BASE_URL = "https://server.zculture.in";
 const ShippingPage = () => {
   const [name, setname] = useState("");
   const [address, setAddress] = useState("");
+  const [email, setemail] = useState("");
   const [city, setCity] = useState("");
-  const [country, setCountry] = useState("");
+  const [country, setCountry] = useState("india");
   const [phone, setPhone] = useState("");
   const [pin, setPin] = useState("");
   const [cartData, setCartData] = useState([]);
@@ -36,6 +37,7 @@ const ShippingPage = () => {
       const orderData = {
         name,
         address,
+        email,
         city,
         country,
         phone,
@@ -50,10 +52,20 @@ const ShippingPage = () => {
       );
       console.log(response.data);
 
+      //email
+      
+      const emailresponsive = await axios
+        .post(`${BASE_URL}/api/v1/sentmail`, orderData)
+        .then(() => {
+          alert("check your mail;");
+        });
+      console.log(emailresponsive.data);
+
       const message = `
-Order placed successfully! Here are the details:
+Order placed successfully! Check your email and Here are the details:
 Name: ${name};
 Address: ${address};
+email:${email}
 City: ${city};
 Country: ${country};
 Phone: ${phone};
@@ -61,7 +73,7 @@ PIN: ${pin};
 
 `;
 
-      let cartItemsMessage = `\nHello! YOUR BRAND I'd like to proceed with my order. Here are the details:\n`;
+      let cartItemsMessage = `\nHello! zculture-shopping I'd like to proceed with my order. Here are the details:\n`;
       if (cartData.length > 0) {
         cartData.forEach((item) => {
           cartItemsMessage += `
@@ -88,6 +100,7 @@ Description: ${item.describe}
       // Clear form data after redirection
       setname("");
       setAddress("");
+      setemail("");
       setCity("");
       setCountry("");
       setPhone("");
@@ -103,8 +116,8 @@ Description: ${item.describe}
       <h2>SHIPPING ADDRESS </h2>
       <form className="main-container" onSubmit={handleSubmit}>
         <div className="container">
-          <label>Name:</label>
           <input
+            placeholder="name"
             type="text"
             name="name"
             value={name}
@@ -114,8 +127,19 @@ Description: ${item.describe}
           />
         </div>
         <div className="container">
-          <label>Address:</label>
           <input
+            placeholder="email"
+            type="email"
+            name="city"
+            className="inputs"
+            value={email}
+            onChange={(e) => setemail(e.target.value)}
+            required
+          />
+        </div>
+        <div className="container">
+          <input
+            placeholder="address"
             type="text"
             name="address"
             value={address}
@@ -125,8 +149,8 @@ Description: ${item.describe}
           />
         </div>
         <div className="container">
-          <label>City:</label>
           <input
+            placeholder="city"
             type="text"
             name="city"
             className="inputs"
@@ -136,9 +160,9 @@ Description: ${item.describe}
           />
         </div>
         <div className="container">
-          <label>Country:</label>
           <input
             type="text"
+            placeholder="country"
             name="country"
             className="inputs"
             value={country}
@@ -147,8 +171,8 @@ Description: ${item.describe}
           />
         </div>
         <div className="container">
-          <label>Phone:</label>
           <input
+            placeholder="phone"
             type="text"
             name="phone"
             className="inputs"
@@ -158,8 +182,8 @@ Description: ${item.describe}
           />
         </div>
         <div className="container">
-          <label>PIN:</label>
           <input
+            placeholder="pin"
             type="text"
             name="pin"
             className="inputs"

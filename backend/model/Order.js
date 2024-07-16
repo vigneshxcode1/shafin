@@ -9,6 +9,10 @@ const orderSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  email:{
+    type:String,
+    required:true
+  },
   city: {
     type: String,
     required: true,
@@ -20,13 +24,6 @@ const orderSchema = new mongoose.Schema({
   phone: {
     type: String,
     required: true,
-    validate: {
-      validator: function (v) {
-        
-        return /^\d{10}$/.test(v);
-      },
-      message: (props) => `${props.value} is not a valid phone number!`,
-    },
   },
   pin: {
     type: String,

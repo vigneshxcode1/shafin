@@ -1,6 +1,6 @@
 
 .cart-container {
-  padding: 20px;
+  padding: 10px;
   font-family: 'mont';
 
 }
@@ -114,7 +114,7 @@ font-weight: 900;
   border-radius: 10px;
   border: 1px solid #ececec;
   font-size: 20px;
-  font-weight: 600;
+
 }
 
 .placeorder {
@@ -133,15 +133,22 @@ font-weight: 900;
 /* Responsive CSS */
 @media (max-width: 768px) {
   .shipping-form-container {
-    padding: 10px;
-  }
-
-  .main-container {
-    padding: 0;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
   }
 
   .inputs {
-    margin-bottom: 10px;
+ 
+    background-color: transparent;
+  color: white;
+  border: none;
+  font-variant: normal;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.593);
+  }
+  ::placeholder{
+    color: #ffffff;
   }
 
 
