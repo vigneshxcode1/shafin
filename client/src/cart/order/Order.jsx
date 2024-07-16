@@ -9,7 +9,7 @@ const BASE_URL = "https://server.zculture.in";
 const ShippingPage = () => {
   const [name, setname] = useState("");
   const [address, setAddress] = useState("");
-  const [email,setemail]=useState("")
+  const [email,setEmail]=useState("")
   const [city, setCity] = useState("");
   const [country, setCountry] = useState("india");
   const [phone, setPhone] = useState("");
@@ -91,7 +91,7 @@ Description: ${item.describe}
       // Clear form data after redirection
       setname("");
       setAddress("");
-      setemail("")
+      setEmail("")
       setCity("");
       setCountry("");
       setPhone("");
@@ -120,9 +120,21 @@ Description: ${item.describe}
         </div>
         <div className="container">
          
+         <input
+           type="text"
+           placeholder="email"
+           name="address"
+           value={email}
+           className="inputs"
+           onChange={(e) => setEmail(e.target.value)}
+           required
+         />
+       </div>
+        <div className="container">
+         
           <input
             type="text"
-            placeholder="email"
+            placeholder="address"
             name="address"
             value={address}
             className="inputs"
