@@ -151,10 +151,12 @@ const Createproducts = () => {
                 <option value="zcommuntity">zcommuntity</option>
                 {/* <option value="printed-oversized">Printed Oversized</option> */}
                 {/* <option value="trending">Trending</option> */}
-                <option value="trendoversized">TrendingOversized</option>
+                <option value="trendoversized">moviesOversized</option>
                 {/* <option value="car">Car</option> */}
                 <option value="caroversized">CarOversizes</option>
                 <option value="music">music tees</option>
+             
+
                 {/* <option value="bike">Bike</option> */}
                 <option value='bikeoversized'>bikeoversized</option>
                 <option value="posters">trendingposters</option>

@@ -20,7 +20,7 @@ function GridExample() {
     const fetchProducts = async () => {
       try {
 
-        const res = await axios.get(`${BASE_URL}/api/v1/products?category=bikeoversized`);
+        const res = await axios.get(`${BASE_URL}/api/v1/products?category=bikeoversized && car`);
 
         const sortedProducts = res.data.product.sort((a, b) => {
           const dateA = new Date(a.createdAt);
@@ -28,8 +28,8 @@ function GridExample() {
           return dateB - dateA;
         });
 
-        const firstFourProducts = sortedProducts.slice(0, 4);
-        setProducts(firstFourProducts);
+        // const firstFourProducts = sortedProducts.slice(0, 4);
+        setProducts(sortedProducts);
       } catch (err) {
         console.error("Error fetching products:", err);
         setError("Failed to load products. Please try again later.");
@@ -44,8 +44,8 @@ function GridExample() {
   if (loading) {
     return (
       <>
-       <img className="loading" src={loadingimg}></img>
-      <p className="loading">Loading....</p>
+ <img className="loading-image" src={loadingimg} alt="Loading..." />
+        <p className="loading">Loading...</p>
     
       </>
     ) 

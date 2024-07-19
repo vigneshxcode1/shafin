@@ -66,7 +66,7 @@ const itemData = [
     img: moviecard,
     title: 'Movie printed',
     author: '@Movie Collections',
-    link:"/movieposters"
+    link:"/movieoversized"
   },
   {
     img: musiccard,

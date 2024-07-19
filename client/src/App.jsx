@@ -56,9 +56,9 @@ function App() {
         <Route path="/animicollections" element={<Animicollections />} />
         <Route path="/aniproducts" element={<Aniproduct />} />
         <Route path="/anioversized" element={<Anioversized />} />
-        <Route path="/trending" element={<Trending />} />
-        <Route path="/trendoversized" element={<Trendoversized />} />
-        <Route path="/trendcollection" element={<Trendcollections />} />
+        {/* <Route path="/trending" element={<Trending />} /> */}
+        <Route path="/movieoversized" element={<Trendoversized />} />
+        {/* <Route path="/trendcollection" element={<Trendcollections />} /> */}
         <Route path="/carcollections" element={<Carcollections />} />
         <Route path="/car" element={<Car />} />
         <Route path="/musicoversized" element={<Musicoversized/>} />

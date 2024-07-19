@@ -26,8 +26,8 @@ function GridExample() {
           return dateB - dateA;
         });
 
-        const firstFourProducts = sortedProducts.slice(0, 4);
-        setProducts(firstFourProducts);
+        // const firstFourProducts = sortedProducts.slice(0, 4);
+        setProducts(sortedProducts);
       } catch (err) {
         console.error("Error fetching products:", err);
         setError("Failed to load products. Please try again later.");

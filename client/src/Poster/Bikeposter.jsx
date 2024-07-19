@@ -4,7 +4,7 @@ import axios from "axios";
 import "../componets/Product/Product.css"
 import Navbar from "../componets/Navbar/Navbar"
 import { useNavigate } from "react-router-dom";
-
+import loadingimg from "../componets/images/animiloading.gif";
 
 
 const BASE_URL = "https://shafin-8q7w.onrender.com";
@@ -26,8 +26,8 @@ function GridExample() {
           return dateB - dateA;
         });
 
-        const firstFourProducts = sortedProducts.slice(0, 4);
-        setProducts(firstFourProducts);
+        // const firstFourProducts = sortedProducts.slice(0, 4);
+        setProducts(sortedProducts);
       } catch (err) {
         console.error("Error fetching products:", err);
         setError("Failed to load products. Please try again later.");
@@ -40,7 +40,13 @@ function GridExample() {
   }, []);
 
   if (loading) {
-    return <p>Loading...</p>;
+    return (
+      <>
+         <img className="loading-image" src={loadingimg} alt="Loading..." />
+        <p className="loading">Loading...</p>
+      </>
+    )
+  
   }
 
   if (error) {

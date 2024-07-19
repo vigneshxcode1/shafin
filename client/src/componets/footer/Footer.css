@@ -8,7 +8,7 @@ footer {
 }
 .links{
   text-decoration: none;
-  color: white;
+  color: rgb(188, 185, 185);
 }
 
 .footer-sections span{
@@ -23,11 +23,13 @@ footer {
   border: none;
   box-shadow: none;
   color: #000;
+
 }
 
 .footerlinks .accordion-button:focus {
   box-shadow: none;
   border: none;
+
 }
 
 .footerlinks .accordion-body {
@@ -41,6 +43,7 @@ text-align: center;
 display: flex;
 border: none;
 margin: 10px;
+
 }
 
 h1, h6, p {

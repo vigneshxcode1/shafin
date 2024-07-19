@@ -22,8 +22,7 @@ function GridExample() {
         const sortedProducts = res.data.product.sort(
           (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
         );
-        const firstFourProducts = sortedProducts.slice(0, 4);
-        setProducts(firstFourProducts);
+        setProducts(sortedProducts);
       } catch (err) {
         console.error("Error fetching products:", err);
         setError("Failed to load products. Please try again later.");

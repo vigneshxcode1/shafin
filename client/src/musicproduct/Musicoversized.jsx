@@ -28,8 +28,8 @@ function Musicoversized() {
           return dateB - dateA;
         });
 
-        const firstFourProducts = sortedProducts.slice(0, 4);
-        setProducts(firstFourProducts);
+        // const firstFourProducts = sortedProducts.slice(0, 4);
+        setProducts(sortedProducts);
       } catch (err) {
         console.error("Error fetching products:", err);
         setError("Failed to load products. Please try again later.");
@@ -44,8 +44,8 @@ function Musicoversized() {
   if (loading) {
     return (
       <>
-       <img className="loading" src={loadingimg}></img>
-       <p className="loading">Loading....</p>
+      <img className="loading-image" src={loadingimg} alt="Loading..." />
+        <p className="loading">Loading...</p>
       </>
    
     
@@ -66,7 +66,7 @@ function Musicoversized() {
 <br></br>
 
 <h2 className="grid-title">Music OverSized Collections</h2>
-      <br />
+    
       <div className="containers">
         <div className="grid">
           {products.map((product) => (

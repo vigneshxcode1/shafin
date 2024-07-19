@@ -16,17 +16,17 @@ const Footer = () => {
               
               <Accordion.Body className="link-detail">
               <span>PRINTED Collections...</span>
-                <Link className="links" to={"/animi-oversizes-t-shirts"}>
+                <Link className="links" to={"/anioversized"}>
                   <li>Animi oversized</li>
                 </Link>
                 <Link className="links" to={"/caroversized"}>
                   <li>Car printed Oversized</li>
                 </Link>
-                <Link className="links" to={"/music"}>
+                <Link className="links" to={"/movieoversized"}>
                   {" "}
                   <li>Music printed Oversized</li>
                 </Link>
-                <Link className="links" to={"/bikeoversized'"}>
+                <Link className="links" to={"/bikeoversized"}>
                   {" "}
                   <li>Bike printed Oversized</li>
                 </Link>
@@ -53,7 +53,7 @@ const Footer = () => {
             <h6>Contact</h6>
             <p>Email:sampleemail@gmail.com</p>
             <p>Ph:+91:786565785</p>
-            <p>social media</p>
+            <p><a href="/contact">social media</a></p>
           </div>
           <div className="info">
             <h6>INFO</h6>
