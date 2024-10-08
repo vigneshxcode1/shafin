@@ -4,11 +4,13 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link } from 'react-router-dom';
 import cartimg from "../../componets/images/add-to-cart.png"
+import titleimg from '../images/titleimg.jpeg'
 import './Navbar.css'
 function CollapsibleExample() {
   return (
-    <Navbar collapseOnSelect expand="lg"  className="bg-body-tertiary toggle" id='bg-body-tertiary'>
-      <Container>
+    <>
+      <Navbar collapseOnSelect expand="lg"  className="bg-body-tertiary toggle" id='bg-body-tertiary'>
+      <Container className='containernavbar'>
         <Navbar.Toggle aria-controls="responsive-navbar-nav"  className='toggle'/>
         <Navbar.Collapse id="responsive-navbar-nav" className='toggle'>
           <Nav className="me-auto">
@@ -39,10 +41,12 @@ function CollapsibleExample() {
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
-        <Navbar.Brand href="/" className='headtitle'>z-culture</Navbar.Brand>
+        <Navbar.Brand href="/" className='headtitle'><img className='titleimg' src={titleimg}></img></Navbar.Brand>
         <Link to={"/cart"}><Navbar.Brand><img src={cartimg} alt="cart"  className='cart-img'/></Navbar.Brand></Link>
       </Container>
     </Navbar>
+    </>
+  
   );
 }
 
