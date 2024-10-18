@@ -62,13 +62,12 @@ function GridExample() {
 
   return (
 <>
-<Navbar/>
-<br></br>
-    <div className="containers">
-       <div className="main-box">
-        <h2 className="title-oversizes1">Cars OverSized collections</h2>
-        <br></br>
-         <div className="containers">
+ <>
+      <Navbar />
+
+      <h2 className="grid-title">OverSized Collections</h2>
+      <br />
+      <div className="containers">
         <div className="grid">
           {products.map((product) => (
             <div className="product-card" key={product._id}>
@@ -89,7 +88,7 @@ function GridExample() {
           ))}
         </div>
       </div>
-</>
+    </>
  
    
   );
