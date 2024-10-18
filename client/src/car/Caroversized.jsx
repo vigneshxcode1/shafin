@@ -62,7 +62,6 @@ function GridExample() {
 
   return (
 <>
- <>
       <Navbar />
 
       <h2 className="grid-title">OverSized Collections</h2>
@@ -88,6 +87,8 @@ function GridExample() {
           ))}
         </div>
       </div>
+
+  
     </>
  
    
