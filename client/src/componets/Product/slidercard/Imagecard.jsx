@@ -60,7 +60,7 @@ const itemData = [
     img:carimg,
     title: 'Road Printed',
     author: '@Car Collections',
-    link: "/car"
+    link: "/caroversized"
   },
   {
     img: moviecard,
