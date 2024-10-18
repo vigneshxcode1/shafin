@@ -57,7 +57,7 @@ function GridExample() {
   }
 
   if (products.length === 0) {
-    return <p>No products available</p>;
+    return <p>No products available in car collection</p>;
   }
 
   return (
