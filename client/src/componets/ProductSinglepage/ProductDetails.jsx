@@ -24,18 +24,24 @@ const ProductDetail = () => {
 
   useEffect(() => {
     const fetchProduct = async () => {
+      setLoading(true);
+      setError(null);
+  
       try {
-        const res = await axios.get(`${BASE_URL}/api/v1/products/${id}`);
-        setProduct(res.data.product);
+        const { data } = await axios.get(`${BASE_URL}/api/v1/products/${id}`);
+        setProduct(data.product);
       } catch (err) {
         setError("Failed to load product details. Please try again later.");
       } finally {
         setLoading(false);
       }
     };
-
-    fetchProduct();
+  
+    if (id) { 
+      fetchProduct();
+    }
   }, [id]);
+  
 
   const handleQuantityChange = (change) => {
     setQuantity((prevQuantity) => Math.max(prevQuantity + change, 1));
@@ -228,7 +234,11 @@ const ProductDetail = () => {
           </div> */}
           <p className="product-detail-created"></p>
         </div>
+
+       
       </div>
+
+   
     </>
   );
 };

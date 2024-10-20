@@ -144,16 +144,22 @@ const Updateproducts = () => {
               value={category}
               onChange={(e) => setCategory(e.target.value)}
             >
-              <option value="oversizes t-shirt">Oversized T-shirt</option>
-              <option value="anime-oversized-t-shirts">
-                Anime Oversized T-shirts
-              </option>
-              <option value="printed-oversized">Printed Oversized</option>
-              <option value="hoodie">Hoodie</option>
-              <option value="pants">Pants</option>
-              <option value="t-shirt">T-shirt</option>
-              <option value="anime-tshirt">Anime T-shirt</option>
-              <option value="printed-collection">Printed Collection</option>
+               <option value="animi-oversizes-t-shirts">Anime Oversized T-shirts</option>
+                <option value="newarrival">newarrival</option>
+                <option value="bestseller">bestseller</option>
+                <option value="zcommuntity">zcommuntity</option>
+                <option value="trendoversized">moviesOversized</option>            
+                <option value="caroversized">CarOversizes</option>
+                <option value="music">music tees</option>
+                <option value='bikeoversized'>bikeoversized</option>
+
+
+
+                <option value="animiposter">animiposters</option>
+                <option value="movieposter">movieposters</option>
+                <option value="carposter">carposters</option>
+                <option value="bikeposter">bikeposters</option>
+        
             </select>
           </div>
           <div className="mb-3">

@@ -42,8 +42,8 @@ const Trendingshirt = () => {
     <div>
       <Link className="links" to={"/anioversized"}>
     
-          <h1 className="header">New arrival</h1>
-          <span className="showmore">show more</span>
+          <h1 className="header">New-arrival</h1>
+          <span className="showmore">slide more</span>
      
       </Link>
       <div className="img-main">

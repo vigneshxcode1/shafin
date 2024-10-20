@@ -40,32 +40,30 @@ const Trendingshirt = () => {
 
   return (
     <div>
-      <Link className="links" to={"/caroversized"}>
+      <Link className="links" to={"/products"}>
         <div>
-          <h1 className="header">Best seller</h1>
-          <span className="showmore">show more</span>
+          <h1 className="header">Best-seller</h1>
+          <span className="showmore">slide more</span>
         </div>
       </Link>
-      <div className="containers">
-        <div className="grid">
-          {products.map((product) => (
-            <div className="product-card" key={product._id}>
-              {product.images && product.images.length > 0 ? (
-                <img
-                  className="product-image"
-                  onClick={() => navigate(`/products/${product._id}`)}
-                  src={product.images[0]}
-                  alt={`${product.name} first image`}
-                />
-              ) : (
-                <p>No products available</p>
-              )}
-              <p className="product-title">{product.name}</p>
-              <p className="title-oversized-cut">Rs:₹{product.cutprice}</p>
-              <p className="product-title">From RS: {product.price}</p>
-            </div>
-          ))}
-        </div>
+      <div className="img-main">
+        {products.map((product) => (
+          <div className="products" key={product._id}>
+            {product.images && product.images.length > 0 ? (
+              <img
+                className="stackimg"
+                onClick={() => navigate(`/products/${product._id}`)}
+                src={product.images[0]} 
+                alt={`${product.name} first image`}
+              />
+            ) : (
+              <p>No products available</p>
+            )}
+             <p className="title-oversized">{product.name}</p>
+            <p className="title-oversized-cut">Rs:₹{product.cutprice}</p>
+            <p className="title-oversized-org">Just at:₹{product.price}</p>
+          </div>
+        ))}
       </div>
     </div>
   );

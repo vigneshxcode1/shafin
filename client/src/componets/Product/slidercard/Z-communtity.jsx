@@ -13,6 +13,10 @@ const Trendingshirt = () => {
 
   useEffect(() => {
     const fetchProducts = async () => {
+
+      setLoading(true);
+      setError(null);
+
       try {
         const res = await axios.get(`${BASE_URL}/api/v1/products?category=zcommuntity`);
         const sortedProducts = res.data.product.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
@@ -43,7 +47,7 @@ const Trendingshirt = () => {
       <Link className="links" to={"/products"}>
         <div>
           <h1 className="header">z-community</h1>
-          <span className="showmore">show more</span>
+          <span className="showmore">slide more</span>
         </div>
       </Link>
       <div className="img-main">
