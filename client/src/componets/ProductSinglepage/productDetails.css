@@ -206,13 +206,12 @@
 .right-arrow {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
+  color: rgb(0, 0, 0);
+  background: transparent;
   border: none;
-  padding: 20px;
+  padding: 10px;
   cursor: pointer;
-  border-radius: 50%;
+  border-radius: 0%;
   z-index: 10;
 }
 
@@ -226,7 +225,7 @@
 
 .left-arrow:hover,
 .right-arrow:hover {
-  background: rgba(0, 0, 0, 0.7);
+
 }
 
 .description {

@@ -25,9 +25,9 @@ const Home = () => {
       <Bestseller />
       <Zcommunity />
       <Imagecard />
-      {/* <Poster /> */}
 
-      <Postercard />
+    {/* <Poster /> */}
+    {/* <Postercard /> */}
 
       <Footer />
     </>

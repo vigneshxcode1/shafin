@@ -6,6 +6,8 @@ import { Link } from 'react-router-dom';
 import cartimg from "../../componets/images/add-to-cart.png"
 import titleimg from '../images/titleimg.jpeg'
 import './Navbar.css'
+
+
 function CollapsibleExample() {
   return (
     <>
