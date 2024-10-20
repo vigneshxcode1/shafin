@@ -151,7 +151,7 @@ const Createproducts = () => {
                 <option value="zcommuntity">zcommuntity</option>
 
                 <option value="animi-oversizes-t-shirts">Anime Oversized T-shirts</option>
-                <option value="movieoversized">moviesOversized</option>            
+                <option value="trendoversized">moviesOversized</option>            
                 <option value="caroversized">CarOversizes</option>
                 <option value="music">music tees</option>
               

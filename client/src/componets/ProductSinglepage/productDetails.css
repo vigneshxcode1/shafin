@@ -171,6 +171,7 @@
   width: 100%;
   max-width: 500px;
   margin: auto;
+  margin-top: 20px;
 }
 
 .product-images img {
@@ -262,6 +263,7 @@
   .product-detail img {
     max-width: 50%;
     object-fit: cover;
+  
   }
 }
 

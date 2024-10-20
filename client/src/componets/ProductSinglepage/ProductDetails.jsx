@@ -9,6 +9,7 @@ import loadingimg from "../../componets/images/animiloading.gif";
 import Navbar from "../Navbar/Navbar.jsx";
 import { addCartItem } from "../../localStorageHelpers.jsx";
 import Accordion from "react-bootstrap/Accordion";
+import Bestseller from '../../componets/Product/slidercard/Bestseller.jsx'
 import cartimgs from "../../componets/images/icons-cart.gif";
 const BASE_URL = "https://shafin-8q7w.onrender.com";
 
@@ -238,6 +239,7 @@ const ProductDetail = () => {
        
       </div>
 
+      <Bestseller />
    
     </>
   );

@@ -59,7 +59,7 @@ function GridExample() {
     <>
     <Navbar/>
     <br></br>
-    <h1>Zculture Collections</h1>
+    <h1 className="grid-title">Zculture Collections</h1>
     <div className="containers">
         <div className="grid">
           {products.map((product) => (
