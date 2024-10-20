@@ -75,11 +75,6 @@ function App() {
         <Route path="/sizechart" element={<Sizechart />} />
         <Route path="/contact" element={<Contact/>}></Route>
         <Route path="/ordershipping" element={<OrderPage/>}></Route>
-
-        <Route path="/hoodies" element={<Hoodies />} />
-        <Route path="/tshirt" element={<Tshirt />} />
-        <Route path="/printed-collection" element={<Printedcollection />} />
-        <Route path="/pants" element={<Pants />} />
         <Route path="/products/:id" element={<ProductDetail />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
@@ -89,6 +84,14 @@ function App() {
         <Route path="/products/update/:id" element={<Updateproducts />} />
         <Route path="/products/delete/:id" element={<Deletedproducts />} />
         <Route path="/cart" element={<Cart />} />
+
+
+        
+        <Route path="/hoodies" element={<Hoodies />} />
+        <Route path="/tshirt" element={<Tshirt />} />
+        <Route path="/printed-collection" element={<Printedcollection />} />
+        <Route path="/pants" element={<Pants />} />
+      
       </Routes>
     </BrowserRouter>
   );

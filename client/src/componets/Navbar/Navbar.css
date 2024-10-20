@@ -1,15 +1,15 @@
 .containernavbar{
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(254, 254, 254);
 }
 .toggle{
     border: none;
     margin-bottom: 20px;
-    background-color: transparent;
+   border: none;
 }
 .titleimg{
     width: 180px;
     height: 90%;
-    justify-content: center;
+    margin-left: 20px;
     cursor: pointer;
 }
 .cart-img{
@@ -42,4 +42,10 @@
     border: none;
     margin-top: -10px;
   margin-bottom: -30px;
+ 
+}
+
+.bg-body-tertiary .toggle{
+border: none;
+
 }

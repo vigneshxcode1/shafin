@@ -12,7 +12,7 @@ function CollapsibleExample() {
   return (
     <>
       <Navbar collapseOnSelect expand="lg"  className="bg-body-tertiary toggle" id='bg-body-tertiary'>
-      <Container className='containernavbar'>
+     
         <Navbar.Toggle aria-controls="responsive-navbar-nav"  className='toggle'/>
         <Navbar.Collapse id="responsive-navbar-nav" className='toggle'>
           <Nav className="me-auto">
@@ -45,7 +45,7 @@ function CollapsibleExample() {
         </Navbar.Collapse>
         <Navbar.Brand href="/" className='headtitle'><img className='titleimg' src={titleimg}></img></Navbar.Brand>
         <Link to={"/cart"}><Navbar.Brand><img src={cartimg} alt="cart"  className='cart-img'/></Navbar.Brand></Link>
-      </Container>
+    
     </Navbar>
     </>
   

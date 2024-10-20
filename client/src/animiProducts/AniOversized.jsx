@@ -53,9 +53,9 @@ function GridExample() {
 
   return (
     <>
-      <Navbar />
+    <Navbar/>
 
-      <h2 className="grid-title">Anime OverSized Collections</h2>
+      <h2 className="grid-title">Anime OverSized</h2>
       <br />
       <div className="containers">
         <div className="grid">
