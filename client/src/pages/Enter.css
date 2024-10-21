@@ -8,10 +8,13 @@
   overflow: hidden;
 }
 .subhead{
-  background-color: #0a0a0a;
+ font-weight:bolder;
+ font-size: 10px;
   margin-top: -30px;
+  font-style: italic;
+  font-family:'Times New Roman', Times, serif;
   color: rgb(251, 251, 251);
-  font-size: 10px;
+  
 }
 .background-video {
   position: absolute;
@@ -42,7 +45,7 @@
 
 .brand-img {
   font-family:'mont';
-  font-weight: 800;
+  font-weight: 700;
   margin-bottom: 20px;
  
 }
@@ -103,7 +106,7 @@ h1 .link-item {
 
   .brand-img {
     margin-top: 40px;
-    font-size: 80px;
+    font-size: 70px;
     color: rgb(221, 224, 224);
   }
 
