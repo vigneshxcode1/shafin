@@ -16,7 +16,7 @@ const handeleSubmit=async(e)=>{
   e.preventDefault();
 
   try {
-    const result = await axios.post(`http://localhost:8000/api/v1/createtestmonial`,{name,review});
+    const result = await axios.post(`http://shafin-8q7w.onrender.com/api/v1/createtestmonial`,{name,review});
     console.log(result);
     navigate("/home")
   } catch (error) {

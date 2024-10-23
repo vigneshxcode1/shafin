@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./Testimonial.css"; 
+import "./Testimonial.css"; // Ensure this is the correct path
 import { Link } from "react-router-dom";
 import axios from "axios";
 
@@ -10,7 +10,7 @@ const Testamonial = () => {
   useEffect(() => {
     const fetchTestimonials = async () => {
       try {
-        const result = await axios.get(`http://localhost:8000/api/v1/getTestimonial`);
+        const result = await axios.get(`http://shafin-8q7w.onrender.com/api/v1/getTestimonial`);
         const sortedList = result.data.testimonial.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
         setTestimonials(sortedList);
       } catch (error) {
@@ -53,7 +53,7 @@ const Testamonial = () => {
       </div>
       <div className="navigation">
         <button onClick={prevTestimonial} className="nav-button"> &#10094;</button>
-        <button onClick={nextTestimonial} className="nav-button">  &#10095;</button>
+        <button onClick={nextTestimonial} className="nav-button"> &#10095;</button>
         <Link to="/createtestimonial" className="createreview">Write Review</Link>
       </div>
      
