@@ -3,12 +3,14 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import Products from './routes/productroutes.js';
 import userrouter from './routes/AuthRouter.js';
+import testimonialroute from './routes/TestimonialRoute.js';
 import path from 'path';
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
 
 import orderRoute from './routes/orderRoute.js';
 import { fileURLToPath } from 'url';
+
 
 dotenv.config();
 
@@ -31,6 +33,9 @@ app.use('/api/v1', userrouter);
 
 // Order API
 app.use('/api/v1', orderRoute);
+
+//testimonial 
+app.use('/api/v1', testimonialroute)
 
 // Error handling middleware
 app.use((err, req, res, next) => {

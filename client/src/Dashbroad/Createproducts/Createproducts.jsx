@@ -90,7 +90,7 @@ const Createproducts = () => {
       <div className="d-flex  justify-content-center align-items-center login">
         <div>
           <form onSubmit={handleSubmit}>
-            <h2>Create Products</h2>
+            <h2 className="grid-title">Create Products</h2>
             <div className="mb-3">
               <label>Product Name</label>
               <input

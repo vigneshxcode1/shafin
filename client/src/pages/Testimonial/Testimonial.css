@@ -1,0 +1,77 @@
+.slider-container {
+  display: flex;
+  justify-content: center; /* Center the testimonial */
+  align-items: center; /* Center vertically */
+  margin: 10px 0; /* Add some margin */
+  width: 100%; /* Full width of the parent */
+  height: 400px; /* Increase height as needed */
+  overflow: hidden; /* Hide overflow for clean look */
+  position: relative; /* For any absolute positioning if needed */
+ background-image: url(".../../../../componets/images/IrM.gif");
+}
+
+.card {
+ color: white;
+  border-radius: 8px;
+  border: none;
+  padding: 30px; 
+  min-width: 100px; /* Minimum width for each card */
+  max-width: 50%; /* Limit card width */
+  height: 100%; /* Ensure the card takes full height of the container */
+  text-align: center; /* Center text */
+  display: flex; /* Use flexbox for better layout */
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: center; /* Center content vertically */
+
+}
+
+.card img {
+  border-radius: 50%; /* Make profile picture round */
+  width: 80px; /* Fixed size for profile picture */
+  height: 80px; /* Fixed size for profile picture */
+  margin-bottom: 15px; /* Space below the image */
+}
+
+.headers {
+
+  font-size: 2.5rem;
+  text-align: center;
+  color: #8dc1d7;
+  margin: 20px 0;
+  letter-spacing: 3px;
+  font-family: 'mont';
+}
+.cust-name{
+  font-weight:800;
+}
+.cust-profession{
+  color: rgb(193, 192, 192);
+}
+.cust-profession-review{
+  font-weight: 700;
+  font-size: 20px;
+}
+.navigation {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0; /* Add margin for spacing */
+}
+
+.nav-button {
+  background-color: #000000;  
+  color: white; 
+  border: none;
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin: 0 10px; 
+  cursor: pointer; 
+}
+
+
+
+.createreview{
+  padding: 10px;
+  background-color: #d83e3e;
+  color: white;
+  border-radius: 10px;
+}

@@ -42,6 +42,9 @@ import Contact from "./pages/Contact.jsx";
 import OrderPage from "./cart/order/Order.jsx";
 import Musicoversized from "./musicproduct/Musicoversized.jsx";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Testamonial from "./pages/Testimonial/Testamonial.jsx";
+import Createtestimonial from "./pages/Testimonial/createtestimonial'/Createtestimonial.jsx";
+
 
 
 function App() {
@@ -84,6 +87,8 @@ function App() {
         <Route path="/products/update/:id" element={<Updateproducts />} />
         <Route path="/products/delete/:id" element={<Deletedproducts />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/testimonial" element={<Testamonial/>}/>
+        <Route path="/createtestimonial" element={<Createtestimonial/>}/>
 
 
         

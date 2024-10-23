@@ -14,6 +14,7 @@ import Postercard from "../componets/Product/slidercard/Postercards.jsx";
 import "../App.css";
 import Footer from "../componets/footer/footdetails.jsx";
 import Imagecard from "../componets/Product/slidercard/Imagecard.jsx";
+import Testamonial from "./Testimonial/Testamonial.jsx";
 const Home = () => {
   return (
     <>
@@ -26,6 +27,8 @@ const Home = () => {
       <Zcommunity />
       <Imagecard />
 
+      <Testamonial/>
+      
     {/* <Poster /> */}
     {/* <Postercard /> */}
 
