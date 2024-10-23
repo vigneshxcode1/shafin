@@ -3,10 +3,13 @@ import "./Testimonial.css"; // Ensure this is the correct path
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-const BASE_URL="http://shafin-8q7w.onrender.com"
+const BASE_URL = "http://localhost:8000";
+
 const Testamonial = () => {
   const [testimonials, setTestimonials] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchTestimonials = async () => {
@@ -15,7 +18,9 @@ const Testamonial = () => {
         const sortedList = result.data.testimonial.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
         setTestimonials(sortedList);
       } catch (error) {
-        console.error("Error fetching testimonials:", error);
+        setError("Error fetching testimonials. Please try again later.");
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -29,6 +34,14 @@ const Testamonial = () => {
   const prevTestimonial = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length);
   };
+
+  if (loading) {
+    return <p>Loading testimonials...</p>;
+  }
+
+  if (error) {
+    return <p>{error}</p>;
+  }
 
   return (
     <>
@@ -52,12 +65,12 @@ const Testamonial = () => {
           <p>No testimonials available.</p>
         )}
       </div>
+
       <div className="navigation">
-        <button onClick={prevTestimonial} className="nav-button"> &#10094;</button>
-        <button onClick={nextTestimonial} className="nav-button"> &#10095;</button>
+        <button onClick={prevTestimonial} className="nav-button" aria-label="Previous testimonial"> &#10094;</button>
+        <button onClick={nextTestimonial} className="nav-button" aria-label="Next testimonial"> &#10095;</button>
         <Link to="/createtestimonial" className="createreview">Write Review</Link>
       </div>
-     
     </>
   );
 };
