@@ -3,7 +3,7 @@ import "./Testimonial.css"; // Ensure this is the correct path
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-const BASE_URL = "http://localhost:8000";
+const BASE_URL = "https://shafin-8q7w.onrender.com";
 
 const Testamonial = () => {
   const [testimonials, setTestimonials] = useState([]);

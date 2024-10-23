@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-const BASE_URL = "http://shafin-8q7w.onrender.com";
+const BASE_URL = "https://shafin-8q7w.onrender.com";
 
 const Createtestimonial = () => {
   const [name, setName] = useState('');
