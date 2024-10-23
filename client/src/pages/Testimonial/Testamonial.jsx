@@ -46,7 +46,7 @@ const Testamonial = () => {
   return (
     <>
       <h1 className="headers">Testimonials</h1>
-
+      <h3 className="headerstitle">What are customer says..</h3>
       <div className="slider-container">
         {testimonials.length > 0 ? (
           <div className="card" key={testimonials[currentIndex].id}>
