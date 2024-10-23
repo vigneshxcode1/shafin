@@ -3,6 +3,7 @@ import "./Testimonial.css"; // Ensure this is the correct path
 import { Link } from "react-router-dom";
 import axios from "axios";
 
+const BASE_URL="http://shafin-8q7w.onrender.com"
 const Testamonial = () => {
   const [testimonials, setTestimonials] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -10,7 +11,7 @@ const Testamonial = () => {
   useEffect(() => {
     const fetchTestimonials = async () => {
       try {
-        const result = await axios.get(`http://shafin-8q7w.onrender.com/api/v1/getTestimonial`);
+        const result = await axios.get(`${BASE_URL}/api/v1/getTestimonial`);
         const sortedList = result.data.testimonial.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
         setTestimonials(sortedList);
       } catch (error) {

@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
-import { Link, Navigate, useNavigate } from 'react-router-dom';
-import Dashbroad from '../../../Dashbroad/Dashbroad';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-
+const BASE_URL="http://shafin-8q7w.onrender.com"
 
 const Createtestimonial = () => {
 
@@ -16,7 +15,7 @@ const handeleSubmit=async(e)=>{
   e.preventDefault();
 
   try {
-    const result = await axios.post(`http://shafin-8q7w.onrender.com/api/v1/createtestmonial`,{name,review});
+    const result = await axios.post(`${BASE_URL}/api/v1/createtestmonial`,{name,review});
     console.log(result);
     navigate("/home")
   } catch (error) {

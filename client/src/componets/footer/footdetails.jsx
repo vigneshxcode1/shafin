@@ -23,10 +23,14 @@ const Footer = () => {
                   <li>Car printed Oversized</li>
                 </Link>
                 <Link className="links" to={"/movieoversized"}>
-                  {" "}
-                  <li>Music printed Oversized</li>
+                  <li>Movies printed </li>
                 </Link>
-                <Link className="links" to={"/bikeoversized"}>
+                <Link className="links" to={"/musicoversized"}>
+                  <li>Music artist printed </li>
+                </Link>
+                
+              
+                {/* <Link className="links" to={"/bikeoversized"}>
                   {" "}
                   <li>Bike printed Oversized</li>
                 </Link>
@@ -45,7 +49,7 @@ const Footer = () => {
                 </Link>
                 <Link className="links" to={"/movieposter"}>
                   <li>Movies Poster</li>
-                </Link>
+                </Link> */}
               </Accordion.Body>
             </Accordion.Item>
           </Accordion>
