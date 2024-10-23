@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./Testimonial.css"; // Ensure this is the correct path
+import "./Testimonial.css"; 
 import { Link } from "react-router-dom";
 import axios from "axios";
 

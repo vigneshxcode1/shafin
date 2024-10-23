@@ -16,7 +16,7 @@
   border: none;
   padding: 30px; 
   min-width: 100px; /* Minimum width for each card */
-  max-width: 50%; /* Limit card width */
+  max-width: 100%; /* Limit card width */
   height: 100%; /* Ensure the card takes full height of the container */
   text-align: center; /* Center text */
   display: flex; /* Use flexbox for better layout */
