@@ -57,7 +57,7 @@ const Testamonial = () => {
             />
             <div>
               <h4 className="cust-name">{testimonials[currentIndex].name}</h4>
-              <p className="cust-profession">Customer from Zculture</p>
+              <p className="cust-profession">Customer from Zculture..</p>
               <p className="cust-profession-review">{`"${testimonials[currentIndex].review}"`}</p>
             </div>
           </div>

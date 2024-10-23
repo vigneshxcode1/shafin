@@ -13,7 +13,7 @@
 .card {
  color: white;
   border-radius: 8px;
-  border: none;
+
   padding: 30px; 
   min-width: 100px; /* Minimum width for each card */
   max-width: 100%; /* Limit card width */
@@ -27,6 +27,7 @@
 }
 
 .card img {
+  border: 2px solid white;
   border-radius: 50%; /* Make profile picture round */
   width: 80px; /* Fixed size for profile picture */
   height: 80px; /* Fixed size for profile picture */
@@ -44,15 +45,18 @@
 }
 .cust-name{
   font-weight:800;
+  font-size:25px;
   color: rgb(221, 220, 220);
 }
 .cust-profession{
   color: rgb(209, 209, 209);
+ 
 }
 .cust-profession-review{
   font-weight: 700;
   font-size: 25px;
   color: rgb(221, 220, 220);
+  border: 2px solid rgb(67, 148, 164);
 }
 .navigation {
   display: flex;
