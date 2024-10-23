@@ -20,7 +20,7 @@ const Createproducts = () => {
   const [rating, setRating] = useState("");
   const [size, setSize] = useState("m");
   const [images, setImages] = useState([]);
-
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -55,7 +55,7 @@ const Createproducts = () => {
       );
       toast.success("Successfully created product.", {
         position: "top-right",
-        autoClose: 2000,
+        autoClose: 1000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -67,14 +67,15 @@ const Createproducts = () => {
     } catch (err) {
       toast.error("Something went wrong...", {
         position: "top-right",
-        autoClose: 2000,
-        hideProgressBar: false,
+        autoClose: 1000,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
       });
       console.log(err);
+    }finally{
+      setLoading(false)
     }
   };
 
@@ -92,7 +93,7 @@ const Createproducts = () => {
           <form onSubmit={handleSubmit}>
             <h2 className="grid-title">Create Products</h2>
             <div className="mb-3">
-              <label>Product Name</label>
+              <label className="name">Product Name</label>
               <input
                 type="text"
                 required
@@ -208,7 +209,9 @@ const Createproducts = () => {
                 onChange={handleImageChange}
               />
             </div>
-            <button className="btn btn-success">Submit</button>
+            <button className="btn btn-success" disabled={loading}>
+            {loading ? 'Submitting...' : 'Submit'}
+          </button>
           </form>
         </div>
       </div>

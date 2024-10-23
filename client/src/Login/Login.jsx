@@ -84,7 +84,7 @@ function Login() {
         <div className="col-md-6">
           <div className="card">
             <div className="card-header">
-              <h3>Login Portal</h3>
+              <h3 >Login Portal</h3>
             </div>
             <div className="card-body">
               <Form onSubmit={handleLogin}>
@@ -113,7 +113,7 @@ function Login() {
                   LOGIN
                 </Button>
               </Form>
-              <p className="mt-3">Create new account? <Link to="/register">Register</Link></p>
+             
             </div>
           </div>
         </div>

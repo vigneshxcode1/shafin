@@ -22,7 +22,7 @@
   flex-direction: column; /* Stack elements vertically */
   justify-content: center; /* Center content vertically */
   background-image: url(".../../../../componets/images/IrM.gif");
-  
+  border: none;
 
 }
 

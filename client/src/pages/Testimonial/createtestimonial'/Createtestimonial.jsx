@@ -20,6 +20,15 @@ const Createtestimonial = () => {
     try {
       const result = await axios.post(`${BASE_URL}/api/v1/createtestmonial`, { name, review });
       console.log(result);
+      toast.success("Successfully created product.", {
+        position: "top-right",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
       navigate("/home");
     } catch (error) {
       setError('Failed to submit your testimonial. Please try again.');

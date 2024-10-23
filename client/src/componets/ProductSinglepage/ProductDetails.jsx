@@ -58,7 +58,15 @@ const ProductDetail = () => {
 
       addCartItem({ ...product, size: selectedSize }, quantity);
       setProduct((prevProduct) => ({ ...prevProduct, stock: updatedStock }));
-      toast.success("check your cart");
+      toast.success("add to cart.", {
+        position: "top-right",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
     } catch (err) {
       toast.error("Failed to add product to cart. Please try again later.");
     }
