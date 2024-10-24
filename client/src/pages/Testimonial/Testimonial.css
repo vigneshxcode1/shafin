@@ -89,3 +89,113 @@
   color: white;
   border-radius: 10px;
 }
+
+
+
+
+
+/* Showalltestimonial.css */
+
+.testimonial-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.testimonial-header {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.dashboard-link {
+  display: block;
+  margin: 20px 0;
+  text-align: center;
+  font-size: 1.2em;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.dashboard-link:hover {
+  text-decoration: underline;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.testimonial-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+}
+
+.testimonial-name {
+  font-weight: bold;
+  color: #555;
+}
+
+.testimonial-review {
+  display: block;
+  margin: 10px 0;
+  color: #666;
+}
+
+.testimonial-buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.delete-btn {
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.delete-btn:hover {
+  background-color: #c9302c;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .testimonial-header {
+      font-size: 1.5em;
+  }
+
+  .dashboard-link {
+      font-size: 1em;
+  }
+
+  .testimonial-grid {
+      grid-template-columns: 1fr; /* Single column on smaller screens */
+  }
+
+  .testimonial-card {
+      padding: 10px; /* Reduce padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial-header {
+      font-size: 1.2em;
+  }
+
+  .delete-btn {
+      width: 100%; /* Full-width button on small screens */
+      padding: 12px; /* Increase padding for better touch targets */
+  }
+}

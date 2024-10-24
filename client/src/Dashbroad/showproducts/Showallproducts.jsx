@@ -2,10 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
 import Dashbroad from "../Dashbroad";
-import "./showproducts.css"
-
-
-
+import "./showproducts.css";
 
 const BASE_URL = "https://shafin-8q7w.onrender.com";
 
@@ -39,6 +36,12 @@ export const Showallproducts = () => {
   }, []);
 
   const handleDelete = async (id) => {
+    const confirmdelete = window.confirm("are your sure want to delete")
+
+  if(!confirmdelete){
+    return;
+  }
+  
     try {
       const token = localStorage.getItem('token');
       await axios.delete(`${BASE_URL}/api/v1/products/delete/${id}`, {
@@ -65,28 +68,28 @@ export const Showallproducts = () => {
   }
 
   return (
-    <div className="container">
-      <h1>All products in store</h1>
-      <Link to="/dashbroad" element={<Dashbroad />}>Dashboard</Link>
+    <div className="products-container">
+      <h1 className="products-header">All Products in Store</h1>
+      <Link to="/dashbroad" className="dashboard-link">Dashboard</Link>
       <div className="products-grid">
-      {products.map((product) => (
-            <div className="products" key={product._id}>
-              {product.images && product.images.length > 0 ? (
-                <img
-                  className="img-products"
-                  onClick={() => navigate(`/products/${product._id}`)}
-                  src={product.images[0]} 
-                  alt={`${product.name} first image`}
-                />
-              ) : (
-                <p>No images available</p>
-              )}
-            <p>Name:{product.name}</p>
-            <p>Stock:{product.stock}</p>
-            <span> price ${product.price}</span>
-            <div className="buttons">
-              <button onClick={() => navigate(`/products/update/${product._id}`)}>Update</button>
-              <button className='delete-btn' onClick={() => handleDelete(product._id)}>Delete</button>
+        {products.map((product) => (
+          <div className="product-cards" key={product._id}>
+            {product.images && product.images.length > 0 ? (
+              <img
+                className="product-image"
+                onClick={() => navigate(`/products/${product._id}`)}
+                src={product.images[0]} 
+                alt={`${product.name} first image`}
+              />
+            ) : (
+              <p className="no-image-text">No images available</p>
+            )}
+            <p className="product-name">Name: {product.name}</p>
+            <p className="product-stock">Stock: {product.stock}</p>
+            <span className="product-price">Price: ${product.price}</span>
+            <div className="product-buttons">
+              <button className="update-button" onClick={() => navigate(`/products/update/${product._id}`)}>Update</button>
+              <button className="delete-button" onClick={() => handleDelete(product._id)}>Delete</button>
             </div>
           </div>
         ))}

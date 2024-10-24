@@ -44,7 +44,8 @@ import Musicoversized from "./musicproduct/Musicoversized.jsx";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Testamonial from "./pages/Testimonial/Testamonial.jsx";
 import Createtestimonial from "./pages/Testimonial/createtestimonial'/Createtestimonial.jsx";
-
+import { Showalltestimonial } from "./pages/Testimonial/createtestimonial'/ShowTestimonial.jsx";
+import{Deletedtestimonial} from "./pages/Testimonial/Deletetestimonial.jsx"
 
 
 function App() {
@@ -79,23 +80,27 @@ function App() {
         <Route path="/contact" element={<Contact/>}></Route>
         <Route path="/ordershipping" element={<OrderPage/>}></Route>
         <Route path="/products/:id" element={<ProductDetail />} />
+
+
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+
         <Route path="/dashbroad" element={<Dashbroad />} />
         <Route path="/createproduct" element={<Createproducts />} />
         <Route path="/showallproducts" element={<Showallproducts />} />
         <Route path="/products/update/:id" element={<Updateproducts />} />
         <Route path="/products/delete/:id" element={<Deletedproducts />} />
         <Route path="/cart" element={<Cart />} />
+
         <Route path="/testimonial" element={<Testamonial/>}/>
         <Route path="/createtestimonial" element={<Createtestimonial/>}/>
-
-
+        <Route path="/Showalltestimonial" element={<Showalltestimonial/>} />
+        <Route path="/deleteTestimonail/:id" element={<Deletedtestimonial/>} />
         
-        <Route path="/hoodies" element={<Hoodies />} />
+        {/* <Route path="/hoodies" element={<Hoodies />} />
         <Route path="/tshirt" element={<Tshirt />} />
         <Route path="/printed-collection" element={<Printedcollection />} />
-        <Route path="/pants" element={<Pants />} />
+        <Route path="/pants" element={<Pants />} /> */}
       
       </Routes>
     </BrowserRouter>

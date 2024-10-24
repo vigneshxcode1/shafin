@@ -4,6 +4,7 @@ import Createproducts from './Createproducts/Createproducts.jsx';
 import { Link } from 'react-router-dom';
 import { Showallproducts } from './showproducts/Showallproducts.jsx';
 import Home from '../pages/Home.jsx';
+import Showalltestimonial from '../pages/Testimonial/createtestimonial\'/ShowTestimonial.jsx';
 
 const Dashbroad = () => {
   return (
@@ -18,6 +19,11 @@ const Dashbroad = () => {
         <div className="link-container show-all-products">
           <h2>Show All Products</h2>
           <Link className="link" to={"/showallproducts"} element={<Showallproducts />}>Click</Link>
+        </div>
+
+        <div className="link-container show-all-products">
+          <h2>Show All testimonial</h2>
+          <Link className="link" to={"/Showalltestimonial"} element={<Showalltestimonial/>}>Click</Link>
         </div>
       </div>
     </>

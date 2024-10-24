@@ -69,7 +69,7 @@ export const deleteTestimonail = async(req,res)=>{
 
 
     try {
-        const testimonial = await testimonialModel.findByIdAndDelete(req.params.id,req.body);
+        const testimonial = await testimonialModel.findByIdAndDelete(req.params.id);
     
         res.status(200).json({
             success:'true',
