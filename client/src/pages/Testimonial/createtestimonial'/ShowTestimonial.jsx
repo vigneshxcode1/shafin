@@ -4,7 +4,9 @@ import { Link, useNavigate } from 'react-router-dom';
 import Dashbroad from "../../../Dashbroad/Dashbroad.jsx";
 import "../../Testimonial/Testimonial.css"; 
 
-const BASE_URL = "http://localhost:8000";
+// const BASE_URL = "http://localhost:8000";
+
+const BASE_URL = "https://shafin-8q7w.onrender.com";
 
 export const Showalltestimonial = () => {
   const [testimonials, setTestimonials] = useState([]); 

@@ -7,8 +7,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import 'react-toastify/dist/ReactToastify.css';
 import "./Login.css";
 
-
-
 const BASE_URL = "https://shafin-8q7w.onrender.com";
 
 function Login() {
@@ -78,15 +76,15 @@ function Login() {
   };
 
   return (
-    <div className="container mt-5">
-      <ToastContainer /> {/* Add ToastContainer here */}
+    <div className="login-container mt-5">
+      <ToastContainer />
       <div className="row justify-content-center">
         <div className="col-md-6">
-          <div className="card">
-            <div className="card-header">
-              <h3 >Login Portal</h3>
+          <div className="login-card">
+            <div className="login-card-header">
+              <h3>Login Portal</h3>
             </div>
-            <div className="card-body">
+            <div className="login-card-body">
               <Form onSubmit={handleLogin}>
                 <Form.Group className="mb-3" controlId="email">
                   <Form.Label>Email</Form.Label>
@@ -109,11 +107,10 @@ function Login() {
                   />
                 </Form.Group>
                 {error && <p className="text-danger">{error}</p>}
-                <Button variant="primary" type="submit">
+                <Button variant="primary" type="submit" className="login-button">
                   LOGIN
                 </Button>
               </Form>
-             
             </div>
           </div>
         </div>
