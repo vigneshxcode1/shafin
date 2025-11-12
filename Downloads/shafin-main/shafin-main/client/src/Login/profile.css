@@ -1,0 +1,119 @@
+/* Base styles for larger screens */
+
+.zculture-profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #000000;
+    font-size: 20px;
+    font-weight: 900;
+  }
+  
+  .zculture-profile-content {
+    max-width: 500px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .zculture-profile-welcome {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .zculture-profile-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .zculture-profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+  
+  .zculture-profile-email,
+  .zculture-profile-name {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+  
+  .zculture-profile-logout-button,
+  .zculture-shop {
+    display: block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #070606;
+    background-color: #007BFF;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .zculture-shop {
+    background-color: #28a745;
+  }
+  
+  /* Responsive styles for tablets and smaller screens */
+  @media (max-width: 768px) {
+    .zculture-profile-content {
+      max-width: 100%;
+      padding: 15px;
+    }
+  
+    .zculture-profile-welcome {
+      font-size: 20px;
+    }
+  
+    .zculture-profile-image {
+      width: 120px;
+      height: 120px;
+    }
+  
+    .zculture-profile-email,
+    .zculture-profile-name {
+      font-size: 14px;
+    }
+  
+    .zculture-profile-logout-button,
+    .zculture-shop {
+      font-size: 14px;
+      padding: 8px 15px;
+    }
+  }
+  
+  /* Responsive styles for mobile screens */
+  @media (max-width: 480px) {
+    .zculture-profile-content {
+      padding: 10px;
+    }
+  
+    .zculture-profile-welcome {
+      font-size: 18px;
+    }
+  
+    .zculture-profile-image {
+      width: 100px;
+      height: 100px;
+    }
+  
+    .zculture-profile-email,
+    .zculture-profile-name {
+      font-size: 12px;
+    }
+  
+    .zculture-profile-logout-button,
+    .zculture-shop {
+      font-size: 12px;
+      padding: 6px 10px;
+    }
+  }
+  

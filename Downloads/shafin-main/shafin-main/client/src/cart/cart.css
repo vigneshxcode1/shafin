@@ -1,0 +1,179 @@
+
+.cart-container {
+  padding: 10px;
+  font-family: 'mont';
+  margin-top: 20px;
+
+}
+
+.cart-img{
+  height: 45px;
+  width: 45px;
+  background-color:transparent;
+  border-radius: 10px;
+ }
+.shop{
+  padding: 10px;
+  background-color:transparent;
+  border: none;
+  color: black;
+  border: 2px solid rgb(0, 0, 0);
+  
+}
+
+a{
+  text-decoration: none;
+  color: #000000;
+
+}
+
+.cart-container h1{
+  font-family: 'mont';
+  font-weight: 700;
+}
+
+
+.cartloading{
+ width: 100%;
+ /* display: flex;
+ margin-top: 200px;
+ height: 200px; */
+}
+.cart-item {
+  display: flex;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.cart-item img {
+  width: 40%; 
+  height: auto;
+  object-fit: cover;
+}
+
+.cart-item-info {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.quantity-container {
+  display: flex;
+  align-items: center;
+  color: #eff1ef;
+  font-size: 20px;
+}
+
+.quantity-container button {
+background-color: #000000;
+color: #44bc50;
+font-size: 20px;
+font-weight: 900;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+.quantity{
+  margin-top: 10px;
+}
+
+.remove {
+  background-color: #dc3545;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin-top: 10px;
+}
+
+.cart-summary {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.total {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  margin-right: 16px;
+  color: white;
+ 
+}
+
+.process-btn {
+  background-color: #a26cd7;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.shipping-form-container {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  background-color: #000000;
+  margin-top: 50px;
+  font-size:20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.shipping-form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  margin-bottom: 10px;
+}
+
+.inputs {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ececec;
+  font-size: 20px;
+
+}
+
+.placeorder {
+  width: 100%;
+  padding: 10px ;
+  background-color: #44bc50;
+  color: #000000;
+  margin-top: 30px;
+  border: none;
+  font-family:'Times New Roman', Times, serif;
+  font-size: 20px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+/* Responsive CSS */
+@media (max-width: 768px) {
+  .shipping-form-container {
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .inputs {
+ 
+    background-color: transparent;
+  color: white;
+  border: none;
+  font-variant: normal;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.593);
+  }
+  ::placeholder{
+    color: #ffffff;
+  }
+
+
+}

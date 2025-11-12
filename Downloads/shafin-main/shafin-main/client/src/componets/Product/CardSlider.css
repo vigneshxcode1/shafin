@@ -1,0 +1,139 @@
+
+
+@keyframes appear {
+  from{
+    opacity: 0;
+    scale: 0.5;
+    /* clip-path: inset(100% 100% 0 0); */
+    /* transform: translateX(-100px); */
+  }
+  to{
+    opacity: 1;
+    /* clip-path: inset(0 0 0 0); */
+    /* transform: translateX(0px); */
+    scale: 1;
+  }
+}
+
+
+
+  
+
+.img-main {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-left: 15px;
+  gap: 10px;
+  margin-left:-10px;
+  scroll-behavior: smooth; 
+  margin-top: 0px;
+  font-family: 'mont';
+ 
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 20%;
+ 
+}
+
+.header {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #171616;
+  margin: 20px 0;
+  margin-top: 20px;
+  margin-bottom:-50px;
+  letter-spacing: 3px;
+  font-family: 'mont';
+}
+
+
+.showmore {
+  margin-top: 20px;
+  color: rgb(198, 195, 195);
+  text-decoration: underline;
+  display: block;
+  text-align: end;
+  margin-right: 20px;
+  font-family: 'mont';
+
+}
+
+.products {
+   
+   font-size: 20px;
+  text-align: center;
+
+}
+
+.stackimg {
+  width: 300px; 
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.5s ease-in-out; 
+}
+
+.stackimg:hover {
+  transform: scale(1.05);
+}
+
+
+
+.title-oversized-cut{
+  text-decoration:line-through;
+font-weight: 900;
+  margin-top: -10px;
+  font-size: 15px;
+  color: rgb(192, 187, 187);
+}
+.title-oversized-org{
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  margin-top: -10px;
+}
+
+
+@media (max-width: 768px) {
+  .stackimg {
+    width: 180px; 
+   
+  }
+ 
+.products .title-oversized{
+
+  font-weight: 900;
+}
+  .header {
+    font-size: 1.5rem;
+    display:flex ;
+    margin-left: 10px;
+    color: rgb(245, 245, 245);
+    font-size: 30px;
+   
+  }
+ 
+  .showmore {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+
+  .title-oversized {
+    font-size: 15px;
+  margin-top: 10px;
+  font-weight: bolder;
+    color: rgb(255, 255, 255);
+    font-family: 'mont';
+  }
+  .title-oversized-cut{
+    text-decoration:line-through;
+    margin-top: -10px;
+    font-size: 15px;
+    color: rgb(192, 187, 187);
+  }
+  .title-oversized-org{
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    margin-top: -10px;
+  }
+}

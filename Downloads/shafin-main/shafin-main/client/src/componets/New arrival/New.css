@@ -1,0 +1,23 @@
+.containers{
+    max-width:700px;
+    margin: 0 auto;
+    margin-top: 35px;
+    margin-bottom: 25px;
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+    color: rgb(224, 216, 216);
+    text-align: center;
+}
+
+.products img {
+    max-width: 100%;
+    height: auto;
+}
+.know-btn{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    text-decoration: none;  /* Remove underline from links */
+    color: #000000;
+    background-color: rgba(125, 245, 139, 0.992);
+}

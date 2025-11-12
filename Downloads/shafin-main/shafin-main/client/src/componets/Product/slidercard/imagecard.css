@@ -1,0 +1,19 @@
+
+@font-face{
+    font-family: "mont";
+    src: url("../../../fonts/Station.ttf");
+}
+.header1{
+    color: rgb(245, 251, 251);
+    margin-top: 50px;
+    border: 2px solid #88A9C3;
+    padding: 10px;
+    font-family: 'mont';  
+      letter-spacing: 3px;
+}
+.main{
+    margin-top: 30px;
+    font-family: "mont";
+    font-weight: 900;
+    letter-spacing: 3px;
+    }

@@ -1,0 +1,46 @@
+
+@keyframes appear {
+    from{
+      opacity: 0;
+      scale: 0.5;
+      /* clip-path: inset(100% 100% 0 0); */
+      /* transform: translateX(-100px); */
+    }
+    to{
+      opacity: 1;
+      /* clip-path: inset(0 0 0 0); */
+      /* transform: translateX(0px); */
+      scale: 1;
+    }
+  }
+
+  
+.product-card{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+
+ }
+
+    
+ 
+
+ .product-image{
+ 
+ padding: 15px
+ }
+
+.containershome .product-title{ 
+  color:rgb(0, 0, 0);
+  font-weight: 900;
+}
+
+.containershome  .title-oversized-cut{
+  color: black;
+
+}
+.containershome .product-price{
+  color: black;
+  font-weight: 800;
+ 
+}

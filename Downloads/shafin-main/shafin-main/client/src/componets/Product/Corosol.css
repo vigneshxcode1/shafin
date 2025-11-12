@@ -1,0 +1,84 @@
+.img-mains {
+
+    display: flex;
+    overflow-x: scroll;
+    white-space: nowrap; 
+    padding: 0px;
+    display: block;
+    overflow-x: scroll;
+    white-space: nowrap; 
+    padding: 0px;
+    margin-left: -10px; 
+    scroll-behavior: smooth; 
+    margin-top: -20px; 
+    position: relative; 
+    font-family: 'mont';
+     letter-spacing: 3px;
+     
+  }
+  .cor-name{
+    font-size: 24px;
+    justify-content: center;
+  }
+  
+  .products {
+    position: relative; 
+    display: inline-block;
+    flex: none;
+    text-align: center;
+    
+  }
+  
+  .stackimgs {
+    width: 1000px;
+    height: 600px;
+
+  }
+  
+
+  .header{
+    text-decoration: underline;
+    margin-top: 30px;
+  }
+  .headers{
+    border: 2px solid white;
+    margin-top: 20px;
+  }
+  
+.overlayname1{
+   position: absolute;
+    top:70%;
+  left: 15%;
+  
+  color: rgb(247, 247, 247);
+font-family: 'Courier New', Courier, monospace;
+ padding: 7px;
+  font-weight: 900;
+}
+
+  .overlayname{
+    position: absolute;
+    top:80%;
+  left: 16%;
+  background-color: rgba(255, 255, 255, 0.952);
+  color: black;
+  
+ padding: 7px;
+  font-weight: 700;
+  
+
+  }
+
+ 
+  @media (max-width: 768px) {
+    .stackimgs {
+      width: 420px;
+    }
+    .links{
+      text-decoration: none;
+    }
+    .header{
+      text-decoration: none;
+    }
+  }
+  

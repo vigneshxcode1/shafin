@@ -1,0 +1,16 @@
+.about{
+    margin:  0 auto;
+    padding: 20px;
+    
+background-image: url('../componets/images/IrM.gif');
+}
+.para{
+    font-size: 20px;
+    justify-content: center;
+    text-align: start;
+    font-weight: 600;
+    color: aliceblue;
+}
+.t{
+    color: aliceblue;
+}

@@ -1,0 +1,359 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap");
+
+/* General Container */
+.product-detail-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  margin: 20px auto 0;
+  max-width: 1200px;
+  font-family: "mont";
+  color: #000000;
+}
+
+/* Product Detail */
+.product-detail {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  color: #000000;
+}
+
+.product-detail img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.product-cutprices{
+  color: #000000;
+}
+.product-prices{
+  color: #000000;
+}
+/* Product Info */
+.product-detail-info {
+  padding: 10px 20px;
+  font-family: "mont";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 16px;
+  font-weight: 900;
+  color: #000000;
+  border-radius: 5px;
+}
+
+.product-detail-info h1 {
+  margin-bottom: 10px;
+}
+
+.product-detail-info p {
+  margin: 5px 0;
+}
+
+.product-detail-info .product-detail-price {
+  font-size: 20px;
+  color: #000000;
+  margin: 10px 0;
+}
+
+.product-detail-info button {
+  margin-top: 20px;
+  background-color: transparent;
+  color: #000000;
+  border: 1px solid #ffffff;
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+.product-detail-info button:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Product Name, Company, Prices */
+.product-detail-name {
+  font-size: 30px;
+  margin: auto;
+  margin-bottom: 10px;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.cmpy {
+  font-size: 14px;
+  letter-spacing: 8px;
+  color: #b5b0b0;
+  margin-bottom: 5px;
+}
+
+.prices {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 10px;
+}
+
+.product-price {
+  font-size: 30px;
+  margin-left: -20px;
+  color: #ffffff;
+}
+
+.product-cutprice {
+  font-size: 20px;
+  text-decoration: line-through;
+  color: #000000;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+/* Labels, Sale, Shipping */
+.sale {
+  color: #000000;
+  font-weight: bold;
+  margin-left: 5px;
+  padding: 0 10px;
+  letter-spacing: 6px;
+  border: 2px solid #000000;
+  border-radius: 10px;
+}
+
+.freeshipping {
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 6px;
+  color: #000000;
+}
+
+/* Size & Quantity Selectors */
+.size-container,
+.quantity-container {
+  margin-top: 16px;
+}
+
+.size-container label,
+.size-container-size label {
+  margin-right: 10px;
+}
+
+.size-container select,
+.size-container-size select {
+  padding: 5px;
+  font-size: 16px;
+  margin-right: 10px;
+  border: 1px solid #b9b8b8;
+  border-radius: 5px;
+}
+
+#size {
+  color: #000000;
+  border-radius: 10px;
+  font-weight: 900;
+  padding: 6px;
+  margin-left: 10px;
+}
+
+/* Quantity Buttons */
+.quantity-container {
+  display: flex;
+  align-items: center;
+}
+
+.quantity {
+  margin: 0 10px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.quantitys {
+  padding: 8px;
+  color: #000000;
+}
+.qtnbtn{
+  color: #000000;
+}
+#quabtity-btn-left,
+#quabtity-btn-right {
+  background-color: #000000;
+  font-size: 30px;
+}
+
+#quabtity-btn-left:hover {
+  background-color: #bc2222;
+  border-radius: 10px;
+}
+
+#quabtity-btn-right:hover {
+  background-color: #000000;
+  border-radius: 10px;
+}
+#view{
+  color: #000000;
+}
+#sizechart{
+  margin-top: 20px;
+  color: #000000;
+}
+
+/* Add to Cart */
+.addtocart {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: 6px;
+  font-family: "mont";
+  border: 1px solid black;
+}
+#addtocart{
+  border: 1px solid black;
+}
+.addtocart:hover {
+  background-color: #2980b9;
+}
+
+/* Image Section */
+.product-images {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto 0;
+}
+
+.product-images img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-images img:hover {
+  transform: scale(1.05);
+}
+
+/* Image Slider */
+.slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide {
+  display: none;
+}
+
+.slide.active {
+  display: block;
+}
+
+.left-arrow,
+.right-arrow {
+  position: absolute;
+  top: 50%;
+  background: transparent;
+  color: #000000;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+}
+
+/* Description Section */
+.description {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  font-family: "fontstart";
+  margin-bottom: 5px;
+}
+
+.dec-detail {
+  font-family: "mont";
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.product-detail-description {
+  cursor: pointer;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.product-detail-description.show {
+  -webkit-line-clamp: unset;
+}
+
+.toggle-button,
+.toggle-button-des {
+  color: white;
+  background: none;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  margin-top: 8px;
+  align-self: flex-start;
+  border-radius: 10px;
+}
+
+/* Size Chart */
+.sizechart {
+  margin-left: 20px;
+  color: #000000;
+  text-decoration: none;
+}
+
+/* Product Created Link */
+.product-detail-created {
+  text-decoration: none;
+  color: rgb(27, 27, 27);
+  margin-left: 20px;
+}
+
+/* Product Category */
+.product-detail-categorys {
+  font-size: 23px;
+  letter-spacing: 6px;
+  margin-top: 20px;
+}
+
+/* Misc */
+.qtnbtn {
+  color: rgb(5, 5, 5);
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.shippinginfo {
+  color: rgb(0, 0, 0);
+  font-family: "mont";
+}
+
+.shippinginfo h1 {
+  color: rgb(0, 0, 0);
+}

@@ -1,0 +1,12 @@
+/* toastify.css */
+.custom-toast-success {
+    background-color: #4caf50 !important; /* Green background for success */
+    color: white !important; /* White text color */
+    font-weight: bold; /* Bold text */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for better visibility */
+  }
+  
+label{
+color: rgb(209, 125, 209);
+  }
