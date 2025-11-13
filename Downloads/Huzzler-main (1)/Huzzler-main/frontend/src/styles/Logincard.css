@@ -1,0 +1,214 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+}
+
+/* Main Container */
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  overflow: hidden;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.heading {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  margin-left: 30px;
+}
+
+.sub-heading {
+  font-size: 16px;
+  font-family: 550;
+  margin-bottom: 30px;
+}
+
+/* Card Container */
+.card-container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 80px;
+  margin-bottom: 40px;
+  z-index: 10;
+}
+
+/* Circle Wrapper behind card container */
+.circle-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Yellow Circles */
+.yellow-circle {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 230, 0, 0.4) 30%, rgba(255, 230, 0, 0.1) 80%);
+  filter: blur(25px);
+  opacity: 0.6;
+}
+
+/* Blurred circle where card overlaps */
+.yellow-circle.blurred {
+  background: radial-gradient(circle, rgba(255, 230, 0, 0.5) 30%, rgba(255, 230, 0, 0.05) 80%);
+  filter: blur(20px);
+  opacity: 0.6;
+}
+
+/* Solid yellow circle */
+.yellow-circle.solid {
+  background-color: rgb(235, 235, 6);
+  opacity: 0.8;
+  filter: none;
+}
+
+/* Positioning Circles */
+.top-left {
+  top: 0;
+  left: 0;
+  transform: translate(-30%, -20%);
+}
+
+.bottom-right {
+  bottom: 0;
+  right: 0;
+  transform: translate(40%, 20%);
+}
+
+/* Yellow Circle Positions */
+.first-card-bottom-right {
+  bottom: 30px;  
+  left: 28%;     
+  transform: translate(50%, 50%);
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  opacity: 0.6;
+  filter: blur(25px);
+  background: radial-gradient(circle, rgba(255, 230, 0, 0.4) 30%, rgba(255, 230, 0, 0.1) 80%);
+  z-index: 0;
+}
+
+.first-card-bottom-right.solid {
+  background-color: rgb(235, 235, 6);
+  filter: none;
+  opacity: 0.8;
+}
+/* ✅ New Yellow Circle Positions */
+.second-card-top-left {
+  top: -65px;  /* adjust to match first card vertical position */
+  left: 43%;     /* adjust horizontally to match first card */
+  transform: translate(50%, 50%);
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  opacity: 0.6;
+  filter: blur(25px);
+  background: radial-gradient(circle, rgba(255, 230, 0, 0.4) 30%, rgba(255, 230, 0, 0.1) 80%);
+  z-index: 0;
+}
+
+.first-card-bottom-right.solid {
+  background-color: rgb(235, 235, 6);
+  filter: none;
+  opacity: 0.8;
+}
+
+
+
+/* Card Styling */
+.card {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  width: 260px;
+  height: 200px;
+  padding: 20px;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  z-index: 10;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Content */
+.icon,
+.card h4,
+.card p {
+  position: relative;
+  z-index: 11;
+}
+
+.icon {
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.card h4 {
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.card p {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Login Text */
+.login-text {
+  font-size: 14px;
+  color: #333;
+}
+
+.login-link {
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .card {
+    width: 90%;
+    height: auto;
+    padding: 25px;
+  }
+
+  .heading {
+    font-size: 18px;
+  }
+
+  .yellow-circle {
+    width: 70px;
+    height: 70px;
+  }
+}

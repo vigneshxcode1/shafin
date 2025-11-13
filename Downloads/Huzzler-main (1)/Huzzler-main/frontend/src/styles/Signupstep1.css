@@ -1,0 +1,208 @@
+
+
+.logo-text {
+  position: absolute;
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 15px;
+margin-left: 20px;
+margin-top: 30px;
+}
+
+
+.signup-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fafafa;
+  font-family: "Poppins", sans-serif;
+
+}
+
+.signup-card {
+  background: #fff;
+  width: 750px;
+  border-radius: 12px;
+  padding: 40px 50px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.signup-header {
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.back-symbol {
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.signup-header h3 {
+  margin: 0;
+  font-size: 20px;
+  margin-left: 25px;
+  font-weight: 100;
+}
+
+.signup-header p {
+  font-style: bold;
+  font-weight: 550;
+  margin-top: 15px;
+  margin-left: 25px;
+}
+
+.signup-body {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.image-upload {
+  text-align: center;
+  width: 40%;
+}
+
+/* Placeholder box around upload image */
+.upload-placeholder {
+ 
+  border-radius: 10px;
+  width: 100px;      /* smaller width */
+  height: 300px;     /* smaller height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+ 
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* PNG size reduced here 👇 */
+.upload-png {
+  width: 200px;       /* reduce to 50px */
+  height: 200px;
+  object-fit: contain;
+  opacity: 0.8;
+}
+
+
+.preview-image {
+  width: 110px;
+  height: 110px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+
+.form-section {
+  width: 65%;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/* .google-btn,
+.facebook-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #ddd;
+  padding: 10px 15px;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  width: 48%;
+} */
+
+
+.google-btn,
+.facebook-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: 500;
+  text-decoration: none; /* removes underline */
+  cursor: pointer;
+}
+
+
+.google-btn img,
+.facebook-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.name-fields {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* space between fields */
+  margin-bottom: 15px;
+}
+
+.name-fields div {
+  width: 45%; /* each field takes 48% of the container */
+}
+
+
+input {
+  width: 100%;
+  padding: 10px 20px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 14px;
+}
+
+.password-field {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0 12px;
+  margin-bottom: 20px;
+}
+
+.password-field input {
+  border: none;
+  flex: 1;
+  padding: 6px;
+}
+
+.password-field svg {
+  cursor: pointer;
+  color: #777;
+}
+
+.continue-btn {
+  width: 100%;
+  background: #1c1b1f;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+}
+label {
+  display: block;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 550;
+}

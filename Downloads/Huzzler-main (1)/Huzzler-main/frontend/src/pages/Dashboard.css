@@ -1,0 +1,205 @@
+/* 🌈 Base Layout */
+.dashboard {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  background: #f9fafb;
+  overflow-x: hidden;
+  color: #1f2937;
+  padding-bottom: 5rem;
+}
+
+/* 🟡 Header Gradient Section (like Figma top bar) */
+.work-container {
+  background: linear-gradient(180deg, #fef08a 0%, #fefce8 50%, #ffffff 100%);
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+/* Title */
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 1.5rem;
+}
+
+/* 🔲 Work Grid */
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+/* 🟣 Work Cards */
+.work-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  border: 1px solid #f3f4f6;
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+.work-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  border-color: #c4b5fd;
+}
+
+/* Header inside card */
+.work-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.work-header h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.category {
+  background: #ede9fe;
+  color: #6d28d9;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-weight: 500;
+}
+
+/* 🧾 Description */
+.description {
+  font-size: 0.9rem;
+  color: #4b5563;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+/* 🏷️ Skills */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.skill-tag {
+  background: #f5f3ff;
+  color: #7c3aed;
+  font-size: 0.75rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: 9999px;
+  font-weight: 500;
+}
+
+/* 📦 Meta info */
+.meta {
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin-bottom: 0.25rem;
+}
+
+.price {
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.25rem;
+}
+
+.tools {
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin-bottom: 0.75rem;
+}
+
+/* 🔗 Links and client */
+.sample-link {
+  display: inline-block;
+  font-size: 0.8rem;
+  color: #7c3aed;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.sample-link:hover {
+  color: #5b21b6;
+  text-decoration: underline;
+}
+
+.client {
+  font-size: 0.75rem;
+  color: #4b5563;
+  margin-top: 0.25rem;
+}
+
+/* 🟣 Floating Add Button */
+.add-btn {
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2.5rem;
+  background: #7c3aed;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-btn:hover {
+  background: #6d28d9;
+  transform: translateY(-4px);
+}
+
+/* ⚠️ Loading & Error */
+.loading,
+.error {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.error {
+  color: red;
+}
+
+/* 🌙 Subtle hover highlight for entire card set */
+.work-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(124, 58, 237, 0.05), rgba(254, 240, 138, 0.05));
+  border-radius: 1rem;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.work-card:hover::before {
+  opacity: 1;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .work-container {
+    padding: 1.5rem;
+  }
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+  .title {
+    text-align: center;
+  }
+}
