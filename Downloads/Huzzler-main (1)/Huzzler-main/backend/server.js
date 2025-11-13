@@ -145,7 +145,6 @@ app.use("/api/Work",WorkRouter);
 app.use("/api/ClientWork",ClientRouter)
 app.use("/api/jobProposal",JobProfileRouter)
 
-console.log("vicky")
 // =======================
 // 🧑‍💼 ACCOUNT DETAILS CRUD (your new code)
 // =======================
